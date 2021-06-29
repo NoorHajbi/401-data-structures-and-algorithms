@@ -1,0 +1,35 @@
+public class BinarySearch
+{
+    public static int binarySearch(int[] numbers, int key)
+    {
+        int left = 0, right =numbers.length,
+         mid =0, value = -1;
+
+        Boolean isFound = false;
+        while(!isFound){
+            if(left>right){
+           value = -1;
+                break;
+            }
+             mid = (left + right) /2;
+            if (key<numbers[mid])
+                right = mid -1;
+
+            else if (key > numbers[mid])
+                left = mid +1;
+
+            else{
+                value = mid;
+                break;
+            }
+
+        }
+         return value;
+
+    }
+	public static void main(String[] args) {
+	    int arr[] = {4, 8, 15, 16, 23, 42};
+	 System.out.println(binarySearch(arr,15));
+	}
+
+}
