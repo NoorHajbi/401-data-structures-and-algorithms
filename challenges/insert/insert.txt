@@ -1,0 +1,31 @@
+import java.util.*;
+public class InsertShiftArray {
+   public static int[] insertShiftArray (int arr[], int val)
+    {
+        int length = arr.length,
+        newArr[] = new int[length+1],
+         middleIdx = length/2;
+         
+        if (length%2!=0) 
+        middleIdx = length/2+1;
+        
+     for (int i = 0; i < length+1; i++){
+        if(i < middleIdx) 
+         newArr[i] = arr[i];
+     
+        else if(i == middleIdx) 
+         newArr[i] = val;
+        
+        else  
+         newArr[i] = arr[i -1];
+        
+      }
+        return newArr;
+    }
+    public static void main(String[] args) {
+        int arr[]
+            = { 42,8,15,23,42 },  val = 16;
+        arr = insertShiftArray (arr,  val);
+        System.out.println(Arrays.toString(arr));
+    }
+}
