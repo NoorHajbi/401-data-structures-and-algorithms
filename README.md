@@ -3,9 +3,9 @@
 ## Table of contents
 
   
-| title       | Link to The challenge   | Link to The Code    |                                  |
-| ------------|-------------------------|---------------------|
-|array-reverse|[challenges](challenges) |                     |
+| title       | Link to The challenge       | Link to The Code                 |         
+| ------------|-----------------------------|----------------------------------|
+|array-reverse|[Dir](challenges/reverseArr) |[Reverse](challenges/reverse/reverse.png)|
 
 
 
@@ -17,7 +17,7 @@ OutPut -> Reversed Array
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Reverse](challenges/reverseArray%20.png)
+![Reverse](challenges/reverse/reverse.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
