@@ -4,9 +4,9 @@
 
   
 
-| title            | Link to The challenge         | Link to The Code                     |                          
-| -----------------|-------------------------------|--------------------------------------|
-|array-reverse     |[challenges](challenges)       |                                      |
+| title       | Link to The challenge       | Link to The Code                 |         
+| ------------|-----------------------------|----------------------------------|
+|array-reverse|[Dir](challenges/reverseArr) |[Reverse](challenges/reverse/reverse.png)|
 |array-insert-shift|[Directory](challenges/insert) |[Image](challenges/insert/insert.png) |
 
 
