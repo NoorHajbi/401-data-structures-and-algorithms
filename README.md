@@ -6,8 +6,8 @@
 
 | title       | Link to The challenge       | Link to The Code                 |         
 | ------------|-----------------------------|----------------------------------|
-|array-reverse|[Dir](challenges/reverse) |[Reverse](challenges/reverse/reverse.png)|
-|array-insert-shift|[Directory](challenges/insert) |[Image](challenges/insert/insert.png) |
+|array-reverse|[Directory](challenges/reverse)|[Reverse](challenges/reverse/reverse.png)|
+|insert-shift|[Directory](challenges/insert)|[Insert](challenges/insert/insert.png)|
 
 
 
