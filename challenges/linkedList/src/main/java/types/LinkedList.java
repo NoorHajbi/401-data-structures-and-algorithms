@@ -27,22 +27,8 @@ public class LinkedList<T> {
         size++;
     }
 
-    //Insert data at the end of the list
-    public void insertAtEnd(T data) {
-        Node<T> node = new Node<>(data);
-        if (this.head == null) {
-            this.head = node;
-        } else {
-            Node<T> current = this.head;
-            while (current.getNext() != null) {
-                current = current.getNext();
-            }
-            current.setNext(node);
-        }
-        size++;
-    }
 
-    //    Indicates whether that value exists as a Node’s value somewhere within the list.
+    // Indicates whether that value exists as a Node’s value somewhere within the list.
     public boolean Search(T key) {
         Node<T> current = this.head;
         if (size != 0) {
@@ -71,4 +57,54 @@ public class LinkedList<T> {
         output.append("NULL");
         return output.toString();
     }
+
+    // Code Challenge: Class 06
+    //    adds a new node with the given value to the end of the list
+    public void insertAtEnd(T data) {
+        Node<T> node = new Node<>(data);
+        if (this.head == null) {
+            this.head = node;
+        } else {
+            Node<T> current = this.head;
+            while (current.getNext() != null) {
+                current = current.getNext();
+            }
+            current.setNext(node);
+        }
+        size++;
+    }
+//  adds a new node with the given new value immediately
+//  before the first node that has the value specified
+
+    public void insertBefore(T value, T newVal) {
+        boolean bool = Search(value);
+        Node<T> node = new Node<>(newVal);
+        if (bool) {
+            Node<T> current = head;
+            Node<T> before = current;
+            while (current.getData() != value) {
+                before = current;
+                current = current.getNext();
+            }
+            node.setNext(current);
+            before.setNext(node);
+        }
+    }
+
+    //    adds a new node with the given new value immediately after the first node that has the value specified
+    public void insertAfter(T value, T newVal) {
+        boolean bool = Search(value);
+        Node<T> node = new Node<>(newVal);
+        if (bool) {
+            Node<T> current = this.head;
+            Node<T> after = current;
+            while (current.getData() != value) {
+                current = after;
+                after = after.getNext();
+            }
+            node.setNext(after);
+            current.setNext(node);
+        }
+    }
+
 }
