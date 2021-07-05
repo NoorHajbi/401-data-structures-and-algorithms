@@ -5,11 +5,11 @@ public class BinarySearch
         int left = 0, right =numbers.length,
          mid =0, value = -1;
 
-        Boolean isFound = false;
-        while(!isFound){
+        Boolean isFound = true;
+        while(isFound){
             if(left>right){
            value = -1;
-                break;
+                isFound = false;
             }
              mid = (left + right) /2;
             if (key<numbers[mid])
@@ -20,13 +20,12 @@ public class BinarySearch
 
             else{
                 value = mid;
-                break;
+                 isFound = false;
             }
-
         }
          return value;
-
     }
+    
 	public static void main(String[] args) {
 	    int arr[] = {4, 8, 15, 16, 23, 42};
 	 System.out.println(binarySearch(arr,15));

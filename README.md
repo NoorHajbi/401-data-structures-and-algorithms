@@ -8,7 +8,7 @@
 | ------------|-----------------------------|----------------------------------|
 |array-reverse|[Directory](challenges/reverse)|[Reverse](challenges/reverse/reverse.png)|
 |insert-shift|[Directory](challenges/insert)|[Insert](challenges/insert/insert.png)|
-|binary-search|[Directory](challenges/binarySearch)|[Search](challenges/binarySearch/binarySearch.jpg)|
+|binary-search|[Directory](challenges/binarySearch)|[layout](challenges/binarySearch/binarySearch.jpg) And [binaryVisual](challenges/binarySearch/binaryVisual.jpg)|
 |linked-list|[Directory](challenges/linkedList)| [LL](challenges/linkedList/src/main/java)|
 
 
@@ -47,6 +47,6 @@ or -1 if the element is not in the array.
 
 ### (3)
 ![binarySearch](challenges/binarySearch/binarySearch.jpg)
-
+![binaryVisual](challenges/binarySearch/binaryVisual.jpg)
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
