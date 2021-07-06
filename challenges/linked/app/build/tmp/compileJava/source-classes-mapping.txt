@@ -1,2 +1,6 @@
+data/Node.java
+ data.Node
+types/LinkedList.java
+ types.LinkedList
 linked/App.java
  linked.App

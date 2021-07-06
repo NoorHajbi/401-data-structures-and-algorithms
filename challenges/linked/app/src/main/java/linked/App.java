@@ -3,37 +3,44 @@
  */
 package linked;
 
+import types.LinkedList;
+
 public class App {
-        public static void main(String[] args) {
-            LinkedList<Integer> list = new LinkedList<>();
-            list.insertABeginning(1);
-            list.insertABeginning(2);
-            list.insertABeginning(3);
-            // List<Integer> list = new LinkedList<Integer>(Arrays.asList(1, 2,3));
-            System.out.println(list);
-            list.insertAfter(3, 33);
-            System.out.println(list);
-            list.insertBefore(3, 33);
-            System.out.println(list);
-        }
+    private static final LinkedList<Integer> list = new LinkedList<>();
+    public static void main(String[] args) {
+        list.insertABeginning(1);
+        list.insertABeginning(2);
+        list.insertABeginning(3);
+        System.out.println(list);
+        //Check Search
+        System.out.println("Is 3 exist? "+list.Search(3));
 
-        // Upon instantiation, an empty Linked List should be created.
-
-        // your code should raise/throw a custom,
-        // semantic error that describes what went wrong in calling the methods you
-        // wrote for this lab.
-
+//            list.insertAfter(3, 33);
+//            System.out.println(list);
+//            list.insertBefore(3, 33);
+//            System.out.println(list);
     }
 
-// Write tests to prove the following functionality:
-// Can successfully instantiate an empty linked list
-// Can properly insert into the linked list
-// The head property will properly point to the first node in the linked list
-// Can properly insert multiple nodes into the linked list
-// Will return true when finding a value within the linked list that exists
-// Will return false when searching for a value in the linked list that does not
-// exist
-// Can properly return a collection of all the values that exist in the linked
-// list
-// Ensure your tests are passing before you submit your solution.
 }
+//5
+//# Singly Linked List
+//<!-- Short summary or background information -->
+//
+//        ## Challenge
+//<!-- Description of the challenge -->
+//
+//        ## Approach & Efficiency
+//<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+//
+//        ## API
+//<!-- Description of each method publicly available to your Linked List -->
+
+
+///
+//Create a pull request from your branch to your master branch
+//        In your open pull request, leave as a comment a checklist of the specifications and tasks above, with the actual steps that you completed checked off
+//        Submitting your completed work to Canvas:
+//        Copy the link to your open pull request and paste it into the corresponding Canvas assignment
+//        Leave a description of how long this assignment took you in the comments box
+//        Add any additional comments you like about your process or any difficulties you may have had with the assignment
+//        Merge your branch into master, and delete your branch (don’t worry, the PR link will still work)

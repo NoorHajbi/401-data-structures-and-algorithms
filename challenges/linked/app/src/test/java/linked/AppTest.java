@@ -4,11 +4,55 @@
 package linked;
 
 import org.junit.Test;
+import types.LinkedList;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    LinkedList<Integer> testList = new LinkedList<>();
+
+    // 1.Can successfully instantiate an empty linked list
+    @Test
+    public void testEmptyLL() {
+        assertNull("null failed", testList.head);
     }
+
+    // 2.Can properly insert into the linked list
+    @Test
+    public void testInsert() {
+        testList.insertABeginning(1);
+        assertTrue("Error with Insertion:\n", testList.size > 0);
+    }
+
+    // 3.The head property will properly point to the first node in the linked list
+    // 4.Can properly insert multiple nodes into the linked list
+    @Test
+    public void testHeadAndNodes() {
+        testList.insertABeginning(1);
+        testList.insertABeginning(2);
+        testList.insertABeginning(3);
+        assertEquals("Error with Pointing or Insertion:\n ",
+                (Integer) 3,
+                testList.head.getData()
+        );
+    }
+
+    // 5.Will return true when finding a value within the linked list that exists
+    // 6. Will return false when searching for a value in the linked list that does not exist
+    @Test
+    public void testSearch() {
+        testList.insertABeginning(1);
+        assertTrue("Should find 1:\n", testList.Search(1));
+        assertFalse("Should detect that 2 is not exist:\n", testList.Search(2));
+    }
+
+    // 7. Can properly return a collection of all the values that exist in the linked list
+    @Test
+    public void testList() {
+        testList.insertABeginning(1);
+        testList.insertABeginning(2);
+        testList.insertABeginning(3);
+        assertEquals("{ 3 } -> { 2 } -> { 1 } -> NULL", String.valueOf(testList));
+    }
+
 }
