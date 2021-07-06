@@ -143,5 +143,10 @@ public class LinkedList<T> {
         return output.toString();
     }
 
+    //Code Challenge: Class 08
+    // public LinkedList<T> zipLists(LinkedList<T> list1,LinkedList<T> list2){
+
+    // }
+
 }
 
