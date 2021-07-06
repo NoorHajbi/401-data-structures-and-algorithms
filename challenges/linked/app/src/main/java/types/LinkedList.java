@@ -61,7 +61,7 @@ public class LinkedList<T> {
 
     // Code Challenge: Class 06
     //    adds a new node with the given value to the end of the list
-    public void insertAtEnd(T data) {
+    public void append(T data) {
         Node<T> node = new Node<>(data);
         if (this.head == null) {
             this.head = node;
@@ -74,38 +74,55 @@ public class LinkedList<T> {
         }
         size++;
     }
-//  adds a new node with the given new value immediately
-//  before the first node that has the value specified
 
+    //  adds a new node with the given new value immediately
+//  before the first node that has the value specified
     public void insertBefore(T value, T newVal) {
-        boolean bool = Includes(value);
-        Node<T> node = new Node<>(newVal);
-        if (bool) {
+        if (this.head == null)
+            System.out.println("Please fill the Linked List");
+
+        else if (Includes(value)) {
+            Node<T> node = new Node<>(newVal);
             Node<T> current = head;
             Node<T> before = current;
-            while (current.getData() != value) {
-                before = current;
-                current = current.getNext();
+            if (this.head.getData() == value) {
+                insertABeginning(newVal);
+            } else {
+                while (current.getData() != value) {
+                    before = current;
+                    current = current.getNext();
+                }
+                node.setNext(current);
+                before.setNext(node);
+                size++;
             }
-            node.setNext(current);
-            before.setNext(node);
-        }
+        } else
+            System.out.println(value + " Is not existed in the linked list");
     }
 
     //    adds a new node with the given new value immediately after the first node that has the value specified
     public void insertAfter(T value, T newVal) {
-        boolean bool = Includes(value);
-        Node<T> node = new Node<>(newVal);
-        if (bool) {
-            Node<T> current = this.head;
+        if (this.head == null)
+            System.out.println("Please fill the Linked List");
+
+        else if (Includes(value)) {
+            Node<T> node = new Node<>(newVal);
+            Node<T> current = head;
             Node<T> after = current;
-            while (current.getData() != value) {
-                current = after;
+            if ((this.head.getData() == value)) {
                 after = after.getNext();
+            } else {
+                while (current.getData() != value) {
+                    current = after;
+                    after = after.getNext();
+                }
             }
             node.setNext(after);
             current.setNext(node);
-        }
+
+            size++;
+        } else
+            System.out.println(value + " Is not existed in the linked list");
     }
 
 }

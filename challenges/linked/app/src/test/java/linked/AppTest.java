@@ -55,4 +55,38 @@ public class AppTest {
         assertEquals("{ 3 } -> { 2 } -> { 1 } -> NULL", String.valueOf(testList));
     }
 
+    // Code Challenge: Class 06
+// 8.Can successfully add a node to the end of the linked list
+// 9.Can successfully add multiple nodes to the end of a linked list
+    @Test
+    public void testAppend() {
+        testList();
+        testList.append(40);
+        assertEquals("{ 3 } -> { 2 } -> { 1 } -> { 40 } -> NULL", String.valueOf(testList));
+        testList.append(41);
+        assertEquals("{ 3 } -> { 2 } -> { 1 } -> { 40 } -> { 41 } -> NULL", String.valueOf(testList));
+    }
+
+    // 10.Can successfully insert a node before a node located i the middle of a linked list
+// 11.Can successfully insert a node before the first node of a linked list
+    @Test
+    public void testInsertBefore() {
+        testList();
+        testList.insertBefore(2, 23);
+        assertEquals("{ 3 } -> { 23 } -> { 2 } -> { 1 } -> NULL", String.valueOf(testList));
+        testList.insertBefore(3, 33);
+        assertEquals("{ 33 } -> { 3 } -> { 23 } -> { 2 } -> { 1 } -> NULL", String.valueOf(testList));
+    }
+
+    // 12.Can successfully insert after a node in the middle of the linked list
+// 13.Can successfully insert a node after the last node of the linked list
+    @Test
+    public void testInsertAfter() {
+        testList();
+        testList.insertAfter(2, 25);
+        assertEquals("{ 3 } -> { 2 } -> { 25 } -> { 1 } -> NULL", String.valueOf(testList));
+        testList.insertAfter(1, 15);
+        assertEquals("{ 3 } -> { 2 } -> { 25 } -> { 1 } -> { 15 } -> NULL", String.valueOf(testList));
+    }
+
 }
