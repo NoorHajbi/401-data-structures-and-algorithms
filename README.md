@@ -63,6 +63,9 @@ list.insertAtEnd(value)
 list.insertAfter(value, newvalue);
 list.insertBefore(value, newvalue);
 
+# 7.kth from end
+Using this method you can insert the index, and it will return the value within that index or error messege of the index is out of the range.
+
 ----
 
 ## Whiteboard Process
