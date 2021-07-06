@@ -29,7 +29,7 @@ Input - > Array
 
 OutPut -> Array new Value in the middle
 
-# 2. Binary Search
+# 3. Binary Search
 We need to create a function that implements binary search:
 
 Input - > a sorted array, and the search key.
@@ -50,9 +50,25 @@ Singly linked lists contain nodes which have a data field as well as 'next' fiel
 - to string -> Returns: a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
 
-  
+# 6.Singly Linked List Insertions
+To LinkedLink Class, Thses methods are added:
+1. Append -> adds a new node with the given value to the end of the list
+2. Insert before -> adds a new node with the given new value immediately before the first node that has the value specified
+3. Insert after -> adds a new node with the given new value immediately after the first node that has the value specified.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+To run this code, type App.java the method with the arguments needed, then print.
+list.insertAtEnd(value)
+list.insertAfter(value, newvalue);
+list.insertBefore(value, newvalue);
+
+----
+
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
+
+
 ### (1)
 ![Reverse](challenges/reverse/reverse.png)
 
@@ -62,6 +78,9 @@ Singly linked lists contain nodes which have a data field as well as 'next' fiel
 ### (3)
 ![binarySearch](challenges/binarySearch/binarySearch.jpg)
 ![binaryVisual](challenges/binarySearch/binaryVisual.jpg) 
+
+## (5)
+[linkedList](challenges/linked/app/src/main/resources) 
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
