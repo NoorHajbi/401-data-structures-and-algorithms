@@ -5,13 +5,13 @@ import data.Node;
 public class LinkedList<T> {
     //a head property
     public Node<T> head;
-    public int size =0;
+    public int size = 0;
 
     public LinkedList() {
         this.head = null;
     }
 
-    public  void insertABeginning(T data) {
+    public void insertABeginning(T data) {
         //Create new node
         Node<T> node = new Node<>(data);
         //Checks if the list is empty
@@ -30,7 +30,7 @@ public class LinkedList<T> {
     }
 
     // Indicates whether that value exists as a Node’s value somewhere within the list.
-    public boolean Search(T key) {
+    public boolean Includes(T key) {
         Node<T> current = this.head;
         if (size != 0) {
             while (current != null) {
@@ -78,7 +78,7 @@ public class LinkedList<T> {
 //  before the first node that has the value specified
 
     public void insertBefore(T value, T newVal) {
-        boolean bool = Search(value);
+        boolean bool = Includes(value);
         Node<T> node = new Node<>(newVal);
         if (bool) {
             Node<T> current = head;
@@ -94,7 +94,7 @@ public class LinkedList<T> {
 
     //    adds a new node with the given new value immediately after the first node that has the value specified
     public void insertAfter(T value, T newVal) {
-        boolean bool = Search(value);
+        boolean bool = Includes(value);
         Node<T> node = new Node<>(newVal);
         if (bool) {
             Node<T> current = this.head;

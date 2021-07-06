@@ -42,8 +42,8 @@ public class AppTest {
     @Test
     public void testSearch() {
         testList.insertABeginning(1);
-        assertTrue("Should find 1:\n", testList.Search(1));
-        assertFalse("Should detect that 2 is not exist:\n", testList.Search(2));
+        assertTrue("Should find 1:\n", testList.Includes(1));
+        assertFalse("Should detect that 2 is not exist:\n", testList.Includes(2));
     }
 
     // 7. Can properly return a collection of all the values that exist in the linked list

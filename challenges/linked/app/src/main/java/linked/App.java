@@ -13,7 +13,7 @@ public class App {
         list.insertABeginning(3);
         System.out.println(list);
         //Check Search
-        System.out.println("Is 3 exist? "+list.Search(3));
+        System.out.println("Is 3 exist? "+list.Includes(3));
 
 //            list.insertAfter(3, 33);
 //            System.out.println(list);
@@ -22,18 +22,7 @@ public class App {
     }
 
 }
-//5
-//# Singly Linked List
-//<!-- Short summary or background information -->
-//
-//        ## Challenge
-//<!-- Description of the challenge -->
-//
-//        ## Approach & Efficiency
-//<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-//
-//        ## API
-//<!-- Description of each method publicly available to your Linked List -->
+
 
 
 ///
