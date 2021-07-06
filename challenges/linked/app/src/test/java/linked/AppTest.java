@@ -89,4 +89,23 @@ public class AppTest {
         assertEquals("{ 3 } -> { 2 } -> { 25 } -> { 1 } -> { 15 } -> NULL", String.valueOf(testList));
     }
 
+    // Code Challenge: Class 07
+// 14.Where k is greater than the length of the linked list
+// 15.Where k and the length of the list are the same
+// 16.Where k is not a positive integer
+// 17.Where the linked list is of a size 1
+// 18."Happy Path" where k is not at the end, but somewhere in the middle of the linked list
+    @Test
+    public void testKthFromEnd() {
+        testList();
+        assertEquals("The number 5 is out of range", testList.kthFromEnd(5));
+        assertEquals("The number 3 is out of range", testList.kthFromEnd(3));
+        assertEquals("The number -1 is out of range", testList.kthFromEnd(-1));
+        assertEquals("2", testList.kthFromEnd(1));
+        LinkedList<Integer> size1 = new LinkedList<>();
+        size1.insertABeginning(10);
+        assertEquals("10", size1.kthFromEnd(0));
+    }
+
+
 }
