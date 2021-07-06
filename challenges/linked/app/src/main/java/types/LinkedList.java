@@ -125,4 +125,23 @@ public class LinkedList<T> {
             System.out.println(value + " Is not existed in the linked list");
     }
 
+    //Code Challenge: Class 07
+    public String kthFromEnd(int k) {
+        Node<T> current = head;
+        StringBuilder output = new StringBuilder();
+        int flag = 0;
+        if (k >= this.size || k < 0) {
+            output.append("The number ").append(k).append(" is out of range");
+        } else {
+            while (current != null) {
+                if (flag == k)
+                    output.append(current.getData());
+                current = current.getNext();
+                flag++;
+            }
+        }
+        return output.toString();
+    }
+
 }
+
