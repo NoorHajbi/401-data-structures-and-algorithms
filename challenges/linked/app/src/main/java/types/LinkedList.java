@@ -4,32 +4,33 @@ import data.Node;
 
 public class LinkedList<T> {
     //a head property
-    private Node<T> head;
-    private int size;
+    public Node<T> head;
+    public int size = 0;
 
     public LinkedList() {
         this.head = null;
     }
 
-    //Insert data at the Beginning of the list
     public void insertABeginning(T data) {
         //Create new node
         Node<T> node = new Node<>(data);
+        //Checks if the list is empty
         if (this.head == null) {
             //If list is empty, head would point to new node.
-            head = node;
+            this.head = node;
         } else {
-            //Store data into current
+            //Store data into current and will point to head
             Node<T> current = this.head;
-            head = node;
-            current.setNext(node);
+            //node will become new head of the list
+            this.head = node;
+            //Node current(previous head) will be added after new head
+            head.setNext(current);
         }
         size++;
     }
 
-
     // Indicates whether that value exists as a Node’s value somewhere within the list.
-    public boolean Search(T key) {
+    public boolean Includes(T key) {
         Node<T> current = this.head;
         if (size != 0) {
             while (current != null) {
@@ -77,7 +78,7 @@ public class LinkedList<T> {
 //  before the first node that has the value specified
 
     public void insertBefore(T value, T newVal) {
-        boolean bool = Search(value);
+        boolean bool = Includes(value);
         Node<T> node = new Node<>(newVal);
         if (bool) {
             Node<T> current = head;
@@ -93,7 +94,7 @@ public class LinkedList<T> {
 
     //    adds a new node with the given new value immediately after the first node that has the value specified
     public void insertAfter(T value, T newVal) {
-        boolean bool = Search(value);
+        boolean bool = Includes(value);
         Node<T> node = new Node<>(newVal);
         if (bool) {
             Node<T> current = this.head;
