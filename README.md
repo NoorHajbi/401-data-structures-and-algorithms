@@ -10,6 +10,7 @@
 |insert-shift|[Directory](challenges/insert)|[Insert](challenges/insert/insert.png)|
 |binary-search|[Directory](challenges/binarySearch)|[layout](challenges/binarySearch/binarySearch.jpg) And [binaryVisual](challenges/binarySearch/binaryVisual.jpg)|
 |linked-list|[Directory](challenges/linked)| [LL](challenges/linked/app/src/main/java)|
+|stack&queue|[Directory](challenges/stack&queue)| [LL](challenges/)|
 
 
 

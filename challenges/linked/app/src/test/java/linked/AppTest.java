@@ -106,6 +106,9 @@ public class AppTest {
         size1.insertABeginning(10);
         assertEquals("10", size1.kthFromEnd(0));
     }
-
-
+    // Code Challenge: Class 08
+    // On this, and all future challenges, 
+    // write tests for any cases that help you ensure your code is working as expected.
+    //  Think through different edge cases to determine what tests will ensure 
+    //  your code is covered.
 }
