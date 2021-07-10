@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 
 public class AppTest {
     LinkedList<Integer> testList = new LinkedList<>();
+    private static final LinkedList<Integer> testList2 = new LinkedList<>();
 
     // 1.Can successfully instantiate an empty linked list
     @Test
@@ -31,14 +32,12 @@ public class AppTest {
         testList.insertABeginning(1);
         testList.insertABeginning(2);
         testList.insertABeginning(3);
-        assertEquals("Error with Pointing or Insertion:\n ",
-                (Integer) 3,
-                testList.head.getData()
-        );
+        assertEquals("Error with Pointing or Insertion:\n ", (Integer) 3, testList.head.getData());
     }
 
     // 5.Will return true when finding a value within the linked list that exists
-    // 6. Will return false when searching for a value in the linked list that does not exist
+    // 6. Will return false when searching for a value in the linked list that does
+    // not exist
     @Test
     public void testSearch() {
         testList.insertABeginning(1);
@@ -46,7 +45,8 @@ public class AppTest {
         assertFalse("Should detect that 2 is not exist:\n", testList.Includes(2));
     }
 
-    // 7. Can properly return a collection of all the values that exist in the linked list
+    // 7. Can properly return a collection of all the values that exist in the
+    // linked list
     @Test
     public void testList() {
         testList.insertABeginning(1);
@@ -56,8 +56,8 @@ public class AppTest {
     }
 
     // Code Challenge: Class 06
-// 8.Can successfully add a node to the end of the linked list
-// 9.Can successfully add multiple nodes to the end of a linked list
+    // 8.Can successfully add a node to the end of the linked list
+    // 9.Can successfully add multiple nodes to the end of a linked list
     @Test
     public void testAppend() {
         testList();
@@ -67,8 +67,9 @@ public class AppTest {
         assertEquals("{ 3 } -> { 2 } -> { 1 } -> { 40 } -> { 41 } -> NULL", String.valueOf(testList));
     }
 
-    // 10.Can successfully insert a node before a node located i the middle of a linked list
-// 11.Can successfully insert a node before the first node of a linked list
+    // 10.Can successfully insert a node before a node located i the middle of a
+    // linked list
+    // 11.Can successfully insert a node before the first node of a linked list
     @Test
     public void testInsertBefore() {
         testList();
@@ -79,7 +80,7 @@ public class AppTest {
     }
 
     // 12.Can successfully insert after a node in the middle of the linked list
-// 13.Can successfully insert a node after the last node of the linked list
+    // 13.Can successfully insert a node after the last node of the linked list
     @Test
     public void testInsertAfter() {
         testList();
@@ -90,11 +91,12 @@ public class AppTest {
     }
 
     // Code Challenge: Class 07
-// 14.Where k is greater than the length of the linked list
-// 15.Where k and the length of the list are the same
-// 16.Where k is not a positive integer
-// 17.Where the linked list is of a size 1
-// 18."Happy Path" where k is not at the end, but somewhere in the middle of the linked list
+    // 14.Where k is greater than the length of the linked list
+    // 15.Where k and the length of the list are the same
+    // 16.Where k is not a positive integer
+    // 17.Where the linked list is of a size 1
+    // 18."Happy Path" where k is not at the end, but somewhere in the middle of the
+    // linked list
     @Test
     public void testKthFromEnd() {
         testList();
@@ -107,5 +109,16 @@ public class AppTest {
         assertEquals("10", size1.kthFromEnd(0));
     }
 
-
+    // Code Challenge: Class 08
+    @Test
+    public void testZipLists() {
+        testList();
+        assertEquals("{ 3 } -> { 2 } -> { 1 } -> NULL", String.valueOf(testList.zipLists(testList, testList2)));
+        assertEquals("{ 3 } -> { 2 } -> { 1 } -> NULL", String.valueOf(testList2.zipLists(testList2, testList)));
+        testList2.insertABeginning(4);
+        testList2.insertABeginning(5);
+        testList2.insertABeginning(6);
+        assertEquals("{ 3 } -> { 6 } -> { 2 } -> { 5 } -> { 1 } -> { 4 } -> NULL",
+                String.valueOf(testList.zipLists(testList, testList2)));
+    }
 }

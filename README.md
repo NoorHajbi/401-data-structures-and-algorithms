@@ -66,7 +66,7 @@ list.insertBefore(value, newvalue);
 # 7.Singly Linked List ->kth from end function
 Using this method you can insert the index, and it will return the value within that index or error messege of the index is out of the range.
 
-# 7.Singly Linked List ->zip lists function
+# 8.Singly Linked List ->zip lists function
 This function take 2 linked lists and return them as a one link list(zipped).
 
 ----
