@@ -1,9 +1,10 @@
 package types;
 
+
 import data.Node;
 
 public class LinkedList<T> {
-    //a head property
+    // a head property
     public Node<T> head;
     public int size = 0;
 
@@ -12,24 +13,25 @@ public class LinkedList<T> {
     }
 
     public void insertABeginning(T data) {
-        //Create new node
+        // Create new node
         Node<T> node = new Node<>(data);
-        //Checks if the list is empty
+        // Checks if the list is empty
         if (this.head == null) {
-            //If list is empty, head would point to new node.
+            // If list is empty, head would point to new node.
             this.head = node;
         } else {
-            //Store data into current and will point to head
+            // Store data into current and will point to head
             Node<T> current = this.head;
-            //node will become new head of the list
+            // node will become new head of the list
             this.head = node;
-            //Node current(previous head) will be added after new head
+            // Node current(previous head) will be added after new head
             head.setNext(current);
         }
         size++;
     }
 
-    // Indicates whether that value exists as a Node’s value somewhere within the list.
+    // Indicates whether that value exists as a Node’s value somewhere within the
+    // list.
     public boolean Includes(T key) {
         Node<T> current = this.head;
         if (size != 0) {
@@ -42,8 +44,9 @@ public class LinkedList<T> {
         return false;
     }
 
-    //    Returns: a string representing all the values in the Linked List, formatted as:
-//            "{ a } -> { b } -> { c } -> NULL"
+    // Returns: a string representing all the values in the Linked List, formatted
+    // as:
+    // "{ a } -> { b } -> { c } -> NULL"
     @Override
     public String toString() {
         Node<T> current = this.head;
@@ -60,7 +63,7 @@ public class LinkedList<T> {
     }
 
     // Code Challenge: Class 06
-    //    adds a new node with the given value to the end of the list
+    // adds a new node with the given value to the end of the list
     public void append(T data) {
         Node<T> node = new Node<>(data);
         if (this.head == null) {
@@ -75,8 +78,8 @@ public class LinkedList<T> {
         size++;
     }
 
-    //  adds a new node with the given new value immediately
-//  before the first node that has the value specified
+    // adds a new node with the given new value immediately
+    // before the first node that has the value specified
     public void insertBefore(T value, T newVal) {
         if (this.head == null)
             System.out.println("Please fill the Linked List");
@@ -100,7 +103,8 @@ public class LinkedList<T> {
             System.out.println(value + " Is not existed in the linked list");
     }
 
-    //    adds a new node with the given new value immediately after the first node that has the value specified
+    // adds a new node with the given new value immediately after the first node
+    // that has the value specified
     public void insertAfter(T value, T newVal) {
         if (this.head == null)
             System.out.println("Please fill the Linked List");
@@ -125,7 +129,7 @@ public class LinkedList<T> {
             System.out.println(value + " Is not existed in the linked list");
     }
 
-    //Code Challenge: Class 07
+    // Code Challenge: Class 07
     public String kthFromEnd(int k) {
         Node<T> current = head;
         StringBuilder output = new StringBuilder();
@@ -143,5 +147,84 @@ public class LinkedList<T> {
         return output.toString();
     }
 
-}
+    // Code Challenge: Class 08
+    public LinkedList<T> zipLists(LinkedList<T> list1, LinkedList<T> list2) {
+        if (list1.head == null) {
+            return list2;
+        } else if (list2.head == null) {
+            return list1;
+        } else {
+            Node<T> current1 = list1.head;
+            Node<T> current2 = list2.head;
+            Node<T> temp1, temp2;
+            while (current1 != null && current2 != null) {
+                if (current1.getNext() == null) {
+                    current1.setNext(current2);
+                    break;
+                }
+                temp1 = current1.getNext();
+                temp2 = current2.getNext();
+                current1.setNext(current2);
+                current2.setNext(temp1);
+                current1 = current1.getNext().getNext();
+                current2 = temp2;
+                size++;
+            }
+        }
+        return list1;
+    }
 
+    // Code Challenge: Class 09
+    // Mohammed khaled Jaradat-Solution
+    public LinkedList<T> reverseLinked(LinkedList<T> list) {
+        Node<T> current = list.head;
+        Node<T> previous = null;
+        Node<T> next = null;
+        while (current != null) {
+            next = current.getNext();
+            current.setNext(previous);
+            previous = current;
+            current = next;
+        }
+        list.head = previous;
+        return list;
+    }
+
+    // This code is copied from
+    // https://www.phptpoint.com/java-program-to-determine-whether-a-singly-linked-list-is-the-palindrome/
+    public Node<T> reverseList(Node<T> temp) {
+        Node<T> current = temp;
+        Node<T> prevNode = null, nextNode = null;
+
+        while (current != null) {
+            nextNode = current.getNext();
+            current.setNext(prevNode);
+            prevNode = current;
+            current = nextNode;
+        }
+        return prevNode;
+    }
+
+    // Palindrome solution
+    public boolean checkPalindrome() {
+        Node<T> rightHead = head, node = head;
+        while (node != null && node.getNext() != null) {
+            node = node.getNext().getNext();
+            rightHead = rightHead.getNext();
+        }
+        // To optimize time complixity we can ignore the first loop
+        // we can let rightHead point to mid immediatly
+        // mid = (size%2 == 0)? (size/2) : ((size+1)/2);
+
+        node = head;
+        rightHead = reverseList(rightHead);
+        while (rightHead != null) {
+            if (rightHead.getData() != node.getData())
+                return false;
+            rightHead = rightHead.getNext();
+            node = node.getNext();
+        }
+        return true;
+    }
+
+}
