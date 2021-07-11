@@ -41,4 +41,6 @@ public class StackLinkedList<T> {
     public boolean isEmpty() {
         return top == null;
     }
+
+    //You forgot, ToString
 }
