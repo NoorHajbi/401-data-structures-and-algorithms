@@ -23,15 +23,16 @@ public class QueueLinkedList<T> {
     }
 
     public int dequeue() {
-        if (this.front == null){
+        if (this.front == null) {
             System.out.println("The queue is empty");
             return Integer.MIN_VALUE;
-        }else{
-        //else if front.next== null
-        Node temp = this.front;
-        this.front = this.front.next;
-        temp.next= null;
-        return temp.data;}
+        } else {
+            //else if front.next== null
+            Node temp = this.front;
+            this.front = this.front.next;
+            temp.next = null;
+            return temp.data;
+        }
     }
 
     //I can put them in interface
@@ -42,18 +43,24 @@ public class QueueLinkedList<T> {
         } else
             return front.data;
     }
+
     public boolean isEmpty() {
         return front == null;
     }
 
-    ////
-//    Create a pull request from your branch to your master branch
-//    In your open pull request, leave as a comment a checklist of the specifications and tasks above,
-//    with the actual steps that you completed checked off
+    @Override
+    public String toString() {
+        Node temp = this.front;
+        StringBuilder output = new StringBuilder();
+        if (temp == null) {
+            return "Please fill the Queue list";
+        }
+        while (temp != null) {
+            output.append("{ ").append(temp.data).append(" } -> ");
+            temp = temp.next;
+        }
+        output.append("NULL");
+        return output.toString();
+    }
 
-//    Submitting your completed work to Canvas:
-//    Copy the link to your open pull request and paste it into the corresponding Canvas assignment
-//    Leave a description of how long this assignment took you in the comments box
-//    Add any additional comments you like about your process or any difficulties you may have had with the assignment
-//    Merge your branch into master, and delete your branch (don’t worry, the PR link will still work)
 }

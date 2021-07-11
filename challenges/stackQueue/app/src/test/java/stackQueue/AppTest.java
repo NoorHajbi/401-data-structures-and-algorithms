@@ -4,31 +4,125 @@
 package stackQueue;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
+    StackLinkedList<Integer> testStack = new StackLinkedList<>();
+    QueueLinkedList<Integer> testQueue = new QueueLinkedList<>();
 
+    // 1.Can successfully instantiate an empty stack & Can successfully instantiate an empty queue
+    @Test
+    public void testEmptySQ() {
+        assertNull("null failed", testStack.top);
+        assertNull("null failed", testQueue.front);
+    }
 
-//    Structure and Testing
-//    Utilize the Single-responsibility principle:
-//    any methods you write should be clean, reusable, abstract component parts to the whole challenge.
-//    You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
-//
-//    Write tests to prove the following functionality:
-//
-//    Can successfully push onto a stack
-//    Can successfully push multiple values onto a stack
-//    Can successfully pop off the stack
-//    Can successfully empty a stack after multiple pops
-//    Can successfully peek the next item on the stack
-//    Can successfully instantiate an empty stack
-//    Calling pop or peek on empty stack raises exception
-//    Can successfully enqueue into a queue
-//    Can successfully enqueue multiple values into a queue
-//    Can successfully dequeue out of a queue the expected value
-//    Can successfully peek into a queue, seeing the expected value
-//    Can successfully empty a queue after multiple dequeues
-//    Can successfully instantiate an empty queue
-//    Calling dequeue or peek on empty queue raises exception
-//    Ensure your tests are passing before you submit your solution.
+    // 2. Can successfully push onto a stack & Can successfully enqueue into a queue
+    @Test
+    public void testInsert() {
+        testStack.push(1);
+        testQueue.enqueue(1);
+        assertEquals(
+                "Error with Stack Insertion:\n ",
+                "{ 1 } -> NULL",
+                String.valueOf(testStack)
+        );
+        assertEquals(
+                "Error with Queue Insertion:\n ",
+                "{ 1 } -> NULL",
+                String.valueOf(testQueue)
+        );
+
+        //3. Can successfully push multiple values onto a stack &  Can successfully enqueue multiple values into a queue
+        testStack.push(2);
+        testQueue.enqueue(2);
+        assertEquals(
+                "Error with multiple Stack Insertion:\n ",
+                "{ 2 } -> { 1 } -> NULL",
+                String.valueOf(testStack)
+        );
+        assertEquals(
+                "Error with multiple Queue Insertion:\n ",
+                "{ 1 } -> { 2 } -> NULL",
+                String.valueOf(testQueue)
+        );
+    }
+
+    //4. Can successfully peek
+    @Test
+    public void testPeekFull() {
+        testInsert();
+        assertEquals(
+                "Error with Stack peek:\n ",
+                2,
+                testStack.peek()
+        );
+        assertEquals(
+                "Error with Queue peek:\n ",
+                1,
+                testQueue.peek()
+        );
+    }
+
+    //4. Can successfully raise exception when peek on empty
+    @Test
+    public void testPeekEmpty() {
+        assertEquals(
+                "Error with peek on empty:\n ",
+                -2147483648,
+                testStack.peek()
+        );
+        assertEquals(
+                "Error wit Queue when peek on empty:\n ",
+                -2147483648,
+                testQueue.peek()
+        );
+    }
+
+    //5. Can successfully pop off the stack & dequeue out of a queue the expected value
+    //6. check empty
+    @Test
+    public void testPopDequeue() {
+        testInsert();
+        assertFalse("Error when call isEmpty() with full Stack:\n ", testStack.isEmpty());
+        assertFalse("Error when call isEmpty() with full queue:\n ", testQueue.isEmpty());
+        assertEquals(
+                "Error with pop:\n ",
+                2,
+                testStack.pop()
+        );
+        assertEquals(
+                "Error with dequeue:\n ",
+                1,
+                testQueue.dequeue()
+        );
+        assertEquals(
+                "Error with pop:\n ",
+                1,
+                testStack.pop()
+        );
+        assertEquals(
+                "Error with dequeue:\n ",
+                2,
+                testQueue.dequeue()
+        );
+    }
+
+    @Test
+    public void testPopDequeueEmpty() {
+        assertEquals(
+                "Error with pop:\n ",
+                -2147483648,
+                testStack.pop()
+        );
+        assertEquals(
+                "Error with dequeue:\n ",
+                -2147483648,
+                testQueue.dequeue()
+        );
+
+        assertTrue("Error when call isEmpty() with empty Stack:\n ", testStack.isEmpty());
+        assertTrue("Error when call isEmpty() with empty queue:\n ", testQueue.isEmpty());
+    }
 }
