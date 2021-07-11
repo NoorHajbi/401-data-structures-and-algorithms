@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="073a8bd1-a693-4f8b-9f6f-4348ab3db830" name="Default Changelist" comment="" />
+    <list default="true" id="073a8bd1-a693-4f8b-9f6f-4348ab3db830" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../stackQueue/app/src/main/java/data/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stackQueue/app/src/main/java/stackQueue/QueueLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stackQueue/app/src/main/java/stackQueue/StackLinkedList.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

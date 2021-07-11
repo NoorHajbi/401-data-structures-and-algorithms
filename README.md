@@ -69,6 +69,15 @@ Using this method you can insert the index, and it will return the value within 
 # 8.Singly Linked List ->zip lists function
 This function take 2 linked lists and return them as a one link list(zipped).
 
+# 10.Stack and a Queue Implementation
+# Stacks and Queues
+<!-- Short summary or background information -->
+
+## Challenge
+<!-- Description of the challenge -->
+
+
+
 ----
 
 ## Whiteboard Process
