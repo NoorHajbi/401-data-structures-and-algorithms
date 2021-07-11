@@ -1,14 +1,14 @@
 package stackQueue;
 
-public class pseudoQueue {
+public class pseudoQueue<T> {
     StackLinkedList<Integer> stackList1;
     StackLinkedList<Integer> stackList2;
 
-    pseudoQueue() {
-        this.stackList1 = new StackLinkedList<Integer>();
-        this.stackList2 = new StackLinkedList<Integer>();
+    public pseudoQueue() {
+        this.stackList1 = new StackLinkedList<Integer>(); //as a rear //top
+        this.stackList2 = new StackLinkedList<Integer>(); //as a front
     }
-//    Methods:
+    //    Methods:
 //    1
 //    input [10]->[15]->[20]
 //          arg  5
@@ -16,11 +16,13 @@ public class pseudoQueue {
 //    (2)
 //    5
 //    5
-//    enqueue
-//    Arguments: value
-//    Inserts value into the PseudoQueue, using a first-in, first-out approach.
 
-//    (1)
+    //    Inserts value into the PseudoQueue, using a first-in, first-out approach.
+    public void enqueue(int value) {
+        this.stackList1.push(value);
+    }
+
+    //    (1)
 //   input [5]->[10]->[15]->[20]
 //        output    20
 //           state [5]->[10]->[15])
@@ -29,11 +31,29 @@ public class pseudoQueue {
 //    [5]->[10]->[15]
 //    15
 //5 10
-//    dequeue
-//    Arguments: none
-//    Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
 
+    public int dequeue() {
+        if (this.stackList2.top == null) {
+            while (stackList1.top != null) {
+                stackList2.push(stackList1.pop());
+            }
+        }
+        return stackList2.pop();
+    }
 
+    @Override
+    public String toString() {
+        //will be full at enqueue and empty in dequeue
+        if (stackList1.top == null)
+            return stackList2.toString();
+
+            //will be empty at enqueue and full in dequeue
+        else if (stackList2.top == null)
+            return stackList1.toString();
+        else
+            return "Please fill the queue";
+
+    }
 
 //    https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Testing
 //    https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Documentation

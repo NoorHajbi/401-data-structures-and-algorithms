@@ -5,24 +5,27 @@
 
 import stackQueue.QueueLinkedList;
 import stackQueue.StackLinkedList;
+import stackQueue.pseudoQueue;
 
 public class App {
     private static final StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
+    private static final pseudoQueue<Integer> pseudoQueueList = new pseudoQueue<>();
+
 
     public static void main(String[] args) {
         QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
 
         // 1. Stack
-        System.out.println("stackList: " + stackList);
+//        System.out.println("stackList: " + stackList);
 //        stackList.push(1);
 //        stackList.push(2);
 //        stackList.push(3);
 
-        System.out.println("stackList: " + stackList);
+//        System.out.println("stackList: " + stackList);
 //        System.out.println(stackList.peek());
 //        System.out.println("stackList isEmpty: "+ stackList.isEmpty());
 //
-        System.out.println("pop 3: " + stackList.pop());
+//        System.out.println("pop 3: " + stackList.pop());
 //        System.out.println("pop 2: "+ stackList.pop());
 //        System.out.println("pop 1: "+ stackList.pop());
 //
@@ -39,7 +42,7 @@ public class App {
 //        System.out.println("Queue list: " + queueList);
 //        System.out.println("queueList.isEmpty(): " + queueList.isEmpty());
 //
-        System.out.println("dequeue 1: " + queueList.dequeue());
+//        System.out.println("dequeue 1: " + queueList.dequeue());
 //        System.out.println("dequeue 2: " + queueList.dequeue());
 //        System.out.println("dequeue 3: " + queueList.dequeue());
 //
@@ -51,6 +54,18 @@ public class App {
 //
 //        System.out.println("Queue list peek(): " + queueList.peek());
 //
+        System.out.println(pseudoQueueList);
+
+        pseudoQueueList.enqueue(4);
+        pseudoQueueList.enqueue(5);
+        pseudoQueueList.enqueue(6);
+        pseudoQueueList.enqueue(7);
+//
+        System.out.println(pseudoQueueList);
+
+        System.out.println("dequeue: " + pseudoQueueList.dequeue());
+
+        System.out.println(pseudoQueueList);
 
 
     }
