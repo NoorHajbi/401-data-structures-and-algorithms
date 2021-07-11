@@ -8,6 +8,7 @@ import types.LinkedList;
 public class App {
     private static final LinkedList<Integer> list = new LinkedList<>();
     private static final LinkedList<Integer> list2 = new LinkedList<>();
+
     public static void main(String[] args) {
         list.insertABeginning(1);
         list.insertABeginning(2);
@@ -16,7 +17,7 @@ public class App {
         list2.insertABeginning(5);
         list2.insertABeginning(6);
         System.out.println(list);
-        System.out.println(list.zipLists(list,list2));
+        System.out.println(list.zipLists(list, list2));
         //Check Search
 //        System.out.println("Is 3 exist? " + list.Includes(3));
 //        list.append(40);

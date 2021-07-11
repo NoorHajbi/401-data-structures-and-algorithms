@@ -95,7 +95,6 @@ public class AppTest {
     // 15.Where k and the length of the list are the same
     // 16.Where k is not a positive integer
     // 17.Where the linked list is of a size 1
-    // 18."Happy Path" where k is not at the end, but somewhere in the middle of the
     // linked list
     @Test
     public void testKthFromEnd() {
@@ -107,6 +106,15 @@ public class AppTest {
         LinkedList<Integer> size1 = new LinkedList<>();
         size1.insertABeginning(10);
         assertEquals("10", size1.kthFromEnd(0));
+    }
+
+    // 18."Happy Path" where k is not at the end, but somewhere in the middle of the
+    @Test
+    public void testHappyPath() {
+        testList();
+        testList.insertABeginning(4);
+        testList.insertABeginning(5);
+        assertEquals("3", testList.kthFromEnd(2));
     }
 
     // Code Challenge: Class 08
