@@ -10,11 +10,11 @@ import stackQueue.pseudoQueue;
 public class App {
     private static final StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
     private static final pseudoQueue<Integer> pseudoQueueList = new pseudoQueue<>();
+    private static final QueueLinkedList<Integer> dog = new QueueLinkedList<>();
 
 
     public static void main(String[] args) {
         QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
-
         // 1. Stack
 //        System.out.println("stackList: " + stackList);
 //        stackList.push(1);
