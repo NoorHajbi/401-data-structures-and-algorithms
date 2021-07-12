@@ -12,8 +12,6 @@
 |linked-list|[Directory](challenges/linked)| [LL](challenges/linked/app/src/main/java)|
 |Stack & Queue|[Directory](challenges/stackQueue)| [Stack&Queue](challenges/stackQueue/app/src/main/java)|
 
-
-
 # 1. Reverse an Array
 <!-- Description of the challenge -->
 We need to reverse array
@@ -126,9 +124,9 @@ Returns: Boolean indicating whether the queue is empty
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-1. Enqueue it is O(1), by pushing to stack2 immediately.
-2. Dequeue it is O(n), by popping each element from stack2 and pop it to stack1(if stack 1 was empty), then pop.
-and O(1) in the case that stack1 was not empty by popping immediately.
+1. Enqueue it is O(1), by pushing to stack1 immediately.
+2. Dequeue it is O(n), by popping each element from stack1 and pop it to stack2(if stack 2 was empty), then pop from stack2.
+and O(1) in the case that stack2 was not empty by popping immediately.
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
@@ -151,8 +149,11 @@ so to run it you need to Enqueue(value) or Dequeue.
 ![binarySearch](challenges/binarySearch/binarySearch.jpg)
 ![binaryVisual](challenges/binarySearch/binaryVisual.jpg) 
 
-## (5)
+## (8)
 [linkedList](challenges/linked/app/src/main/resources) 
+
+## (11)
+![stackQueuePseudo](challenges/stackQueue/app/src/main/resources/StackQueuePseudo.jpg) 
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
