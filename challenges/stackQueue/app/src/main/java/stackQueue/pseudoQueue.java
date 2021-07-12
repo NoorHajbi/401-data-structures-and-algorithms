@@ -56,7 +56,6 @@ public class pseudoQueue<T> {
     }
 
 //    https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Testing
-//    https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Documentation
 //    https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Submission
 
 }

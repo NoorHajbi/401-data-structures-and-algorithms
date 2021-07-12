@@ -113,6 +113,27 @@ Returns: Value of the node located at the front of the queue
 Arguments: none
 Returns: Boolean indicating whether the queue is empty
 
+# 11. Stack Queue Pseudo
+
+## Challenge Summary
+<!-- Description of the challenge -->
+1. Implement a queue by using two stacks
+2. Create 2Methods:
+   1. enqueue
+   - Inserts value into the PseudoQueue, using a first-in, first-out approach.
+   2. dequeue
+   - Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+1. Enqueue it is O(1), by pushing to stack2 immediately.
+2. Dequeue it is O(n), by popping each element from stack2 and pop it to stack1(if stack 1 was empty), then pop.
+and O(1) in the case that stack1 was not empty by popping immediately.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+It described in the previous node,
+so to run it you need to Enqueue(value) or Dequeue.
 
 ----
 
