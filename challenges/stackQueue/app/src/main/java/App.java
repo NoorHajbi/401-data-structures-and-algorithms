@@ -3,18 +3,29 @@
  */
 
 
-import stackQueue.QueueLinkedList;
-import stackQueue.StackLinkedList;
-import stackQueue.pseudoQueue;
+import stackQueue.*;
 
 public class App {
     private static final StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
     private static final pseudoQueue<Integer> pseudoQueueList = new pseudoQueue<>();
-    private static final QueueLinkedList<Integer> dog = new QueueLinkedList<>();
-
+//    private static final QueueLinkedList<Integer> dog = new QueueLinkedList<>();
+    private static final AnimalShelter shelter = new AnimalShelter();
 
     public static void main(String[] args) {
-        QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
+//        QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
+        Dog dog1 = new Dog("Dog1");
+        Dog dog2 = new Dog("Dog2");
+        Dog dog3 = new Dog("Dog3");
+        Cat cat1 = new Cat("Cat1");
+        Cat cat2 = new Cat("Cat2");
+        shelter.enqueue(dog1);
+        shelter.enqueue(cat1);
+        shelter.enqueue(dog2);
+        shelter.enqueue(dog3);
+        shelter.enqueue(cat2);
+        Animal animal =shelter.dequeue("cat");
+        System.out.println("Name: "+animal.getName());
+
         // 1. Stack
 //        System.out.println("stackList: " + stackList);
 //        stackList.push(1);
@@ -54,18 +65,18 @@ public class App {
 //
 //        System.out.println("Queue list peek(): " + queueList.peek());
 //
-        System.out.println(pseudoQueueList);
-
-        pseudoQueueList.enqueue(4);
-        pseudoQueueList.enqueue(5);
-        pseudoQueueList.enqueue(6);
-        pseudoQueueList.enqueue(7);
+//        System.out.println(pseudoQueueList);
 //
-        System.out.println(pseudoQueueList);
-
-        System.out.println("dequeue: " + pseudoQueueList.dequeue());
-
-        System.out.println(pseudoQueueList);
+//        pseudoQueueList.enqueue(4);
+//        pseudoQueueList.enqueue(5);
+//        pseudoQueueList.enqueue(6);
+//        pseudoQueueList.enqueue(7);
+//
+//        System.out.println(pseudoQueueList);
+//
+//        System.out.println("dequeue: " + pseudoQueueList.dequeue());
+//
+//        System.out.println(pseudoQueueList);
 
 
     }
