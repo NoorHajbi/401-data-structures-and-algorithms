@@ -15,7 +15,7 @@ public class StackLinkedList<T> {
             top = newNode;
             newNode.next = temp;
         }
-        System.out.println(value + " pushed to stack");
+//        System.out.println(value + " pushed to stack");
     }
 
     public int pop() {
