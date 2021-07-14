@@ -135,6 +135,11 @@ and O(1) in the case that stack2 was not empty by popping immediately.
 It described in the previous node,
 so to run it you need to Enqueue(value) or Dequeue.
 
+
+# 13. Stack Queue Brackets
+- Function Called **validateBrackets**, that take string and return boolean.
+- So it checks for the 3 types of brackets, and return true if the brackets in the string are balanced or false if they are not.
+
 ----
 
 ## Whiteboard Process
