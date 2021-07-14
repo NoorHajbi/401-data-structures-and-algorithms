@@ -1,8 +1,8 @@
 package stackQueue;
 
 public class AnimalShelter {
-    private QueueLinkedList<Animal> dog;
-    private QueueLinkedList<Animal> cat;
+    private final QueueLinkedList<Animal> dog;
+    private final QueueLinkedList<Animal> cat;
 
     public AnimalShelter() {
         this.dog = new QueueLinkedList<>();
@@ -38,7 +38,6 @@ public class AnimalShelter {
             return dog.toString();
         else
             return "Please fill the queue";
-
     }
 
 }
