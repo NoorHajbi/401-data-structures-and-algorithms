@@ -28,10 +28,10 @@ public class App {
 
         // 1. Stack
 //        System.out.println("stackList: " + stackList);
-//        stackList.push(1);
-//        stackList.push(2);
-//        stackList.push(3);
-
+//        stackList.push(10);
+//        stackList.push(15);
+//        stackList.push(20);
+//
 //        System.out.println("stackList: " + stackList);
 //        System.out.println(stackList.peek());
 //        System.out.println("stackList isEmpty: "+ stackList.isEmpty());
