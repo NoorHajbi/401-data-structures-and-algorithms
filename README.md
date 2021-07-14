@@ -11,6 +11,8 @@
 |binary-search|[Directory](challenges/binarySearch)|[layout](challenges/binarySearch/binarySearch.jpg) And [binaryVisual](challenges/binarySearch/binaryVisual.jpg)|
 |linked-list|[Directory](challenges/linked)| [LL](challenges/linked/app/src/main/java)|
 |Stack & Queue|[Directory](challenges/stackQueue)| [Stack&Queue](challenges/stackQueue/app/src/main/java)|
+|stack-queue-pseudo|[Directory](challenges/stackQueue)| [Stack&Queue](challenges/stackQueue/app/src/main/resources)|
+
 
 # 1. Reverse an Array
 <!-- Description of the challenge -->

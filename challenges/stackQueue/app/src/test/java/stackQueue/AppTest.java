@@ -8,8 +8,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    StackLinkedList<Integer> testStack = new StackLinkedList<>();
-    QueueLinkedList<Integer> testQueue = new QueueLinkedList<>();
+    private static final StackLinkedList<Integer> testStack = new StackLinkedList<>();
+    private static final QueueLinkedList<Integer> testQueue = new QueueLinkedList<>();
+    private static final pseudoQueue<Integer> testPseudoQueue = new pseudoQueue<>();
 
     // 1.Can successfully instantiate an empty stack & Can successfully instantiate an empty queue
     @Test
@@ -19,40 +20,45 @@ public class AppTest {
     }
 
     // 2. Can successfully push onto a stack & Can successfully enqueue into a queue
-    @Test
-    public void testInsert() {
-        testStack.push(1);
-        testQueue.enqueue(1);
-        assertEquals(
-                "Error with Stack Insertion:\n ",
-                "{ 1 } -> NULL",
-                String.valueOf(testStack)
-        );
-        assertEquals(
-                "Error with Queue Insertion:\n ",
-                "{ 1 } -> NULL",
-                String.valueOf(testQueue)
-        );
-
-        //3. Can successfully push multiple values onto a stack &  Can successfully enqueue multiple values into a queue
-        testStack.push(2);
-        testQueue.enqueue(2);
-        assertEquals(
-                "Error with multiple Stack Insertion:\n ",
-                "{ 2 } -> { 1 } -> NULL",
-                String.valueOf(testStack)
-        );
-        assertEquals(
-                "Error with multiple Queue Insertion:\n ",
-                "{ 1 } -> { 2 } -> NULL",
-                String.valueOf(testQueue)
-        );
-    }
+//    @Test
+//    public void testInsert() {
+//        testStack.push(1);
+//        testQueue.enqueue(1);
+//        assertEquals(
+//                "Error with Stack Insertion:\n ",
+//                "{ 1 } -> NULL",
+//                String.valueOf(testStack)
+//        );
+//
+//        assertEquals(
+//                "Error with Queue Insertion:\n ",
+//                "{ 1 } -> NULL",
+//                String.valueOf(testQueue)
+//        );
+//
+//        //3. Can successfully push multiple values onto a stack &  Can successfully enqueue multiple values into a queue
+//        testStack.push(2);
+//        testQueue.enqueue(2);
+//        assertEquals(
+//                "Error with multiple Stack Insertion:\n ",
+//                "{ 2 } -> { 1 } -> NULL",
+//                String.valueOf(testStack)
+//        );
+//
+//        assertEquals(
+//                "Error with multiple Queue Insertion:\n ",
+//                "{ 1 } -> { 2 } -> NULL",
+//                String.valueOf(testQueue)
+//        );
+//    }
 
     //4. Can successfully peek
     @Test
     public void testPeekFull() {
-        testInsert();
+        testStack.push(1);
+        testQueue.enqueue(1);
+        testStack.push(2);
+        testQueue.enqueue(2);
         assertEquals(
                 "Error with Stack peek:\n ",
                 2,
@@ -84,7 +90,10 @@ public class AppTest {
     //6. check empty
     @Test
     public void testPopDequeue() {
-        testInsert();
+        testStack.push(1);
+        testQueue.enqueue(1);
+        testStack.push(2);
+        testQueue.enqueue(2);
         assertFalse("Error when call isEmpty() with full Stack:\n ", testStack.isEmpty());
         assertFalse("Error when call isEmpty() with full queue:\n ", testQueue.isEmpty());
         assertEquals(
@@ -125,4 +134,62 @@ public class AppTest {
         assertTrue("Error when call isEmpty() with empty Stack:\n ", testStack.isEmpty());
         assertTrue("Error when call isEmpty() with empty queue:\n ", testQueue.isEmpty());
     }
+
+    //Code Challenge 11- Stack Queue Pseudo
+//    Happy Path - Expected outcome
+    @Test
+    public void testHappyPseudoQueue() {
+        testPseudoQueue.enqueue(20);
+        testPseudoQueue.enqueue(15);
+        testPseudoQueue.enqueue(10);
+        testPseudoQueue.enqueue(5);
+        //(1)
+        assertEquals(
+                "Error with enqueue in two Stacks peek:\n ",
+                "{ 5 } -> { 10 } -> { 15 } -> { 20 } -> NULL",
+                String.valueOf(testPseudoQueue)
+        );
+        //(2) also it is  Edge Case, because stack2 is empty, so it will talk more time
+        assertEquals(
+                "Error with dequeue in two Stacks peek:\n ",
+                20,
+                testPseudoQueue.dequeue()
+        );
+        //(3)
+        assertEquals(
+                "Error with dequeue in two Stacks peek:\n ",
+                15,
+                testPseudoQueue.dequeue()
+        );
+
+        testPseudoQueue.dequeue();
+        testPseudoQueue.dequeue();
+
+        //(4)
+        testPseudoQueue.enqueue(5);
+        assertEquals(
+                "Error with enqueue in two Stacks peek:\n ",
+                "{ 5 } -> NULL",
+                String.valueOf(testPseudoQueue)
+        );
+
+    }
+
+//    Expected failure
+@Test
+public void testEmptyPseudoQueue() {
+    assertEquals(
+            "null failed:\n ",
+            "Please fill the Linked List",
+            String.valueOf(testPseudoQueue.stackList2)
+    );
+    assertEquals(
+            "null failed:\n ",
+            -2147483648,
+            testPseudoQueue.dequeue()
+    );
+
+}
+
+
 }

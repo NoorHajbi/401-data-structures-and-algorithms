@@ -17,10 +17,10 @@ public class App {
 
         // 1. Stack
 //        System.out.println("stackList: " + stackList);
-//        stackList.push(1);
-//        stackList.push(2);
-//        stackList.push(3);
-
+//        stackList.push(10);
+//        stackList.push(15);
+//        stackList.push(20);
+//
 //        System.out.println("stackList: " + stackList);
 //        System.out.println(stackList.peek());
 //        System.out.println("stackList isEmpty: "+ stackList.isEmpty());
@@ -55,17 +55,21 @@ public class App {
 //        System.out.println("Queue list peek(): " + queueList.peek());
 //
         System.out.println(pseudoQueueList);
+//        pseudoQueueList.enqueue(20);
+//        pseudoQueueList.enqueue(15);
+//        pseudoQueueList.enqueue(10);
 
-        pseudoQueueList.enqueue(4);
-        pseudoQueueList.enqueue(5);
-        pseudoQueueList.enqueue(6);
-        pseudoQueueList.enqueue(7);
+
+//        pseudoQueueList.enqueue(5);
+//        pseudoQueueList.enqueue(5);
+//        pseudoQueueList.enqueue(6);
+//        pseudoQueueList.enqueue(7);
 //
         System.out.println(pseudoQueueList);
 
         System.out.println("dequeue: " + pseudoQueueList.dequeue());
-
-        System.out.println(pseudoQueueList);
+//
+//        System.out.println(pseudoQueueList);
 
 
     }
