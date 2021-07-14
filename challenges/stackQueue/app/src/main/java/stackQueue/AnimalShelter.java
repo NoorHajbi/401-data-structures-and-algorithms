@@ -18,9 +18,9 @@ public class AnimalShelter {
     }
 
     public Animal dequeue(String pref) {
-        if (pref.equals("cat")) {
+        if (pref.equals("cat") && !this.cat.isEmpty()) {
             return this.cat.dequeue();
-        } else if (pref.equals("dog")) {
+        } else if (pref.equals("dog") && !this.dog.isEmpty()) {
             return this.dog.dequeue();
         } else {
             return null;
@@ -33,9 +33,10 @@ public class AnimalShelter {
         if (cat.front != null)
             return cat.toString();
 
-            //will be empty at enqueue and full in dequeue
-        else if (dog.front != null)
+        //will be empty at enqueue and full in dequeue
+        if (dog.front != null)
             return dog.toString();
+
         else
             return "Please fill the queue";
     }

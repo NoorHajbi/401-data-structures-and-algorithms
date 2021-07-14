@@ -8,6 +8,9 @@ public class AppTest {
     private static final StackLinkedList<Integer> testStack = new StackLinkedList<>();
     private static final QueueLinkedList<Integer> testQueue = new QueueLinkedList<>();
     private static final pseudoQueue<Integer> testPseudoQueue = new pseudoQueue<>();
+    private static final AnimalShelter testShelterDog = new AnimalShelter();
+    private static final AnimalShelter testShelterCat = new AnimalShelter();
+
 
     // 1.Can successfully instantiate an empty stack & Can successfully instantiate an empty queue
     @Test
@@ -187,6 +190,82 @@ public class AppTest {
     }
 
     //Code Challenge 12- Stack Queue Pseudo
-//    Happy Path - Expected outcome
+    @Test
+    public void testAnimalShelter() {
+        assertEquals("Please fill the queue", String.valueOf(testShelterDog));
+        assertEquals("Please fill the queue", String.valueOf(testShelterCat));
+
+        Dog dog1 = new Dog("Bobby");
+        Cat cat1 = new Cat("Migalo");
+        Dog dog2 = new Dog("Milo");
+        Cat cat2 = new Cat("Lilly");
+        Dog dog3 = new Dog("Foxy");
+        assertEquals(
+                "failed to dequeue unexpected value:\n ",
+                "null",
+                String.valueOf(testShelterDog.dequeue("Turtle"))
+        );
+
+        testShelterDog.enqueue(dog1);
+        assertEquals(
+                "Error with enqueue dog1:\n ",
+                "{ Dog{name='Bobby'} } -> NULL",
+                String.valueOf(testShelterDog)
+        );
+        testShelterCat.enqueue(cat1);
+        assertEquals(
+                "Error with enqueue cat1:\n ",
+                "{ Cat{name='Migalo'} } -> NULL",
+                String.valueOf(testShelterCat)
+        );
+        testShelterCat.enqueue(cat2);
+        testShelterDog.enqueue(dog2);
+        testShelterDog.enqueue(dog3);
+        assertEquals(
+                "Error with enqueue cats:\n ",
+                "{ Cat{name='Migalo'} } -> { Cat{name='Lilly'} } -> NULL",
+                String.valueOf(testShelterCat)
+        );
+        assertEquals(
+                "Error with enqueue dogs:\n ",
+                "{ Dog{name='Bobby'} } -> { Dog{name='Milo'} } -> { Dog{name='Foxy'} } -> NULL",
+                String.valueOf(testShelterDog)
+        );
+        //Dequeue first
+        Animal first = testShelterDog.dequeue("dog");
+        assertEquals(
+                "Error with dequeue first:\n ",
+                "Bobby",
+                first.getName()
+        );
+        //Dequeue middle
+        Animal middle = testShelterDog.dequeue("dog");
+        assertEquals(
+                "Error with dequeue first:\n ",
+                "Milo",
+                middle.getName()
+        );
+        //Dequeue last
+        Animal last = testShelterDog.dequeue("dog");
+        assertEquals(
+                "Error with dequeue first:\n ",
+                "Foxy",
+                last.getName()
+        );
+        //Dequeue null
+        Animal noDogs = testShelterDog.dequeue("dog");
+        assertEquals(
+                "Error with dequeue first:\n ",
+                "null",
+                String.valueOf(noDogs)
+        );
+    }
+
+    @Test
+    public void testEmptyAS() {
+        assertNull("null failed", testShelterDog.dequeue(""));
+        assertNull("null failed", testShelterCat.dequeue(""));
+    }
+
 
 }

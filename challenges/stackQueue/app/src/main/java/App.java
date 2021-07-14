@@ -8,23 +8,37 @@ import stackQueue.*;
 public class App {
     private static final StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
     private static final pseudoQueue<Integer> pseudoQueueList = new pseudoQueue<>();
-//    private static final QueueLinkedList<Integer> dog = new QueueLinkedList<>();
-    private static final AnimalShelter shelter = new AnimalShelter();
+    //    private static final QueueLinkedList<Integer> dog = new QueueLinkedList<>();
+    private static final AnimalShelter shelterCat = new AnimalShelter();
+    private static final AnimalShelter shelterDog = new AnimalShelter();
 
     public static void main(String[] args) {
 //        QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
-        Dog dog1 = new Dog("Dog1");
-        Dog dog2 = new Dog("Dog2");
-        Dog dog3 = new Dog("Dog3");
-        Cat cat1 = new Cat("Cat1");
-        Cat cat2 = new Cat("Cat2");
-        shelter.enqueue(dog1);
-        shelter.enqueue(cat1);
-        shelter.enqueue(dog2);
-        shelter.enqueue(dog3);
-        shelter.enqueue(cat2);
-        Animal animal =shelter.dequeue("cat");
-        System.out.println("Name: "+animal.getName());
+        Dog dog1 = new Dog("Bobby");
+        Dog dog2 = new Dog("Milo");
+        Dog dog3 = new Dog("Foxy");
+        Cat cat1 = new Cat("Migalo");
+        Cat cat2 = new Cat("Lilly");
+        shelterDog.enqueue(dog1);
+//        System.out.println("Dog1 shelter: "+shelterDog);
+        shelterCat.enqueue(cat1);
+//        System.out.println("cat1 shelter: "+shelterCat);
+        shelterDog.enqueue(dog2);
+        shelterDog.enqueue(dog3);
+//        System.out.println("Dog2 shelter: "+shelterDog);
+//        shelter.enqueue(dog3);
+        shelterCat.enqueue(cat2);
+//        System.out.println("cat2 shelter: "+shelterCat);
+//        Animal animal =shelter.dequeue("cat");
+//        System.out.println("Name: "+animal.getName());
+        Animal first = shelterDog.dequeue("dog");
+        System.out.println("Name: " + first.getName());
+        Animal middle = shelterDog.dequeue("dog");
+        System.out.println("Name: " + middle.getName());
+        Animal last = shelterDog.dequeue("dog");
+        System.out.println("Name: " + last.getName());
+        Animal noDogs = shelterDog.dequeue("dog");
+//        System.out.println("Name: "+noDogs.getName());
 
         // 1. Stack
 //        System.out.println("stackList: " + stackList);
