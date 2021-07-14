@@ -44,12 +44,10 @@ public class AppTest {
 //                "{ 2 } -> { 1 } -> NULL",
 //                String.valueOf(testStack)
 //        );
-//
-//        assertEquals(
-//                "Error with multiple Queue Insertion:\n ",
-//                "{ 1 } -> { 2 } -> NULL",
-//                String.valueOf(testQueue)
-//        );
+//        testStack.pop();
+//        testStack.pop();
+//        testQueue.dequeue();
+//        testQueue.dequeue();
 //    }
 
     //4. Can successfully peek
@@ -172,24 +170,25 @@ public class AppTest {
                 "{ 5 } -> NULL",
                 String.valueOf(testPseudoQueue)
         );
+        testPseudoQueue.dequeue();
 
     }
 
-//    Expected failure
-@Test
-public void testEmptyPseudoQueue() {
-    assertEquals(
-            "null failed:\n ",
-            "Please fill the Linked List",
-            String.valueOf(testPseudoQueue.stackList2)
-    );
-    assertEquals(
-            "null failed:\n ",
-            -2147483648,
-            testPseudoQueue.dequeue()
-    );
+    //    Expected failure
+    @Test
+    public void testEmptyPseudoQueue() {
+        assertEquals(
+                "null failed:\n ",
+                "Please fill the Linked List",
+                String.valueOf(testPseudoQueue.stackList2)
+        );
+        assertEquals(
+                "null failed:\n ",
+                -2147483648,
+                testPseudoQueue.dequeue()
+        );
 
-}
+    }
 
 
 }
