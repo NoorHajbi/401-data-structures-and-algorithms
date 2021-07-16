@@ -175,8 +175,6 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-<<<<<<< HEAD
-=======
           <url>file://$PROJECT_DIR$/app/src/main/java/linked/App.java</url>
           <line>10</line>
           <properties class="linked.App">
@@ -185,7 +183,6 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
->>>>>>> main
           <url>file://$PROJECT_DIR$/app/src/test/java/linked/AppTest.java</url>
           <line>97</line>
           <properties class="linked.AppTest" method="testKthFromEnd">
