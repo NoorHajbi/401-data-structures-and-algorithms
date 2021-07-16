@@ -10,8 +10,9 @@
 |insert-shift|[Directory](challenges/insert)|[Insert](challenges/insert/insert.png)|
 |binary-search|[Directory](challenges/binarySearch)|[layout](challenges/binarySearch/binarySearch.jpg) And [binaryVisual](challenges/binarySearch/binaryVisual.jpg)|
 |linked-list|[Directory](challenges/linked)| [LL](challenges/linked/app/src/main/java)|
+|linked-list-zip|[Directory](challenges/stackQueue)|[linked-list-zip](challenges/linked/app/src/main/resources)|
 |Stack & Queue|[Directory](challenges/stackQueue)| [Stack&Queue](challenges/stackQueue/app/src/main/java)|
-|stack-queue-pseudo|[Directory](challenges/stackQueue)| [Stack&Queue](challenges/stackQueue/app/src/main/resources)|
+|stack-queue-pseudo|[Directory](challenges/stackQueue)|[stack-queue-pseudo](challenges/stackQueue/app/src/main/resources)|
 
 
 # 1. Reverse an Array
@@ -152,8 +153,9 @@ so to run it you need to Enqueue(value) or Dequeue.
 ![binaryVisual](challenges/binarySearch/binaryVisual.jpg) 
 
 ## (8)
-[linkedList](challenges/linked/app/src/main/resources) 
+![linked-list-zip](challenges/linked/app/src/main/resources/linkedListZip.jpg)
 
+![linked-list-zip](challenges/linked/app/src/main/resources/linkedListZipVisuals.jpg)
 ## (11)
 ![stackQueuePseudo](challenges/stackQueue/app/src/main/resources/StackQueuePseudo.jpg) 
 
