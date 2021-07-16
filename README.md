@@ -156,6 +156,7 @@ so to run it you need to Enqueue(value) or Dequeue.
 ![linked-list-zip](challenges/linked/app/src/main/resources/linkedListZip.jpg)
 
 ![linked-list-zip](challenges/linked/app/src/main/resources/linkedListZipVisuals.jpg)
+
 ## (11)
 ![stackQueuePseudo](challenges/stackQueue/app/src/main/resources/StackQueuePseudo.jpg) 
 
