@@ -129,4 +129,36 @@ public class AppTest {
         assertEquals("{ 3 } -> { 6 } -> { 2 } -> { 5 } -> { 1 } -> { 4 } -> NULL",
                 String.valueOf(testList.zipLists(testList, testList2)));
     }
+    @Test
+    public void testZipListsExample1() {
+        testList.insertABeginning(3);
+        testList.insertABeginning(1);
+        testList2.insertABeginning(4);
+        testList2.insertABeginning(9);
+        testList2.insertABeginning(5);
+        assertEquals("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 4 } -> NULL",
+                String.valueOf(testList.zipLists(testList, testList2)));
+    }
+
+    @Test
+    public void testZipListsExample2() {
+        testList.insertABeginning(3);
+        testList.insertABeginning(1);
+        testList2.insertABeginning(4);
+        testList2.insertABeginning(9);
+        testList2.insertABeginning(5);
+        assertEquals("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 4 } -> NULL",
+                String.valueOf(testList.zipLists(testList, testList2)));
+    }
+
+    @Test
+    public void testZipListsExample3() {
+        testList.insertABeginning(2);
+        testList.insertABeginning(3);
+        testList.insertABeginning(1);
+        testList2.insertABeginning(9);
+        testList2.insertABeginning(5);
+        assertEquals("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> NULL",
+                String.valueOf(testList.zipLists(testList, testList2)));
+    }
 }

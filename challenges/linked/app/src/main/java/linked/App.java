@@ -10,12 +10,12 @@ public class App {
     private static final LinkedList<Integer> list2 = new LinkedList<>();
 
     public static void main(String[] args) {
-        list.insertABeginning(1);
         list.insertABeginning(2);
         list.insertABeginning(3);
-        list2.insertABeginning(4);
+        list.insertABeginning(1);
+//        list2.insertABeginning(4);
+        list2.insertABeginning(9);
         list2.insertABeginning(5);
-        list2.insertABeginning(6);
         System.out.println(list);
         System.out.println(list.zipLists(list, list2));
         //Check Search
