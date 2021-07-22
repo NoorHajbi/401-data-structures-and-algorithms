@@ -19,6 +19,8 @@ public class AnimalShelter {
         } else if (animal instanceof Cat) {
             this.cat.enqueue(animal);
         }
+        else
+            throw new IllegalArgumentException("The Animal is neither a cat nor a dog");
     }
 
     public Animal dequeue(String pref) {
