@@ -3,14 +3,14 @@ package stackQueue;
 import data.Node;
 
 public class QueueLinkedList<T> {
-    public Node front, rear;
+    public Node<T> front, rear;
 
     public QueueLinkedList() {
         this.front = this.rear = null;
     }
 
-    public void enqueue(int value) {
-        Node newNode = new Node(value);
+    public void enqueue(T value) {
+        Node<T> newNode = new Node<>(value);
 
         //if it's empty, the newNode is rear and front
         if (this.rear == null) {
@@ -22,13 +22,12 @@ public class QueueLinkedList<T> {
         this.rear = newNode;
     }
 
-    public int dequeue() {
+    public T dequeue() {
         if (this.front == null) {
-            System.out.println("The queue is empty");
-            return Integer.MIN_VALUE;
+            return (T) "The queue is empty";
         } else {
             //else if front.next== null
-            Node temp = this.front;
+            Node<T> temp = this.front;
             this.front = this.front.next;
             temp.next = null;
             return temp.data;
@@ -36,10 +35,9 @@ public class QueueLinkedList<T> {
     }
 
     //I can put them in interface
-    public int peek() {
+    public T peek() {
         if (front == null) {
-            System.out.println("Queue is Empty");
-            return Integer.MIN_VALUE;
+            return (T) "Queue is Empty";
         } else
             return front.data;
     }

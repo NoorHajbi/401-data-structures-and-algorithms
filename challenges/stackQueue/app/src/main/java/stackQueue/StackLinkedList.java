@@ -23,7 +23,7 @@ public class StackLinkedList<T> {
         if (top == null)
             System.out.println("Stack is Empty");
         else {
-            popped = top.data;
+            popped = (int) top.data;
             top = top.next;
         }
         return popped;
@@ -34,7 +34,7 @@ public class StackLinkedList<T> {
             System.out.print("Stack is Empty, So the returned Peek-> ");
             return Integer.MIN_VALUE;
         } else
-            return top.data;
+            return (int) top.data;
     }
 
     //Returns: Boolean indicating whether or not the stack is empty.
