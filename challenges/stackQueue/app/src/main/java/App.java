@@ -97,8 +97,10 @@ public class App {
 //        System.out.println("Name: "+animal.getName());
         Animal first = shelterDog.dequeue("dog");
         System.out.println("Name: " + first.getName());
-        Animal middle = shelterDog.dequeue("dog");
-        System.out.println("Name: " + middle.getName());
+//        Animal middle = shelterDog.dequeue("dog");
+        System.out.println("shelterDog.dequeue(\"dog\": "+ shelterDog.dequeue("dog"));
+
+//        System.out.println("Name: " + middle.getName());
         Animal last = shelterDog.dequeue("dog");
         System.out.println("Name: " + last.getName());
         Animal noDogs = shelterDog.dequeue("dog");
