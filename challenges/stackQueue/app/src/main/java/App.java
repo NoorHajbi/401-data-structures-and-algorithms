@@ -3,6 +3,10 @@
  */
 
 
+import data.Animal;
+import data.Cat;
+import data.Dog;
+import stackQueue.AnimalShelter;
 import stackQueue.QueueLinkedList;
 import stackQueue.StackLinkedList;
 import stackQueue.pseudoQueue;
@@ -10,6 +14,8 @@ import stackQueue.pseudoQueue;
 public class App {
     private static final StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
     private static final pseudoQueue<Integer> pseudoQueueList = new pseudoQueue<>();
+    private static final AnimalShelter shelterCat = new AnimalShelter();
+    private static final AnimalShelter shelterDog = new AnimalShelter();
 
 
     public static void main(String[] args) {
@@ -70,6 +76,35 @@ public class App {
         System.out.println("dequeue: " + pseudoQueueList.dequeue());
 //
 //        System.out.println(pseudoQueueList);
+
+        /**********/
+        Dog dog1 = new Dog("Bobby");
+        Dog dog2 = new Dog("Milo");
+        Dog dog3 = new Dog("Foxy");
+        Cat cat1 = new Cat("Migalo");
+        Cat cat2 = new Cat("Lilly");
+        shelterDog.enqueue(dog1);
+//        System.out.println("Dog1 shelter: "+shelterDog);
+        shelterCat.enqueue(cat1);
+//        System.out.println("cat1 shelter: "+shelterCat);
+        shelterDog.enqueue(dog2);
+        shelterDog.enqueue(dog3);
+//        System.out.println("Dog2 shelter: "+shelterDog);
+//        shelter.enqueue(dog3);
+        shelterCat.enqueue(cat2);
+//        System.out.println("cat2 shelter: "+shelterCat);
+//        Animal animal =shelter.dequeue("cat");
+//        System.out.println("Name: "+animal.getName());
+        Animal first = shelterDog.dequeue("dog");
+        System.out.println("Name: " + first.getName());
+//        Animal middle = shelterDog.dequeue("dog");
+        System.out.println("shelterDog.dequeue(\"dog\": "+ shelterDog.dequeue("dog"));
+
+//        System.out.println("Name: " + middle.getName());
+        Animal last = shelterDog.dequeue("dog");
+        System.out.println("Name: " + last.getName());
+        Animal noDogs = shelterDog.dequeue("dog");
+//        System.out.println("Name: "+noDogs.getName());
 
 
     }

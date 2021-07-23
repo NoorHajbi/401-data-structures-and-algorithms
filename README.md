@@ -13,6 +13,7 @@
 |linked-list-zip|[Directory](challenges/stackQueue)|[linked-list-zip](challenges/linked/app/src/main/resources)|
 |Stack & Queue|[Directory](challenges/stackQueue)| [Stack&Queue](challenges/stackQueue/app/src/main/java)|
 |stack-queue-pseudo|[Directory](challenges/stackQueue)|[stack-queue-pseudo](challenges/stackQueue/app/src/main/resources)|
+|stackQueueAnimalShelter|[Directory](challenges/stackQueue)| [AnimalShelter](challenges/stackQueue/app/src/main/resources)|
 
 
 # 1. Reverse an Array
@@ -127,14 +128,40 @@ Returns: Boolean indicating whether the queue is empty
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-1. Enqueue it is O(1), by pushing to stack1 immediately.
-2. Dequeue it is O(n), by popping each element from stack1 and pop it to stack2(if stack 2 was empty), then pop from stack2.
+1. Enqueue is O(1), by pushing to stack1 immediately.
+2. Dequeue is O(n), by popping each element from stack1 and pop it to stack2(if stack 2 was empty), then pop from stack2.
 and O(1) in the case that stack2 was not empty by popping immediately.
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
-It described in the previous node,
+It described in the Summary,
 so to run it you need to Enqueue(value) or Dequeue.
+
+----
+# 12. Stack Queue Animal Shelter
+
+## Challenge Summary
+<!-- Description of the challenge -->
+1. **Dog & Cat classes** Implements Animal Interface.
+2. **AnimalShelter Class** holds only dogs and cats.
+3. The shelter operates using Queue.
+2. The 2Methods Inside AnimalShelter Class :
+   1. enqueue
+   - Arguments: animal, and **animal** can be either a dog or a cat object
+   2. dequeue
+   - Arguments: pref, and pref can be either "dog" or "cat".
+   - Return: either a dog or a cat, based on preference.
+   - If pref is not "dog" or "cat" then return null.
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+1. Enqueue is O(1), by enqueue to Dog or Cat immediately.
+2. Dequeue is O(1), by dequeue Dog or Cat immediately or return null.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+To run it you need to Enqueue(value) or Dequeue.
 
 ----
 
@@ -158,7 +185,14 @@ so to run it you need to Enqueue(value) or Dequeue.
 ![linked-list-zip](challenges/linked/app/src/main/resources/linkedListZipVisuals.jpg)
 
 ## (11)
-![stackQueuePseudo](challenges/stackQueue/app/src/main/resources/StackQueuePseudo.jpg) 
+![stackQueuePseudo](challenges/stackQueue/app/src/main/resources/StackQueuePseudo.jpg)
+
+## (12)
+![stackQueueAnimalShelter](challenges/stackQueue/app/src/main/resources/stackQueueAnimalShelter.png)
+
+![stackQueueAnimalShelter](challenges/stackQueue/app/src/main/resources/stackQueueAnimalShelterVisual.png)
+
+
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
