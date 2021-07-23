@@ -162,3 +162,8 @@ so to run it you need to Enqueue(value) or Dequeue.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
+
+
+# 13. Stack Queue Brackets
+- Function Called **validateBrackets**, that take string and return boolean.
+- So it checks for the 3 types of brackets, and return true if the brackets in the string are balanced or false if they are not.
