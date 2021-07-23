@@ -188,7 +188,10 @@ To run it you need to Enqueue(value) or Dequeue.
 ![stackQueuePseudo](challenges/stackQueue/app/src/main/resources/StackQueuePseudo.jpg)
 
 ## (12)
-![stackQueueAnimalShelter](challenges/stackQueue/app/src/main/resources/stackQueueAnimalShelter.jpg)
+![stackQueueAnimalShelter](challenges/stackQueue/app/src/main/resources/stackQueueAnimalShelter.png)
+
+![stackQueueAnimalShelter](challenges/stackQueue/app/src/main/resources/stackQueueAnimalShelterVisual.png)
+
 
 
 ## Approach & Efficiency

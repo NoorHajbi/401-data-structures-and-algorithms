@@ -195,7 +195,7 @@ public class AppTest {
 
     }
 
-    //Code Challenge 12- Stack Queue Pseudo
+    //Code Challenge 12- Stack Queue Animal Shelter
     @Test
     public void testAnimalShelter() {
         assertEquals("Please fill the queue", String.valueOf(testShelterDog));
