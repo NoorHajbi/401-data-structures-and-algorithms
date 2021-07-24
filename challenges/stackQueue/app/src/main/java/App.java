@@ -21,11 +21,9 @@ public class App {
 
     //Code Challenge 13
     private static boolean checkPairs(char open, char close) {
-        if (open == '(' && close == ')')
-            return true;
-        else if (open == '{' && close == '}')
-            return true;
-        else return open == '[' && close == ']';
+        return (open == '(' && close == ')')
+                || (open == '{' && close == '}')
+                || (open == '[' && close == ']');
     }
 
     public static boolean validateBrackets(String exp) {
@@ -52,7 +50,7 @@ public class App {
 
         // 1. Stack
         System.out.println("stackList: " + stackList);
-        System.out.println("stackList Brackets:" + validateBrackets("[({})]"));
+        System.out.println("stackList Brackets:" + validateBrackets("[({5(})]"));
 //        stackList.push(10);
 //        stackList.push(15);
 //        stackList.push(20);
