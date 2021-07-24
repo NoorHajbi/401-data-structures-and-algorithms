@@ -14,6 +14,8 @@
 |Stack & Queue|[Directory](challenges/stackQueue)| [Stack&Queue](challenges/stackQueue/app/src/main/java)|
 |stack-queue-pseudo|[Directory](challenges/stackQueue)|[stack-queue-pseudo](challenges/stackQueue/app/src/main/resources)|
 |stackQueueAnimalShelter|[Directory](challenges/stackQueue)| [AnimalShelter](challenges/stackQueue/app/src/main/resources)|
+|stackQueueBrackets|[Directory](challenges/stackQueue)| [AnimalShelter](challenges/stackQueue/app/src/main/resources)|
+
 
 
 # 1. Reverse an Array
@@ -164,8 +166,24 @@ so to run it you need to Enqueue(value) or Dequeue.
 To run it you need to Enqueue(value) or Dequeue.
 
 # 13. Stack Queue Brackets
+
+## Challenge Summary
+
 - Function Called **validateBrackets**, that take string and return boolean.
-- So it checks for the 3 types of brackets, and return true if the brackets in the string are balanced or false if they are not.
+- So it checks for the 3 types of brackets, 
+  and return true if the brackets in the string are balanced or false if they are not.
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+- Big O time -> O(n) because we are looping inside the string character by character.
+
+- Big O space -> O(n) because the method is taking a String.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+To run it you need to insert any string you want
 
 ----
 
@@ -196,6 +214,8 @@ To run it you need to Enqueue(value) or Dequeue.
 
 ![stackQueueAnimalShelter](challenges/stackQueue/app/src/main/resources/stackQueueAnimalShelterVisual.png)
 
+## (13)
+![stackQueueBrackets](challenges/stackQueue/app/src/main/resources/stackQueueBrackets.png)
 
 
 ## Approach & Efficiency
