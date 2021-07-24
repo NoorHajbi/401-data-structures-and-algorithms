@@ -3,15 +3,7 @@
  */
 
 
-import data.Animal;
-import data.Cat;
-import data.Dog;
-import stackQueue.AnimalShelter;
-import stackQueue.QueueLinkedList;
-import stackQueue.StackLinkedList;
-import stackQueue.pseudoQueue;
-
-import java.util.Stack;
+import stackQueue.*;
 
 public class App {
     private static final StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
@@ -19,38 +11,12 @@ public class App {
     private static final AnimalShelter shelterCat = new AnimalShelter();
     private static final AnimalShelter shelterDog = new AnimalShelter();
 
-    //Code Challenge 13
-    private static boolean checkPairs(char open, char close) {
-        return (open == '(' && close == ')')
-                || (open == '{' && close == '}')
-                || (open == '[' && close == ']');
-    }
-
-    public static boolean validateBrackets(String exp) {
-        Stack<Character> stack = new Stack<>();
-        if (exp.length() == 0) {
-            return false;
-        }
-        for (int i = 0; i < exp.length(); i++) {
-            if (exp.charAt(i) == '(' || exp.charAt(i) == '{' || exp.charAt(i) == '[')
-                stack.push(exp.charAt(i));
-            else if (exp.charAt(i) == ')' || exp.charAt(i) == '}' || exp.charAt(i) == ']') {
-                if (stack.isEmpty() || !checkPairs(stack.peek(), exp.charAt(i)))
-                    return false;
-                else
-                    stack.pop();
-            }
-        }
-        return stack.isEmpty();
-    }
-
-
     public static void main(String[] args) {
         QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
 
         // 1. Stack
         System.out.println("stackList: " + stackList);
-        System.out.println("stackList Brackets:" + validateBrackets("[({5(})]"));
+        System.out.println("stackList Brackets:" + StackBrackets.validateBrackets("[({5(})]"));
 //        stackList.push(10);
 //        stackList.push(15);
 //        stackList.push(20);
