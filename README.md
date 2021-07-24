@@ -14,7 +14,7 @@
 |Stack & Queue|[Directory](challenges/stackQueue)| [Stack&Queue](challenges/stackQueue/app/src/main/java)|
 |stack-queue-pseudo|[Directory](challenges/stackQueue)|[stack-queue-pseudo](challenges/stackQueue/app/src/main/resources)|
 |stackQueueAnimalShelter|[Directory](challenges/stackQueue)| [AnimalShelter](challenges/stackQueue/app/src/main/resources)|
-|stackQueueBrackets|[Directory](challenges/stackQueue)| [AnimalShelter](challenges/stackQueue/app/src/main/resources)|
+|stackQueueBrackets|[Directory](challenges/stackQueue)| [stackQueueBrackets](challenges/stackQueue/app/src/main/resources)|
 
 
 
