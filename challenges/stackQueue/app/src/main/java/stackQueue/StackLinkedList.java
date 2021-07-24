@@ -3,7 +3,7 @@ package stackQueue;
 import data.Node;
 
 public class StackLinkedList<T> {
-    Node top;
+     public Node<T> top;
 
     //O(1)
     public void push(int value) {
@@ -18,29 +18,53 @@ public class StackLinkedList<T> {
 //        System.out.println(value + " pushed to stack");
     }
 
-    public int pop() {
-        int popped = Integer.MIN_VALUE;
+    public T pop() {
         if (top == null)
-            System.out.println("Stack is Empty");
-        else {
-            popped = (int) top.data;
+            throw new IllegalArgumentException("Stack is Empty");
+            T popped = top.data;
             top = top.next;
-        }
-        return popped;
+            return popped;
     }
 
-    public int peek() {
+    public T peek() {
         if (top == null) {
-            System.out.print("Stack is Empty, So the returned Peek-> ");
-            return Integer.MIN_VALUE;
+            return (T)  "Stack is Empty, So the returned Peek-> ";
         } else
-            return (int) top.data;
+            return top.data;
     }
 
     //Returns: Boolean indicating whether or not the stack is empty.
     public boolean isEmpty() {
         return top == null;
     }
+
+//    //Code Challenge 13
+//
+//    private boolean ArePair(String open, char close)
+//    {
+//        if (open.equals("(") && close == ')')
+//            return true;
+//        else if (open.equals("{") && close == '}')
+//            return true;
+//        else return open.equals("]") && close == ']';
+//    }
+//
+//    public boolean validateBrackets(String exp) {
+//        StackLinkedList<Character> stackList = new StackLinkedList<Character>();
+//        for (int i = 0; i < exp.length(); i++)
+//        {
+//            if (exp.charAt(i) == '(' || exp.charAt(i) == '{' || exp.charAt(i) == '[')
+//                stackList.push(exp.charAt(i));
+//            else if (exp.charAt(i) == ')' || exp.charAt(i) == '}' || exp.charAt(i) == ']')
+//            {
+//                if (stackList.isEmpty() || !ArePair(stackList.top.toString(), exp.charAt(i)))
+//                    return false;
+//                else
+//                    stackList.pop();
+//            }
+//        }
+//        return stackList.isEmpty();
+//    }
 
     @Override
     public String toString() {

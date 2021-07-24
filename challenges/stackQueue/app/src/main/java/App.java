@@ -11,18 +11,48 @@ import stackQueue.QueueLinkedList;
 import stackQueue.StackLinkedList;
 import stackQueue.pseudoQueue;
 
+import java.util.Stack;
+
 public class App {
     private static final StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
     private static final pseudoQueue<Integer> pseudoQueueList = new pseudoQueue<>();
     private static final AnimalShelter shelterCat = new AnimalShelter();
     private static final AnimalShelter shelterDog = new AnimalShelter();
 
+    //Code Challenge 13
+    private static boolean checkPairs(char open, char close) {
+        if (open == '(' && close == ')')
+            return true;
+        else if (open == '{' && close == '}')
+            return true;
+        else return open == '[' && close == ']';
+    }
+
+    public static boolean validateBrackets(String exp) {
+        Stack<Character> stack = new Stack<>();
+        if (exp.length() == 0) {
+            return false;
+        }
+        for (int i = 0; i < exp.length(); i++) {
+            if (exp.charAt(i) == '(' || exp.charAt(i) == '{' || exp.charAt(i) == '[')
+                stack.push(exp.charAt(i));
+            else if (exp.charAt(i) == ')' || exp.charAt(i) == '}' || exp.charAt(i) == ']') {
+                if (stack.isEmpty() || !checkPairs(stack.peek(), exp.charAt(i)))
+                    return false;
+                else
+                    stack.pop();
+            }
+        }
+        return stack.isEmpty();
+    }
+
 
     public static void main(String[] args) {
         QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
 
         // 1. Stack
-//        System.out.println("stackList: " + stackList);
+        System.out.println("stackList: " + stackList);
+        System.out.println("stackList Brackets:" + validateBrackets("[({})]"));
 //        stackList.push(10);
 //        stackList.push(15);
 //        stackList.push(20);
@@ -60,7 +90,7 @@ public class App {
 //
 //        System.out.println("Queue list peek(): " + queueList.peek());
 //
-        System.out.println(pseudoQueueList);
+//        System.out.println(pseudoQueueList);
 //        pseudoQueueList.enqueue(20);
 //        pseudoQueueList.enqueue(15);
 //        pseudoQueueList.enqueue(10);
@@ -71,39 +101,39 @@ public class App {
 //        pseudoQueueList.enqueue(6);
 //        pseudoQueueList.enqueue(7);
 //
-        System.out.println(pseudoQueueList);
-
-        System.out.println("dequeue: " + pseudoQueueList.dequeue());
+//        System.out.println(pseudoQueueList);
+//
+//        System.out.println("dequeue: " + pseudoQueueList.dequeue());
 //
 //        System.out.println(pseudoQueueList);
 
         /**********/
-        Dog dog1 = new Dog("Bobby");
-        Dog dog2 = new Dog("Milo");
-        Dog dog3 = new Dog("Foxy");
-        Cat cat1 = new Cat("Migalo");
-        Cat cat2 = new Cat("Lilly");
-        shelterDog.enqueue(dog1);
+//        Dog dog1 = new Dog("Bobby");
+//        Dog dog2 = new Dog("Milo");
+//        Dog dog3 = new Dog("Foxy");
+//        Cat cat1 = new Cat("Migalo");
+//        Cat cat2 = new Cat("Lilly");
+//        shelterDog.enqueue(dog1);
 //        System.out.println("Dog1 shelter: "+shelterDog);
-        shelterCat.enqueue(cat1);
+//        shelterCat.enqueue(cat1);
 //        System.out.println("cat1 shelter: "+shelterCat);
-        shelterDog.enqueue(dog2);
-        shelterDog.enqueue(dog3);
+//        shelterDog.enqueue(dog2);
+//        shelterDog.enqueue(dog3);
 //        System.out.println("Dog2 shelter: "+shelterDog);
 //        shelter.enqueue(dog3);
-        shelterCat.enqueue(cat2);
+//        shelterCat.enqueue(cat2);
 //        System.out.println("cat2 shelter: "+shelterCat);
 //        Animal animal =shelter.dequeue("cat");
 //        System.out.println("Name: "+animal.getName());
-        Animal first = shelterDog.dequeue("dog");
-        System.out.println("Name: " + first.getName());
+//        Animal first = shelterDog.dequeue("dog");
+//        System.out.println("Name: " + first.getName());
 //        Animal middle = shelterDog.dequeue("dog");
-        System.out.println("shelterDog.dequeue(\"dog\": "+ shelterDog.dequeue("dog"));
+//        System.out.println("shelterDog.dequeue(\"dog\": "+ shelterDog.dequeue("dog"));
 
 //        System.out.println("Name: " + middle.getName());
-        Animal last = shelterDog.dequeue("dog");
-        System.out.println("Name: " + last.getName());
-        Animal noDogs = shelterDog.dequeue("dog");
+//        Animal last = shelterDog.dequeue("dog");
+//        System.out.println("Name: " + last.getName());
+//        Animal noDogs = shelterDog.dequeue("dog");
 //        System.out.println("Name: "+noDogs.getName());
 
 

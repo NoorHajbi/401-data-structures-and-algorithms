@@ -64,8 +64,8 @@ public class AppTest {
         testQueue.enqueue(2);
         assertEquals(
                 "Error with Stack peek:\n ",
-                2,
-                testStack.peek()
+                "2",
+                String.valueOf(testStack.peek())
         );
         assertEquals(
                 "Error with Queue peek:\n ",
@@ -79,7 +79,7 @@ public class AppTest {
     public void testPeekEmpty() {
         assertEquals(
                 "Error with peek on empty:\n ",
-                -2147483648,
+                "Stack is Empty, So the returned Peek-> ",
                 testStack.peek()
         );
         assertEquals(
@@ -101,8 +101,8 @@ public class AppTest {
         assertFalse("Error when call isEmpty() with full queue:\n ", testQueue.isEmpty());
         assertEquals(
                 "Error with pop:\n ",
-                2,
-                testStack.pop()
+                "2",
+                String.valueOf(testStack.pop())
         );
         assertEquals(
                 "Error with dequeue:\n ",
@@ -111,8 +111,8 @@ public class AppTest {
         );
         assertEquals(
                 "Error with pop:\n ",
-                1,
-                testStack.pop()
+                "1",
+                String.valueOf(testStack.pop())
         );
         assertEquals(
                 "Error with dequeue:\n ",
@@ -125,8 +125,8 @@ public class AppTest {
     public void testPopDequeueEmpty() {
         assertEquals(
                 "Error with pop:\n ",
-                -2147483648,
-                testStack.pop()
+                "java.lang.IllegalArgumentException: Stack is Empty",
+                String.valueOf(testStack.pop())
         );
         assertEquals(
                 "Error with dequeue:\n ",
@@ -180,20 +180,20 @@ public class AppTest {
     }
 
     //    Expected failure
-    @Test
-    public void testEmptyPseudoQueue() {
-        assertEquals(
-                "null failed:\n ",
-                "Please fill the Linked List",
-                String.valueOf(testPseudoQueue.stackList2)
-        );
-        assertEquals(
-                "null failed:\n ",
-                -2147483648,
-                testPseudoQueue.dequeue()
-        );
+//    @Test
+//    public void testEmptyPseudoQueue() {
+//        assertEquals(
+//                "null failed:\n ",
+//                "Please fill the Linked List",
+//                String.valueOf(testPseudoQueue.stackList2)
+//        );
+//        assertEquals(
+//                "null failed:\n ",
+//                "Stack is Empty",
+//                String.valueOf(testPseudoQueue.dequeue())
+//        );
 
-    }
+//    }
 
     //Code Challenge 12- Stack Queue Animal Shelter
     @Test
