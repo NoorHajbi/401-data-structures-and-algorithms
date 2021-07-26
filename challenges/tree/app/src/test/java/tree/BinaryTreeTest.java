@@ -51,4 +51,8 @@ public class BinaryTreeTest {
 
     }
 
+//    Happy Path - Expected outcome
+//    Expected failure
+//    Edge Case (if applicable/obvious)
+
 }
