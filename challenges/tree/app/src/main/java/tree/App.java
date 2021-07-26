@@ -54,5 +54,6 @@ public class App {
         System.out.println(binarySearchTree.contains(0));
         System.out.println();
 
+
     }
 }
