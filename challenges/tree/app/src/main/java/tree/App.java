@@ -36,7 +36,7 @@ public class App {
         System.out.println("postorder" + binaryTree.postOrder());
         System.out.println();
         System.out.println("Max  "+binaryTree.findMaximumValue());
-
+        System.out.println("BFS  "+binaryTree.breadthFirst(binaryTree));
 
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         System.out.println(binarySearchTree.contains(10));

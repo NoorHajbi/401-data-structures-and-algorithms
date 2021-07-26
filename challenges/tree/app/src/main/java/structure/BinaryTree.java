@@ -3,7 +3,9 @@ package structure;
 import data.Node;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.NoSuchElementException;
+import java.util.Queue;
 
 public class BinaryTree {
     private static final int MIN_VALUE = -1;
@@ -77,6 +79,27 @@ public class BinaryTree {
             }
         }
         return number;
+    }
+
+    //    https://www.baeldung.com/java-binary-tree
+    public ArrayList<Integer> breadthFirst(BinaryTree tree) {
+        if (this.root == null)
+            return null;
+        ArrayList<Integer> list = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(tree.getRoot());
+        while (!queue.isEmpty()) {
+            Node node = queue.remove();
+            list.add(node.getValue());
+            if (node.getLeft() != null) {
+                queue.add(node.getLeft());
+            }
+            if (node.getRight() != null) {
+                queue.add(node.getRight());
+
+            }
+        }
+        return list;
     }
 
     @Override
