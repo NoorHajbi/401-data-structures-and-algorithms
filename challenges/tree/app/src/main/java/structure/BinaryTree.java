@@ -3,8 +3,10 @@ package structure;
 import data.Node;
 
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class BinaryTree {
+    private static final int MIN_VALUE = -1;
     Node root;
 
     public BinaryTree() {
@@ -62,6 +64,19 @@ public class BinaryTree {
 
     public ArrayList<Integer> postOrder() {
         return postOrder(root, new ArrayList<>());
+    }
+
+    // Code Challenge 16
+    public int findMaximumValue() {
+        int number = MIN_VALUE;
+        if (root != null) {
+            ArrayList<Integer> list = inOrder();
+            for (Integer integer : list) {
+                if (number < integer)
+                    number = integer;
+            }
+        }
+        return number;
     }
 
     @Override

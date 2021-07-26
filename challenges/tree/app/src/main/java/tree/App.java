@@ -20,6 +20,7 @@ public class App {
         System.out.println("Empty  " + binaryTree);
 
         // adds nodes to the tree
+        System.out.println("Max  "+binaryTree.findMaximumValue());
         binaryTree.setRoot(new Node(1));
         System.out.println("Root " + binaryTree.getRoot().getValue());
         System.out.println();
@@ -34,6 +35,7 @@ public class App {
         System.out.println();
         System.out.println("postorder" + binaryTree.postOrder());
         System.out.println();
+        System.out.println("Max  "+binaryTree.findMaximumValue());
 
 
         BinarySearchTree binarySearchTree = new BinarySearchTree();
@@ -51,6 +53,7 @@ public class App {
         System.out.println(binarySearchTree.contains(5));
         System.out.println(binarySearchTree.contains(0));
         System.out.println();
+
 
     }
 }
