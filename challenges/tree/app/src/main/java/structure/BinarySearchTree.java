@@ -47,24 +47,29 @@ public class BinarySearchTree {
     }
 
     public boolean contains(int value) {
-        if (root.getValue() == value) {
-            return true;
-        } else if (value < root.getValue()) {
-            if (root.getLeft() == null) { //not has a left Child
-                return false;
-            }
-            root = root.getLeft();
-            return contains(value);
-        } else if (value > root.getValue()) {
-            if (root.getRight() == null) {
-                return false;
-            }
-            root = root.getRight();
-            return contains(value);
-        }
-        return true;
+        if (root != null)
+            return contains(this.root, value);
+        else
+            return false; //for null
     }
 
+    private boolean contains(Node node, int value) {
+        if (node.getValue() == value) {
+            return true;
+        }
+        if (value < node.getValue()) {
+            if (node.getLeft() == null) { //not has a left Child
+                return false;
+            }
+            return contains(node.getLeft(), value);
+        } else if (value > node.getValue()) {
+            if (node.getRight() == null) {
+                return false;
+            }
+            return contains(node.getRight(), value);
+        }
+        return false;
+    }
 
     @Override
     public String toString() {

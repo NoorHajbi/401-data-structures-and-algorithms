@@ -37,6 +37,7 @@ public class App {
 
 
         BinarySearchTree binarySearchTree = new BinarySearchTree();
+        System.out.println(binarySearchTree.contains(10));
         binarySearchTree.add(5);
         binarySearchTree.add(7);
         binarySearchTree.add(3);
@@ -44,10 +45,11 @@ public class App {
 
         System.out.println(binarySearchTree);
         System.out.println();
-//        System.out.println(binarySearchTree.contains(10));
-//        System.out.println(binarySearchTree.contains(3));
-//        System.out.println(binarySearchTree.contains(7));
+        System.out.println(binarySearchTree.contains(10));
+        System.out.println(binarySearchTree.contains(3));
+        System.out.println(binarySearchTree.contains(7));
         System.out.println(binarySearchTree.contains(5));
+        System.out.println(binarySearchTree.contains(0));
         System.out.println();
 
     }
