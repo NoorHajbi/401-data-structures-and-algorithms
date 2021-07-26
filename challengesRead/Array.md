@@ -37,4 +37,4 @@ or -1 if the element is not in the array.
 ## Whiteboard Process
 
 ![binarySearch](../challenges/binarySearch/binarySearch.jpg)
-![binaryVisual](../hallenges/binarySearch/binaryVisual.jpg) 
+![binaryVisual](../challenges/binarySearch/binaryVisual.jpg) 

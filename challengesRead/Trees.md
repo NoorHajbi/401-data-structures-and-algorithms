@@ -57,7 +57,7 @@ We asked to write a method that finds the maximum numeric value stored in the bi
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![TreeMax](../challenges/tree/app/src/main/resources/TreeMax.png)
+![TreeMax](../challenges/tree/app/src/main/resources/tgitreeMax.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
