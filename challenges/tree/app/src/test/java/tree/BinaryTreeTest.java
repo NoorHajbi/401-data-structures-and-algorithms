@@ -51,8 +51,25 @@ public class BinaryTreeTest {
 
     }
 
-//    Happy Path - Expected outcome
-//    Expected failure
-//    Edge Case (if applicable/obvious)
+    //Code Challenge: Class 16
+    @Test
+    public void testEmptyMax() {
+        //Empty tree
+        assertEquals(-1, tree.findMaximumValue());
+
+        //Happy path
+        Node left = new Node(7);
+        Node right = new Node(5);
+        Node root = new Node(left, 2, right);
+        tree.setRoot(root);
+        tree.getRoot().getLeft().setLeft(new Node(2));
+        tree.getRoot().getLeft().setRight(new Node(6));
+        tree.getRoot().getLeft().getRight().setRight(new Node(11));
+        tree.getRoot().getLeft().getRight().setLeft(new Node(5));
+        tree.getRoot().getRight().setRight(new Node(9));
+        tree.getRoot().getRight().getRight().setLeft(new Node(4));
+        assertEquals(11, tree.findMaximumValue());
+    }
+
 
 }
