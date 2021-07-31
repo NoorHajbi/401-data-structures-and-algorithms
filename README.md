@@ -17,3 +17,6 @@
 |stackQueueBrackets|[Directory](challengesRead/StackQueue.md)| [stackQueueBrackets](challenges/stackQueue/app/src/main/resources)|
 |Trees|[Directory](challengesRead/Trees.md)| [Trees](challenges/tree/app/src/main/resources)|
 |TreeMax|[Directory](challengesRead/Trees.md)| [TreeMax](challenges/tree/app/src/main/resources)|
+|TreeBreadthFirst|[Directory](challengesRead/Trees.md)| [TreeBreadthFirst](challenges/tree/app/src/main/resources)|
+
+
