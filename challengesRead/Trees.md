@@ -67,3 +67,32 @@ O(n) because it checks the value for each node.
 <!-- Show how to run your code, and examples of it in action -->
 - Initilize A tree variable from **BinaryTree Class**.
 - then call the **findMaximumValue()** method.
+
+---
+# 17. Breadth First
+
+# Challenge Summary
+<!-- Description of the challenge -->
+We asked to write  breadth first method for breadth first traversal in a binary tree.
+- Method: **breadthFirst(tree)**
+- Arguments: tree
+- Returns: list of all values in the tree, in the order they were encountered
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![TreeBreadthFirst](../challenges/tree/app/src/main/resources/treeBreadthFirst.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- The Big O time complexity -> O(n).
+
+- The Big O space complexity -> be O(w), where w is the largest width of the tree.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initilize A tree variable from **BinaryTree Class**.
+- then call the **breadthFirst(tree)** method.
+
+
+# Resources:
+[BreadthFirst](https://www.baeldung.com/java-binary-tree)

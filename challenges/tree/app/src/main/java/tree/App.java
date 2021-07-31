@@ -4,7 +4,6 @@
 package tree;
 
 import data.Node;
-//import structure.BinarySearchTree;
 import structure.BinarySearchTree;
 import structure.BinaryTree;
 
@@ -16,44 +15,85 @@ public class App {
         System.out.println("Binary Tree");
 
         // creates the binary tree
-        BinaryTree binaryTree = new BinaryTree();
-        System.out.println("Empty  " + binaryTree);
+        BinaryTree tree = new BinaryTree();
+//        BinaryTree binaryTree = new BinaryTree();
+//        BinaryTree binaryTree2 = new BinaryTree();
+//        System.out.println("Empty  " + binaryTree);
+//        System.out.println("BFS  " + binaryTree.breadthFirst(binaryTree));
+//
+//        // adds nodes to the tree
+//        System.out.println("Max  " + binaryTree.findMaximumValue());
+//        binaryTree.setRoot(new Node(1));
+//        System.out.println("Root " + binaryTree.getRoot().getValue());
+//        System.out.println();
+//        binaryTree.getRoot().setLeft(new Node(2));
+//        binaryTree.getRoot().setRight(new Node(3));
+//        binaryTree.getRoot().getLeft().setLeft(new Node(4)); //leaf
+//        binaryTree.getRoot().getLeft().setRight(new Node(5));
+//        binaryTree.getRoot().getLeft().getRight().setRight(new Node(6));//leaf
+//        binaryTree.getRoot().getLeft().getRight().setLeft(new Node(7));//leaf
+//        binaryTree.getRoot().getRight().setRight(new Node(8));
+//        binaryTree.getRoot().getRight().getRight().setLeft(new Node(9)); //leaf
+//        binaryTree.getRoot().getRight().getRight().setRight(new Node(10));//leaf
+///****************/
+//        binaryTree2.setRoot(new Node(11));
+//        binaryTree2.getRoot().setLeft(new Node(12));
+//        binaryTree2.getRoot().setRight(new Node(13));
+//        binaryTree2.getRoot().getLeft().setLeft(new Node(14));
+//        binaryTree2.getRoot().getLeft().getLeft().setRight(new Node(15));//leaf
+//        binaryTree2.getRoot().getLeft().getLeft().setLeft(new Node(16));//leaf
+//        binaryTree2.getRoot().getRight().setRight(new Node(17));
+//        binaryTree2.getRoot().getRight().getRight().setLeft(new Node(18)); //leaf
+//        binaryTree2.getRoot().getRight().getRight().setRight(new Node(19));
+//        binaryTree2.getRoot().getRight().getRight().getRight().setRight(new Node(20));//leaf
+//        binaryTree2.getRoot().getRight().getRight().getRight().setLeft(new Node(21));//leaf
+//
+//
+//        System.out.println("preorder" + binaryTree.inOrder());
+//
+//        System.out.println("checkkkkkkkk  " + binaryTree.CompareDirectoriesFilesNum(binaryTree,binaryTree2));
+//
+//
+//
+//        /****************/
+//        System.out.println("preorder" + binaryTree.inOrder());
+//        System.out.println();
+//        System.out.println("inorder" + binaryTree.inOrder(binaryTree.getRoot(), new ArrayList<>()));
+//        System.out.println("inorder" + binaryTree.inOrder());
+//        System.out.println();
+//        System.out.println("postorder" + binaryTree.postOrder());
+//        System.out.println();
+//        System.out.println("Max  " + binaryTree.findMaximumValue());
 
-        // adds nodes to the tree
-        System.out.println("Max  "+binaryTree.findMaximumValue());
-        binaryTree.setRoot(new Node(1));
-        System.out.println("Root " + binaryTree.getRoot().getValue());
-        System.out.println();
-        binaryTree.getRoot().setLeft(new Node(2));
-        binaryTree.getRoot().setRight(new Node(3));
-        binaryTree.getRoot().getLeft().setLeft(new Node(4));
+        /**************/
+        Node left = new Node(7);
+        Node right = new Node(5);
+        Node root = new Node(left, 2, right);
+        tree.setRoot(root);
+        tree.getRoot().getLeft().setLeft(new Node(2));
+        tree.getRoot().getLeft().setRight(new Node(6));
+        tree.getRoot().getLeft().getRight().setRight(new Node(11));
+        tree.getRoot().getLeft().getRight().setLeft(new Node(5));
+        tree.getRoot().getRight().setRight(new Node(9));
+        tree.getRoot().getRight().getRight().setLeft(new Node(4));
+        System.out.println("BFS  " + tree.breadthFirst(tree));
 
-        System.out.println("preorder" + binaryTree.inOrder());
-        System.out.println();
-        System.out.println("inorder" + binaryTree.inOrder(binaryTree.getRoot(), new ArrayList<>()));
-        System.out.println("inorder" + binaryTree.inOrder());
-        System.out.println();
-        System.out.println("postorder" + binaryTree.postOrder());
-        System.out.println();
-        System.out.println("Max  "+binaryTree.findMaximumValue());
-        System.out.println("BFS  "+binaryTree.breadthFirst(binaryTree));
-
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        System.out.println(binarySearchTree.contains(10));
-        binarySearchTree.add(5);
-        binarySearchTree.add(7);
-        binarySearchTree.add(3);
-        binarySearchTree.add(10);
-
-        System.out.println(binarySearchTree);
-        System.out.println();
-        System.out.println(binarySearchTree.contains(10));
-        System.out.println(binarySearchTree.contains(3));
-        System.out.println(binarySearchTree.contains(7));
-        System.out.println(binarySearchTree.contains(5));
-        System.out.println(binarySearchTree.contains(0));
-        System.out.println();
-
+//        BinarySearchTree binarySearchTree = new BinarySearchTree();
+//        System.out.println(binarySearchTree.contains(10));
+//        binarySearchTree.add(5);
+//        binarySearchTree.add(7);
+//        binarySearchTree.add(3);
+//        binarySearchTree.add(10);
+//
+//        System.out.println(binarySearchTree);
+//        System.out.println();
+//        System.out.println(binarySearchTree.contains(10));
+//        System.out.println(binarySearchTree.contains(3));
+//        System.out.println(binarySearchTree.contains(7));
+//        System.out.println(binarySearchTree.contains(5));
+//        System.out.println(binarySearchTree.contains(0));
+//        System.out.println();
+//
 
     }
 }

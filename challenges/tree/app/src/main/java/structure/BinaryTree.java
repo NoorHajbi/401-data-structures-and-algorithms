@@ -2,10 +2,7 @@ package structure;
 
 import data.Node;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
-import java.util.Queue;
+import java.util.*;
 
 public class BinaryTree {
     private static final int MIN_VALUE = -1;
@@ -81,14 +78,16 @@ public class BinaryTree {
         return number;
     }
 
-    //    https://www.baeldung.com/java-binary-tree
+    // Code 17
     public ArrayList<Integer> breadthFirst(BinaryTree tree) {
         if (this.root == null)
             return null;
         ArrayList<Integer> list = new ArrayList<>();
         Queue<Node> queue = new LinkedList<>();
+        //enqueue
         queue.add(tree.getRoot());
         while (!queue.isEmpty()) {
+            //dequeue
             Node node = queue.remove();
             list.add(node.getValue());
             if (node.getLeft() != null) {
@@ -100,6 +99,43 @@ public class BinaryTree {
             }
         }
         return list;
+    }
+
+    public static int sumOdd(BinaryTree tree) {
+        if (tree.getRoot() == null) {
+            return -1;
+        }
+        int sum = 0;
+        List<Integer> inOrder = tree.inOrder();
+        for (Integer integer : inOrder) {
+            if (integer % 2 != 0) {
+                sum = integer + sum;
+            }
+        }
+        return sum;
+    }
+
+    public int filesSum(Node node) {
+        int count=0;
+        int numLeft =0;
+        int numRight =0;
+        if (node == null)
+            return 0;
+        if (node.getLeft() == null && node.getRight() == null)
+            return 1;
+        else
+             numLeft = filesSum(node.getLeft()) ;
+        System.out.println("numLeft   " + numLeft);
+        numRight=  filesSum(node.getRight());
+        System.out.println("numRight   " + numRight);
+        count = numLeft+numRight;
+        System.out.println("Countttttttt   " + count);
+        return count;
+    }
+
+    public boolean CompareDirectoriesFilesNum(BinaryTree tree1, BinaryTree tree2) {
+        int sum = filesSum(tree1.getRoot()) + filesSum(tree2.getRoot());
+        return sum % 2 == 0;
     }
 
     @Override

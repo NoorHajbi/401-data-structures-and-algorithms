@@ -71,5 +71,43 @@ public class BinaryTreeTest {
         assertEquals(11, tree.findMaximumValue());
     }
 
+    //Code Challenge: Class 17
+    @Test
+    public void testEmptyBreadth() {
+        assertNull("Problem with instantiate an empty tree", tree.breadthFirst(tree));
+
+    }
+    @Test
+    public void testHappyPathBreadth() {
+        //Happy path
+        Node left = new Node(7);
+        Node right = new Node(5);
+        Node root = new Node(left, 2, right);
+        tree.setRoot(root);
+        tree.getRoot().getLeft().setLeft(new Node(2));
+        tree.getRoot().getLeft().setRight(new Node(6));
+        tree.getRoot().getLeft().getRight().setRight(new Node(11));
+        tree.getRoot().getLeft().getRight().setLeft(new Node(5));
+        tree.getRoot().getRight().setRight(new Node(9));
+        tree.getRoot().getRight().getRight().setLeft(new Node(4));
+        assertEquals("[2, 7, 5, 2, 6, 9, 5, 11, 4]", String.valueOf(tree.breadthFirst(tree)));
+    }
+    @Test
+    public void testCaseBreadth() {
+        //edge cases, put multiple values to same node
+        Node left = new Node(7);
+        Node right = new Node(5);
+        Node root = new Node(left, 2, right);
+        tree.setRoot(root);
+        tree.getRoot().getLeft().setLeft(new Node(2));
+        tree.getRoot().getLeft().setRight(new Node(6));
+        tree.getRoot().getLeft().getRight().setRight(new Node(11));
+        tree.getRoot().getLeft().getRight().setLeft(new Node(5));
+        tree.getRoot().getRight().setRight(new Node(9));
+        tree.getRoot().getRight().getRight().setLeft(new Node(4));
+        tree.getRoot().getRight().getRight().setLeft(new Node(5));
+        tree.getRoot().getRight().getRight().setLeft(new Node(7));
+        assertEquals("[2, 7, 5, 2, 6, 9, 5, 11, 7]", String.valueOf(tree.breadthFirst(tree)));
+    }
 
 }
