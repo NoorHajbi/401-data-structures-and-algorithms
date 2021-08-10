@@ -97,20 +97,20 @@ public class App {
 //        System.out.println(binarySearchTree.contains(0));
 //        System.out.println();
 //
-        KAryTree kAryTree = new KAryTree();
+        KAryTree<String> kAryTree = new KAryTree<>();
 //        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-        KNode<Integer> root = new KNode<>(5);
+        KNode<String> root = new KNode<>("5");
         kAryTree.setRoot(root);
-        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
+//        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
         System.out.println();
-        root.addChild(new KNode<>(1));
+        root.addChild(new KNode<>("1"));
 //        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
 
-        root.addChild(new KNode<>(3));
+        root.addChild(new KNode<>("3"));
         System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-//        root.addChild(new KNode<>(3));
+        root.addChild(new KNode<>("3"));
 //        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-//        root.addChild(new KNode<>(5));
+        root.addChild(new KNode<>("5"));
 //        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
 //        root.addChild(new KNode<>(90));
 //        System.out.println(root.getChildren());

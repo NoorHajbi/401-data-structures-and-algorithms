@@ -114,7 +114,7 @@ We asked to create method that checks K ary tree nodes' values- Method: **treeFi
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![TreeBreadthFirst](../challenges/tree/app/src/main/resources/treeBreadthFirst.png)
+![TreeBreadthFirst](../challenges/tree/app/src/main/resources/treeFizzBuzz.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
