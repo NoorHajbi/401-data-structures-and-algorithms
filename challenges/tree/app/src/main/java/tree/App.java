@@ -3,19 +3,22 @@
  */
 package tree;
 
+import data.KNode;
 import data.Node;
 import structure.BinarySearchTree;
 import structure.BinaryTree;
+import structure.KAryTree;
 
 import java.util.ArrayList;
 
 public class App {
 
     public static void main(String[] args) {
-        System.out.println("Binary Tree");
+//        System.out.println("Binary Tree");
 
         // creates the binary tree
         BinaryTree tree = new BinaryTree();
+
 //        BinaryTree binaryTree = new BinaryTree();
 //        BinaryTree binaryTree2 = new BinaryTree();
 //        System.out.println("Empty  " + binaryTree);
@@ -66,17 +69,17 @@ public class App {
 //        System.out.println("Max  " + binaryTree.findMaximumValue());
 
         /**************/
-        Node left = new Node(7);
-        Node right = new Node(5);
-        Node root = new Node(left, 2, right);
-        tree.setRoot(root);
-        tree.getRoot().getLeft().setLeft(new Node(2));
-        tree.getRoot().getLeft().setRight(new Node(6));
-        tree.getRoot().getLeft().getRight().setRight(new Node(11));
-        tree.getRoot().getLeft().getRight().setLeft(new Node(5));
-        tree.getRoot().getRight().setRight(new Node(9));
-        tree.getRoot().getRight().getRight().setLeft(new Node(4));
-        System.out.println("BFS  " + tree.breadthFirst(tree));
+//        Node left = new Node(7);
+//        Node right = new Node(5);
+//        Node root = new Node(left, 2, right);
+//        tree.setRoot(root);
+//        tree.getRoot().getLeft().setLeft(new Node(2));
+//        tree.getRoot().getLeft().setRight(new Node(6));
+//        tree.getRoot().getLeft().getRight().setRight(new Node(11));
+//        tree.getRoot().getLeft().getRight().setLeft(new Node(5));
+//        tree.getRoot().getRight().setRight(new Node(9));
+//        tree.getRoot().getRight().getRight().setLeft(new Node(4));
+//        System.out.println("BFS  " + tree.breadthFirst(tree));
 
 //        BinarySearchTree binarySearchTree = new BinarySearchTree();
 //        System.out.println(binarySearchTree.contains(10));
@@ -94,6 +97,22 @@ public class App {
 //        System.out.println(binarySearchTree.contains(0));
 //        System.out.println();
 //
+        KAryTree<String> kAryTree = new KAryTree<>();
+        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
+        System.out.println();
+        System.out.println();
+        KNode<String> root = new KNode<>("90");
+        kAryTree.setRoot(root);
+        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
+        System.out.println();
+        System.out.println();
+        root.addChild(new KNode<>("70"));
+        root.addChild(new KNode<>("4"));
+        root.addChild(new KNode<>("11"));
+        root.addChild(new KNode<>("17"));
+        root.addChild(new KNode<>("13"));
+        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
 
+//        System.out.println(root.getChildren());
     }
 }

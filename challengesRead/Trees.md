@@ -96,3 +96,35 @@ We asked to write  breadth first method for breadth first traversal in a binary 
 
 # Resources:
 [BreadthFirst](https://www.baeldung.com/java-binary-tree)
+
+---
+# 18. Tree Fizz Buzz
+
+# Challenge Summary
+<!-- Description of the challenge -->
+We asked to create method that checks K ary tree nodes' values- Method: **treeFizzBuzz(tree)**
+1. If the values divisible by 3, change it to 'Fizz'.
+2. Divisible by 5, change it to 'Buzz'.
+3. By both 3&5, change it to 'FizzBuzz'.
+4. Else, just convert the value to string.
+
+
+- Arguments: tree<Integer>
+- Returns: tree<String>
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![TreeBreadthFirst](../challenges/tree/app/src/main/resources/treeFizzBuzz.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- The Big O time complexity -> O(n).
+
+- The Big O space complexity -> be O(w), where w is the largest width of the tree.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initialize A tree variable from **KAryTree Class**.
+- then call the **treeFizzBuzz(tree)** method.
+
+
