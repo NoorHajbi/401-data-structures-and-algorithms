@@ -8,15 +8,15 @@ public class KNode<T> {
     private List<KNode<T>> children;
     private KNode<T> parent;
 
-    public KNode(T data) {
-        this.value = data;
+
+    public KNode(T value) {
+        this.value = value;
         this.children = new ArrayList<>();
     }
 
-
-    public KNode(KNode<T> node) {
-        this.value = node.getValue();
-        children = new ArrayList<>();
+    public KNode() {
+        super();
+        this.children = new ArrayList<>();
     }
 
 
@@ -24,6 +24,7 @@ public class KNode<T> {
         child.setParent(this);
         children.add(child);
     }
+
 
     public void addChildAt(int index, KNode<T> child) {
         child.setParent(this);
@@ -33,7 +34,6 @@ public class KNode<T> {
     public void setChildren(List<KNode<T>> children) {
         for (KNode<T> child : children)
             child.setParent(this);
-
         this.children = children;
     }
 
@@ -56,9 +56,15 @@ public class KNode<T> {
         return this.value;
     }
 
+
     public void setValue(T value) {
         this.value = value;
     }
+
+    public void setStringValue(String value) {
+        this.value = (T) value;
+    }
+
 
     public KNode<T> getParent() {
         return this.parent;
@@ -71,6 +77,9 @@ public class KNode<T> {
     public List<KNode<T>> getChildren() {
         return this.children;
     }
+    public int getNumberOfChildren() {
+        return getChildren().size();
+    }
 
     public KNode<T> getChildAt(int index) {
         return children.get(index);
@@ -79,8 +88,6 @@ public class KNode<T> {
 
     @Override
     public String toString() {
-        return "KNode{" +
-                "value=" + value +
-                '}';
+        return value + " ";
     }
 }

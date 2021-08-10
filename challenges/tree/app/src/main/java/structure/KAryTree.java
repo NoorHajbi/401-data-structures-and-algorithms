@@ -2,19 +2,19 @@ package structure;
 
 import data.KNode;
 
-public class KAryTree<T> {
-    private KNode<T> root;
 
+public class KAryTree {
+    private KNode<Integer> root;
 
     public KAryTree() {
-        this.root = null;
+        this.root =null;
     }
 
-    public KNode<T> getRoot() {
+    public KNode<Integer> getRoot() {
         return root;
     }
 
-    public void setRoot(KNode<T> root) {
+    public void setRoot(KNode<Integer> root) {
         this.root = root;
     }
 
@@ -24,43 +24,38 @@ public class KAryTree<T> {
     }
 
 
-//    public ArrayList<KNode<T>> getPreOrderTraversal() {
-//        ArrayList<KNode<T>> preOrder = new ArrayList<>();
-//        buildPreOrder(root, preOrder);
-//        return preOrder;
-//    }
-//
-//
-//    private void buildPreOrder(KNode<T> node, ArrayList<KNode<T>> preOrder) {
-//        preOrder.add(node);
-//        for (KNode<T> child : node.getChildren()) {
-//            buildPreOrder(child, preOrder);
-//        }
-//    }
-
-
-    private void fizzBuzz(KNode<T> current) {
-        if ((int) current.getValue() % 15 == 0) { //%5 && %3
-            current.setValue((T) "FizzBuzz");
-        } else if ((int) current.getValue() % 3 == 0) {
-            current.setValue((T) "Fizz");
-        } else if ((int) current.getValue() % 5 == 0) {
-            current.setValue((T) "Buzz");
-        } else {
-            current.setValue(current.getValue());
-        }
+    private void fizzBuzz(KNode<Integer> current) {
+        if (isEmpty())
+            current = null;
+        assert current != null;
+        if (current.getValue() % 3 == 0) {
+            current.setStringValue("Fizz");
+        } else if (current.getValue() % 5 == 0) {
+            current.setStringValue("Buzz");
+        } else if (current.getValue() % 15 == 0) {
+            current.setStringValue("FizzBuzz");
+        } else
+            current.setStringValue(current.getValue().toString());
     }
 
-    private void checkChildren(KNode<T> current) {
-        if (!isEmpty()) {
-            for (KNode<T> child : current.getChildren()) {
-                fizzBuzz(child);
-            }
+    private void checkChildren(KNode<Integer> current) {
+        for (KNode<Integer> child : current.getChildren()) {
+//            fizzBuzz(child.getParent());
+            fizzBuzz(child);
         }
+
     }
 
-    public KAryTree<T> treeFizzBuzz(KAryTree<T> tree) {
+    public KAryTree treeFizzBuzz(KAryTree tree) {
+        if (isEmpty())
+            return null;
         checkChildren(tree.getRoot());
         return tree;
+    }
+
+    @Override
+    public String toString() {
+        return "Root: " + root + "\n" +
+                "Children: " + root.getChildren();
     }
 }
