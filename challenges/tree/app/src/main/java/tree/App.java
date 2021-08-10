@@ -98,21 +98,21 @@ public class App {
 //        System.out.println();
 //
         KAryTree<String> kAryTree = new KAryTree<>();
-//        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-        KNode<String> root = new KNode<>("5");
-        kAryTree.setRoot(root);
-//        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-        System.out.println();
-        root.addChild(new KNode<>("1"));
-//        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-
-        root.addChild(new KNode<>("3"));
         System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-        root.addChild(new KNode<>("3"));
-//        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-        root.addChild(new KNode<>("5"));
-//        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
-//        root.addChild(new KNode<>(90));
+        System.out.println();
+        System.out.println();
+        KNode<String> root = new KNode<>("90");
+        kAryTree.setRoot(root);
+        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
+        System.out.println();
+        System.out.println();
+        root.addChild(new KNode<>("70"));
+        root.addChild(new KNode<>("4"));
+        root.addChild(new KNode<>("11"));
+        root.addChild(new KNode<>("17"));
+        root.addChild(new KNode<>("13"));
+        System.out.println(kAryTree.treeFizzBuzz(kAryTree));
+
 //        System.out.println(root.getChildren());
     }
 }

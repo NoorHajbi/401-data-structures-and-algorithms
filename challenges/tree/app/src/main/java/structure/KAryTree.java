@@ -2,29 +2,15 @@ package structure;
 
 import data.KNode;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.lang.Number.*;
+import java.util.*;
 
-
-public class KAryTree<T>
-        implements Serializable {
+public class KAryTree<T> {
     private KNode<T> root;
-    //    private List<KNode<Integer>> children;
     int K = 0;
 
 
     public KAryTree() {
-//        this.children = null;
         this.root = null;
-
-    }
-
-    public KAryTree(int k) {
-        if (k <= 1)
-            k = 2;
-        this.K = k;
     }
 
     public KNode<T> getRoot() {
@@ -69,55 +55,43 @@ public class KAryTree<T>
     public KAryTree<String> treeFizzBuzz(KAryTree<String> tree) {
         if (isEmpty())
             return null;
-        int count = 0;
         fizzBuzz(tree, tree.getRoot());
-//        for (KNode<String> child : tree.getRoot().getChildren()) {
-//            if (child != null) {
-//                child = child.getChildAt(count);
-//                fizzBuzz(tree, child);
-//                count++;
-//            } else
-//                break;
-//
-//        }
         return tree;
     }
 
 
-
-    //    https://www.geeksforgeeks.org/number-children-given-node-n-ary-tree/
-    public KAryTree<String> fizzBuzz(KAryTree<String> tree, KNode<String> node) {
+    public void fizzBuzz(KAryTree<String> tree, KNode<String> node) {
+        Queue<KNode<String>> queue = new LinkedList<>();
         if (node != null) {
-
-            if (isInteger(node.getValue())) {
-                node.setValue(
-                        (Integer.parseInt(node.getValue()) % 3 == 0) ? "Fizz" :
-                                (Integer.parseInt(node.getValue()) % 5 == 0) ? "Buzz" :
-                                        (Integer.parseInt(node.getValue()) % 15 == 0 || Integer.parseInt(node.getValue()) == 1) ? "FizzBuzz" :
-                                                "" + node.getValue());
-            }
-            tree.getRoot().addChild(node);
-
-            for (KNode<String> child : tree.getRoot().getChildren()) {
-
-                fizzBuzz(tree, child);
+            queue.add(tree.getRoot());
+            while (!queue.isEmpty()) {
+                node = queue.poll();
+                if (isInteger(node.getValue())) {
+                    node.setValue(
+                            (Integer.parseInt(node.getValue()) % 3 == 0) ? "Fizz" :
+                                    (Integer.parseInt(node.getValue()) % 5 == 0) ? "Buzz" :
+                                            (Integer.parseInt(node.getValue()) % 15 == 0 || Integer.parseInt(node.getValue()) == 1) ? "FizzBuzz" :
+                                                    "" + node.getValue());
+                }
+                queue.addAll(node.getChildren());
+                tree.add(node.getValue());
             }
         }
-        return tree;
+    }
+
+
+    public void add(T value) {
+        KNode<T> newNode = new KNode<>(value);
+        if (isEmpty()) {
+            root = newNode;
+            return;
+        }
+        ++K;
     }
 
     @Override
     public String toString() {
-        if (root.getChildren() != null) {
-            {
-                for (KNode<T> child : root.getChildren()) {
-                    return "Parent: " + child.getParent() + "\n" +
-                            "Children: " + child;
-                }
-            }
-        }
-        return "Root: " + root;
+        return "root= " + root + "\n"+
+                "Children= " + root.getChildren() ;
     }
-
-
 }
