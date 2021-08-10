@@ -3,14 +3,14 @@ package tree;
 import data.KNode;
 import org.junit.Test;
 import structure.KAryTree;
+
 import static org.junit.Assert.*;
-import org.junit.*;
 
 
 public class KAryTest {
 
     @Test
-    public void testFizzBuzzTree (){
+    public void testFizzBuzzTree() {
         KAryTree<String> kAryTree = new KAryTree<>();
         System.out.println(kAryTree.treeFizzBuzz(kAryTree));
         //if the tree is empty

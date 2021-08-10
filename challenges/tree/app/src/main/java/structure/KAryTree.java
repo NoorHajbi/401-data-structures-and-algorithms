@@ -6,7 +6,7 @@ import java.util.*;
 
 public class KAryTree<T> {
     private KNode<T> root;
-    int K = 0;
+    int count = 0;
 
 
     public KAryTree() {
@@ -22,12 +22,12 @@ public class KAryTree<T> {
     }
 
 
-    public boolean isEmpty() {
+    private boolean isEmpty() {
         return root == null;
     }
 
     //    https://stackoverflow.com/questions/237159/whats-the-best-way-to-check-if-a-string-represents-an-integer-in-java
-    public static boolean isInteger(String str) {
+    private static boolean isInteger(String str) {
         if (str == null) {
             return false;
         }
@@ -51,16 +51,16 @@ public class KAryTree<T> {
         return true;
     }
 
-
-    public KAryTree<String> treeFizzBuzz(KAryTree<String> tree) {
-        if (isEmpty())
-            return null;
-        fizzBuzz(tree, tree.getRoot());
-        return tree;
+    private void add(T value) {
+        KNode<T> newNode = new KNode<>(value);
+        if (isEmpty()) {
+            root = newNode;
+            return;
+        }
+        ++count;
     }
 
-
-    public void fizzBuzz(KAryTree<String> tree, KNode<String> node) {
+    private void fizzBuzz(KAryTree<String> tree, KNode<String> node) {
         Queue<KNode<String>> queue = new LinkedList<>();
         if (node != null) {
             queue.add(tree.getRoot());
@@ -71,7 +71,9 @@ public class KAryTree<T> {
                             (Integer.parseInt(node.getValue()) % 3 == 0) ? "Fizz" :
                                     (Integer.parseInt(node.getValue()) % 5 == 0) ? "Buzz" :
                                             (Integer.parseInt(node.getValue()) % 15 == 0 || Integer.parseInt(node.getValue()) == 1) ? "FizzBuzz" :
-                                                    "" + node.getValue());
+                                                    //these lines are same
+//                                                    (Integer.parseInt(node.getValue()) % 5 == 0 && Integer.parseInt(node.getValue()) == 3) ? "FizzBuzz" :
+                                                            "" + node.getValue());
                 }
                 queue.addAll(node.getChildren());
                 tree.add(node.getValue());
@@ -79,19 +81,16 @@ public class KAryTree<T> {
         }
     }
 
-
-    public void add(T value) {
-        KNode<T> newNode = new KNode<>(value);
-        if (isEmpty()) {
-            root = newNode;
-            return;
-        }
-        ++K;
+    public KAryTree<String> treeFizzBuzz(KAryTree<String> tree) {
+        if (isEmpty())
+            return null;
+        fizzBuzz(tree, tree.getRoot());
+        return tree;
     }
 
     @Override
     public String toString() {
-        return "root= " + root + "\n"+
-                "Children= " + root.getChildren() ;
+        return "root= " + root + "\n" +
+                "Children= " + root.getChildren();
     }
 }
