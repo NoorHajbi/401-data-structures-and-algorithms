@@ -3,12 +3,16 @@
  */
 package sort;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Arrays;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+        int[] arr = { 15, 12, 20, 2, 4 };
+
+        QuickSort sort = new QuickSort();
+        sort.quickSort(arr);
+
+        System.out.println("Quick sort"+ Arrays.toString(arr));
+
+}
 }
