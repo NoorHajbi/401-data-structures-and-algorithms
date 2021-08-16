@@ -28,3 +28,7 @@ application {
     // Define the main class for the application.
     mainClass = 'sort.App'
 }
+
+task wrapper(type: Wrapper){
+    gradleVersion = '2.14.1'
+}

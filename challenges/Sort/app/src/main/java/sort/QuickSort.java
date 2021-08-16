@@ -4,7 +4,7 @@ public class QuickSort {
     public void quickSort(int[] arr) {
         quickSort(arr, 0, arr.length-1);
     }
-    void quickSort(int[] arr, int left, int right) {
+    private void quickSort(int[] arr, int left, int right) {
         if (left < right) {
             // Partition the array by setting the position of the pivot value
             int position = partition(arr, left, right);

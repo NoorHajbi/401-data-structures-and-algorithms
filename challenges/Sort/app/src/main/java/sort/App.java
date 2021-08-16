@@ -8,11 +8,18 @@ import java.util.Arrays;
 public class App {
     public static void main(String[] args) {
         int[] arr = { 15, 12, 20, 2, 4 };
-
-        QuickSort sort = new QuickSort();
-        sort.quickSort(arr);
-
-        System.out.println("Quick sort"+ Arrays.toString(arr));
+        int[] arr1 = { 15, 12, 20, 2, 4 };
+        int[] arr2 = { 15, 12, 20, 2, 4 };
+        QuickSort sortQ = new QuickSort();
+        sortQ.quickSort(arr);
+        MergeSort sortM = new MergeSort();
+        sortM.mergeSort(arr1);
+        Sort sort2 = new Sort();
+        sort2.mergeSort(arr2);
+//        System.out.println("Quick sort"+ Arrays.toString(arr));
+//
+//        System.out.println("Merge sort"+ Arrays.toString(arr1));
+        System.out.println("Merge sort"+ Arrays.toString(arr2));
 
 }
 }
