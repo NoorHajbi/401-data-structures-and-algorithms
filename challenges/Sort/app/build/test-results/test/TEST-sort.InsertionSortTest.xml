@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sort.InsertionSortTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-08-17T20:52:21" hostname="DESKTOP-0KIMU03" time="0.009">
+  <properties/>
+  <testcase name="happyPath" classname="sort.InsertionSortTest" time="0.005"/>
+  <testcase name="testEmpty" classname="sort.InsertionSortTest" time="0.001"/>
+  <testcase name="testSort" classname="sort.InsertionSortTest" time="0.0"/>
+  <testcase name="testSortedArray" classname="sort.InsertionSortTest" time="0.001"/>
+  <testcase name="testOneElement" classname="sort.InsertionSortTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
