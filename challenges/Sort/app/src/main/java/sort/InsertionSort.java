@@ -6,9 +6,9 @@ public class InsertionSort {
      * The traversal keeps track of the minimum value and places it in the front of the array
      * which should be incrementally sorted.
      **/
-    public static int[] selectionSort(int[] arr) {
+    public int[] selectionSort(int[] arr) {
         int n = arr.length;
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             int j = i - 1;
             int temp = arr[i];
 
@@ -22,9 +22,9 @@ public class InsertionSort {
         return arr;
     }
 
-    public static int[] selectionSortDescending(int[] arr) {
+    public int[] selectionSortDescending(int[] arr) {
         int n = arr.length;
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             int j = i - 1;
             int temp = arr[i];
 

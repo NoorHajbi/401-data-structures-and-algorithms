@@ -22,4 +22,21 @@ public class App {
         System.out.println("Merge sort"+ Arrays.toString(arr2));
 
 }
+        int[] arrEmpty = { };
+        int[] arrOne = { 2};
+
+        InsertionSort sort = new InsertionSort();
+        sort.selectionSort(arr);
+        sort.selectionSort(arrEmpty);
+        sort.selectionSort(arrOne);
+
+        System.out.println("Selection sort "+ Arrays.toString(arr));
+        System.out.println("Selection sort "+ Arrays.toString(arrEmpty));
+        System.out.println("Selection sort "+ Arrays.toString(arrOne));
+
+
+        sort.selectionSortDescending(arr);
+        System.out.println("Selection sort Descending "+ Arrays.toString(arr));
+
+    }
 }

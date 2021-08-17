@@ -12,13 +12,17 @@ Selection Sort is a sorting algorithm that traverses the array multiple times fi
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
+![InsertionSort](../../challenges/Sort/app/src/main/resources/insertionSort.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- **Time Complexity:** for average and worst case O(n^2) - The basic operation of algorith is comparision.
+
+- **Space Complexity:** O(1) - No extra space needed
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
-
+You just need to call selectionSort method and insert your array.
 
 # Resourses: 
 1. [Sorting Algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm).
