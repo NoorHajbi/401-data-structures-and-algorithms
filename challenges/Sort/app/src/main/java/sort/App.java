@@ -3,12 +3,26 @@
  */
 package sort;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Arrays;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        int[] arr = { 15, 12, 20, 2, 4 };
+        int[] arrEmpty = { };
+        int[] arrOne = { 2};
+
+        InsertionSort sort = new InsertionSort();
+        sort.selectionSort(arr);
+        sort.selectionSort(arrEmpty);
+        sort.selectionSort(arrOne);
+
+        System.out.println("Selection sort "+ Arrays.toString(arr));
+        System.out.println("Selection sort "+ Arrays.toString(arrEmpty));
+        System.out.println("Selection sort "+ Arrays.toString(arrOne));
+
+
+        sort.selectionSortDescending(arr);
+        System.out.println("Selection sort Descending "+ Arrays.toString(arr));
+
     }
 }
