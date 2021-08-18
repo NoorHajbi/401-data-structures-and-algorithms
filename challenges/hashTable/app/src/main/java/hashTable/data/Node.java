@@ -57,4 +57,13 @@ public class Node<K, V> {
 //    public int hashCode() {
 //        return Objects.hash(key, value, hashCode, next);
 //    }
+
+
+//    @Override
+//    public String toString() {
+//        return "Node{" +
+//                "key=" + key +
+//                ", value=" + value +
+//                '}';
+//    }
 }

@@ -1,13 +1,12 @@
 package hashTable;
 
-import com.google.common.hash.HashCode;
 import hashTable.data.Node;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class HashTable<K, V> {
-    private ArrayList<Node<K, V>> bucketArray; //a.k.a the hashTable
+    private LinkedList<Node<K, V>> bucketArray; //a.k.a the hashTable
 
     //To hold the current size of bucketArray
     private int numBuckets;
@@ -16,7 +15,7 @@ public class HashTable<K, V> {
     private int size;
 
     public HashTable() {
-        bucketArray = new ArrayList<>();
+        bucketArray = new LinkedList<>();
         numBuckets = 30;
         size = 0;
 
@@ -24,7 +23,6 @@ public class HashTable<K, V> {
         for (int index = 0; index < numBuckets; index++) {
             bucketArray.add(null);
         }
-
     }
 
     /**
@@ -33,9 +31,10 @@ public class HashTable<K, V> {
      * @param key
      * @return hashCode of the key
      */
-    private int hashCode(K key) {
+    public int hashCode(K key) {
         return Objects.hashCode(key);
     }
+
 
     /**
      * Gets the index of where the value is located in the bucket array
@@ -43,7 +42,7 @@ public class HashTable<K, V> {
      * @param key
      * @return bucketIndex
      */
-    private int getBucketIndex(K key) {
+    public int getBucketIndex(K key) {
         int hashCode = hashCode(key);
         // this is to ensure the index is with in the bounds of the bucket array
         int index = hashCode % numBuckets;
@@ -75,7 +74,7 @@ public class HashTable<K, V> {
 
         //check if key present
         while (head != null) {
-            if (head.getKey().equals(key) && head.hashCode() == hashCode) {
+            if (head.getKey().equals(key) && head.getHashCode() == hashCode) {
                 head.setValue(value);
                 return;
             }
@@ -91,9 +90,9 @@ public class HashTable<K, V> {
         //if the number of hashNodes goes beyond the threshold
         //double the bucket array
         if ((1.0 * size) / numBuckets >= 0.7) {
-            ArrayList<Node<K, V>> temp = bucketArray;
-            bucketArray = new ArrayList<>();
-            numBuckets = 2 * numBuckets;
+            LinkedList<Node<K, V>> temp = bucketArray;
+            bucketArray = new LinkedList<>();
+            numBuckets *= 2;
             size = 0;
 
             for (int index = 0; index < numBuckets; index++) {
@@ -125,7 +124,7 @@ public class HashTable<K, V> {
         Node<K, V> prev = null;
         while (head != null) {
             // if Key found
-            if (head.getKey().equals(key) && hashCode == head.hashCode())
+            if (head.getKey().equals(key) && hashCode == head.getHashCode())
                 break;
 
             //Else keep moving in chain
@@ -161,7 +160,7 @@ public class HashTable<K, V> {
 
         //search the linked list
         while (head != null) {
-            if (head.getKey().equals(key) && head.hashCode() == hashCode) {
+            if (head.getKey().equals(key) && head.getHashCode() == hashCode) {
                 return head.getValue();
             }
             head = head.getNext();
@@ -171,3 +170,4 @@ public class HashTable<K, V> {
         return null;
     }
 }
+
