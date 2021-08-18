@@ -35,5 +35,15 @@ public class App {
         System.out.println("Merge sort" + Arrays.toString(arr));
 
 
+        int[] reverseSorted = {20,18,12,8,5,-2};
+        int[] fewUniques = {5,12,7,5,5,7};
+        int[] nearlySorted = {2,3,5,7,13,11};
+        sortQ.quickSort(reverseSorted);
+        System.out.println("Quick sort" + Arrays.toString(reverseSorted));
+        sortQ.quickSort(fewUniques);
+        System.out.println("Quick sort" + Arrays.toString(fewUniques));
+        sortQ.quickSort(nearlySorted);
+        System.out.println("Quick sort" + Arrays.toString(nearlySorted));
+
     }
 }

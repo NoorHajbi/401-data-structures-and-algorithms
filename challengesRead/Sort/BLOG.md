@@ -184,9 +184,33 @@ ALGORITHM Swap(arr, i, low)
 
 ### (1)
 [8,4,23,42,16,15]
-- 8 <= 15 ?? yes
+- 15 < 8 ?? No
+- 15 < 4 ?? No
+- 15 < 23 ?? yes
 
-Swap(arr[i], arr[low])
+### (2)
+[8,4,15,42,16,23]
+and now we will divide it
+
+### (3)
+[8,4,15] [42,16,23]
+left array is sorted
+let's check second array.
+
+### (4)
+[42,16,23]
+- 16 < 42? yes
+
+### (5)
+[16,42,23]
+- 23 < 42? yes
+
+### (6)
+[16,23,42]
+- this array is now sorted, so let's conqure the final output.
+
+### (8)
+[4,8,15,16,23,42]
 
 
 ## Whiteboard Process

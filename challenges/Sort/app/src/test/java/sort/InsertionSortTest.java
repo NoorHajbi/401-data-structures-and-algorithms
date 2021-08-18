@@ -37,11 +37,11 @@ public class InsertionSortTest {
         //Ascending
         int[] arrOneElement = {1};
         sort.selectionSort(arrOneElement);
-        assertNotNull("Problem with sorting array with size one", Arrays.toString(arrOneElement));
+        assertEquals("[1]", Arrays.toString(arrOneElement));
 
         //Descending
         sort.selectionSortDescending(arrOneElement);
-        assertNotNull("Problem with sorting array with size one", Arrays.toString(arrOneElement));
+        assertEquals("Problem with sorting array with size one","[1]", Arrays.toString(arrOneElement));
     }
 
     //    3. Sorted Array
@@ -49,7 +49,7 @@ public class InsertionSortTest {
     public void testSortedArray() {
         //Ascending
         sort.selectionSort(sortedArr);
-        assertNotNull("Problem with sorting array that already sorted", Arrays.toString(sortedArr));
+        assertEquals("Problem with sorting array that already sorted","[1, 2, 3, 4, 5]", Arrays.toString(sortedArr));
 
         //Descending
         sort.selectionSortDescending(sortedDescArr);
@@ -61,11 +61,11 @@ public class InsertionSortTest {
     public void testSort() {
         //Ascending
         sort.selectionSort(arr);
-        assertNotNull("Problem with sorting array", Arrays.toString(sortedArr));
+        assertEquals("Problem with sorting array","[2, 4, 12, 15, 20]", Arrays.toString(arr));
 
         //Descending
         sort.selectionSortDescending(arr);
-        assertNotNull("Problem with sorting array", Arrays.toString(sortedDescArr));
+        assertNotNull("Problem with sorting array", Arrays.toString(arr));
     }
 
     //    4. Happy path
@@ -74,7 +74,7 @@ public class InsertionSortTest {
         //1.
         //Ascending
         sort.selectionSort(reverseSorted);
-        assertNotNull("Problem with sorting array", Arrays.toString(reverseSorted));
+        assertEquals("Problem with sorting array","[-2, 5, 8, 12, 18, 20]", Arrays.toString(reverseSorted));
 
         //Descending
         sort.selectionSortDescending(reverseSorted);
@@ -83,7 +83,7 @@ public class InsertionSortTest {
         //2.
         //Ascending
         sort.selectionSort(fewUniques);
-        assertNotNull("Problem with sorting array", Arrays.toString(fewUniques));
+        assertEquals("Problem with sorting array","[5, 5, 5, 7, 7, 12]", Arrays.toString(fewUniques));
 
         //Descending
         sort.selectionSortDescending(fewUniques);
@@ -92,7 +92,7 @@ public class InsertionSortTest {
         //3.
         //Ascending
         sort.selectionSort(nearlySorted);
-        assertNotNull("Problem with sorting array", Arrays.toString(nearlySorted));
+        assertEquals("Problem with sorting array","[2, 3, 5, 7, 11, 13]", Arrays.toString(nearlySorted));
 
         //Descending
         sort.selectionSortDescending(nearlySorted);
