@@ -18,6 +18,9 @@ A hash table (hash map) is a data structure that implements a hash table array, 
 5. **remove** method -> O(n)
 6. **get** method (for search) -> O(n)
 
+Because it could include more than one item point to the single cell
+
+
 ## API
 ### HashTable Class Methods:
 1.  **hashCode(K key)** ->  hashes the key using built in java hash function

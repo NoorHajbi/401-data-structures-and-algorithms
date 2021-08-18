@@ -1,6 +1,5 @@
 package hashTable.data;
 
-import java.util.Objects;
 
 public class Node<K, V> {
     K key;

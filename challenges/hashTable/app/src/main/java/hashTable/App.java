@@ -9,58 +9,41 @@ import java.util.Map;
 public class App {
     // convert string to `char[]` array
 //to loop inside the word character by character
-    public static boolean checkUniqueCharacters(String word)
-    {
-        Map<Character,Integer> hashMap=new HashMap<>();
-        word = word.replaceAll("\\s+","");
-        char[] chars = word.toCharArray();
+    public static boolean checkUniqueCharacters(String sentence) {
+        Map<Character, Integer> hashMap = new HashMap<>();
+        sentence = sentence.replaceAll("\\s+", "");
+        char[] chars = sentence.toCharArray();
         int value = 0;
-        for(Character ch: chars)
-        {
-            if(hashMap.containsKey(ch))
-            {
+        for (Character ch : chars) {
+            if (hashMap.containsKey(ch)) {
                 return false;
-            }
-            else
-                hashMap.put(ch,value++);
+            } else
+                hashMap.put(ch, value++);
         }
         return true;
 
     }
-//    The most efficient solution is going to use a Hashmap.
-//    The candidate should iterate through the string and for each
-//    of the characters put them in the Hashset, if the value already exists,
-//    they can return false as soon as a duplicate occurs.
 
     public static void main(String[] args) {
         HashTable<String, Integer> studentsMoney = new HashTable<>();
+        HashTable<String, String> stringTest = new HashTable<>();
+        HashTable<Integer, Integer> integerTest = new HashTable<>();
+
         studentsMoney.add("Noor", 200);
-        System.out.println("The studentsMoney is => " + studentsMoney);
-        System.out.println("The hashCode is => " + studentsMoney.hashCode("Noor"));
-        System.out.println("The BucketIndex is => " + studentsMoney.getBucketIndex("Noor"));
-        System.out.println("The size is => " + studentsMoney. getSize());
+        studentsMoney.add("Sara", 300);
+        studentsMoney.add("Alaa", 500);
+        stringTest.add("hello", "World");
+        integerTest.add(1, 2);
+        System.out.println("The hashCode is => " + studentsMoney.hashCode("Sara"));
+        System.out.println("The BucketIndex is => " + studentsMoney.getBucketIndex("Sara"));
+        System.out.println("The size is => " + studentsMoney.getSize());
         System.out.println("The isEmpty => " + studentsMoney.isEmpty());
-        System.out.println("The remove not existed is => " + studentsMoney.remove("Not existed value"));
-        System.out.println("The get not existed is => " + studentsMoney.get("Not existed value"));
-        System.out.println("The get noor => " + studentsMoney.get("Noor"));
-        System.out.println("The remove noor => " + studentsMoney.remove("Noor"));
-        System.out.println("The size is => " + studentsMoney. getSize());
+        System.out.println("The get noor => " + studentsMoney.get("Sara"));
+        System.out.println("The remove noor => " + studentsMoney.remove("Sara"));
+        System.out.println("The size is => " + studentsMoney.getSize());
 
-
-
-
-
-
-//        studentsMoney.add("Noor", 200);
-//        studentsMoney.add("Sara", 300);
-//        studentsMoney.add("Alaa", 500);
-
-//        System.out.println("The size is => " + studentsMoney.getSize());
-//        System.out.println("The remove => " + studentsMoney.remove("Noor"));
-
-
-//        System.out.println("The Noor money is => " + studentsMoney.get("Noor"));
-
+        System.out.println("The get noor => " + stringTest.get("hello"));
+        System.out.println("The get noor => " + integerTest.get(1));
 
 
 //        System.out.println(checkUniqueCharacters("NoOr JAmal  l"));
