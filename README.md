@@ -20,7 +20,7 @@
 |TreeBreadthFirst|[Directory](challengesRead/Trees.md)| [TreeBreadthFirst](challenges/tree/app/src/main/resources)|
 |treeFizzBuzz|[Directory](challengesRead/Trees.md)| [treeFizzBuzz](challenges/tree/app/src/main/resources)|
 |insertionSort|[BLOG](challengesRead/Sort/BLOG.md)| [insertionSort](challenges/Sort/app/src/main/resources)|
-|mergeSort|[BLOG](challengesRead/Sort/BLOG.md)| [insertionSort](challenges/Sort/app/src/main/resources)|
-|quickSort|[BLOG](challengesRead/Sort/BLOG.md)| [insertionSort](challenges/Sort/app/src/main/resources)|
+|mergeSort|[BLOG](challengesRead/Sort/BLOG.md)| [mergeSort](challenges/Sort/app/src/main/resources)|
+|quickSort|[BLOG](challengesRead/Sort/BLOG.md)| [quickSort](challenges/Sort/app/src/main/resources)|
 
 
