@@ -4,11 +4,14 @@
 package hashTable;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        HashTable<String, Integer> studentsMoney = new HashTable<>();
+        studentsMoney.add("Noor", 200);
+        studentsMoney.add("Sara", 300);
+
+        System.out.println("The size is => " + studentsMoney.getSize());
+        System.out.println("The Noor money is => " + studentsMoney.get("Noor"));
+
     }
 }

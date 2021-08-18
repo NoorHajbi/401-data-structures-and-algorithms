@@ -23,7 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f707b397-5dd6-4761-8df1-961f4d4cece9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/sort/InsertionSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/sort/InsertionSortTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/src/main/java/hashTable/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/src/test/java/hashTable/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/main/sort/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/main/sort/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/sort/InsertionSortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/sort/InsertionSortTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +67,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hashTable" />
     <property name="project.structure.last.edited" value="Variables" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />

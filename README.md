@@ -22,5 +22,7 @@
 |insertionSort|[BLOG](challengesRead/Sort/BLOG.md)| [insertionSort](challenges/Sort/app/src/main/resources)|
 |mergeSort|[BLOG](challengesRead/Sort/BLOG.md)| [mergeSort](challenges/Sort/app/src/main/resources)|
 |quickSort|[BLOG](challengesRead/Sort/BLOG.md)| [quickSort](challenges/Sort/app/src/main/resources)|
+|hashTable|[BLOG](challengesRead/HashTable.md)| [hashTable](challenges/Sort/app/src/main/resources)|
+
 
 
