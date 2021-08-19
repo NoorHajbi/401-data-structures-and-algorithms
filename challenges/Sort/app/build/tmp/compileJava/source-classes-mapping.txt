@@ -1,4 +1,8 @@
-sort/App.java
- sort.App
 sort/InsertionSort.java
  sort.InsertionSort
+sort/App.java
+ sort.App
+sort/QuickSort.java
+ sort.QuickSort
+sort/MergeSort.java
+ sort.MergeSort

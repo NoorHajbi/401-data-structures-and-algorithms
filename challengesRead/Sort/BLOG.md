@@ -70,11 +70,12 @@ You just need to call selectionSort method and insert your array.
 ---
 
 ## Merge Sort
-is a Divide and Conquer algorithm
+Is a Divide and Conquer algorithm
+It divides the input array into two halves, and then merges the two sorted halves.
 
 ## Challenge Summary
 <!-- Description of the challenge -->
- sorting an Array of elements from the beginning to end using merge sort. 
+Sorting an Array of elements from the beginning to end using merge sort. 
 
 ## Pseudocode
 ```
@@ -113,11 +114,6 @@ ALGORITHM Merge(left, right, arr)
        set remaining entries in arr to remaining values in left
 ```
 
-## Example steps
-[8,4,23,42,16,15]
-
-
-
 
 
 ## Whiteboard Process
@@ -126,9 +122,8 @@ ALGORITHM Merge(left, right, arr)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-- **Time Complexity:** 
-
-- **Space Complexity:** 
+- **Time Complexity:**  O(nlogn)
+- **Space Complexity:** O(n)
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
@@ -233,6 +228,6 @@ You just need to call quickSort method and insert your array.
 1. [Sorting Algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm).
 2. [Insertion Sort - Video](https://www.youtube.com/watch?v=JecAk1FAOck).
 3. [Insertion Sort - example document](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-26/solutions/BLOG)
-4. 
+4. [Merge Sort](https://www.geeksforgeeks.org/merge-sort/)
 5. [Quick Sort](https://www.geeksforgeeks.org/quick-sort/)
 
