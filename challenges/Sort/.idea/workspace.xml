@@ -23,19 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f707b397-5dd6-4761-8df1-961f4d4cece9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../hashTable/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/app/src/main/java/hashTable/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/app/src/test/java/hashTable/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hashTable/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/main/sort/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/main/sort/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/sort/InsertionSortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/sort/InsertionSortTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/mergeSort.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/sort/MergeSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/sort/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/sort/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/test/sort/InsertionSortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/test/sort/InsertionSortTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileTestJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileTestJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/sort/InsertionSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/sort/InsertionSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/sort/QuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/sort/QuickSortTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +73,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hashTable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Variables" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -78,20 +84,7 @@
       <recent name="C:\Users\noorh\ASAC\ASAC401\401\401-data-structures-and-algorithms\challenges\Sort\app\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.InsertionSortTest">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sort.App" />
-      <module name="sort.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MergeSortTest">
     <configuration name="InsertionSortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -176,13 +169,28 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MergeSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sort.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sort" />
+      <option name="MAIN_CLASS_NAME" value="sort.MergeSortTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MergeSortTest" />
         <item itemvalue="Gradle.InsertionSortTest" />
         <item itemvalue="Gradle.InsertionSortTest.happyPath" />
         <item itemvalue="Gradle.InsertionSortTest.testSortedArray" />
         <item itemvalue="Gradle.InsertionSortTest.testEmpty" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>

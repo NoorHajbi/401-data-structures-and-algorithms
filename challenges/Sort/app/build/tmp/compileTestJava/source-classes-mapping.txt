@@ -2,3 +2,7 @@ sort/AppTest.java
  sort.AppTest
 sort/InsertionSortTest.java
  sort.InsertionSortTest
+sort/QuickSortTest.java
+ sort.QuickSortTest
+sort/MergeSortTest.java
+ sort.MergeSortTest
