@@ -30,6 +30,21 @@ public class Graph {
         adjVertices.remove(new Vertex(data));
     }
 
+    void removeEdge(String data1, String data2){
+        Vertex vertex1 = new Vertex(data1);
+        Vertex vertex2 = new Vertex(data2);
+
+        List<Vertex> edgeVertex1= adjVertices.get(vertex1);
+        List<Vertex> edgeVertex2= adjVertices.get(vertex2);
+
+        if(edgeVertex1 != null){
+            edgeVertex1.remove(vertex2);
+        }
+        if(edgeVertex2 != null){
+            edgeVertex2.remove(vertex1);
+        }
+    }
+
     String printGraph() {
         StringBuilder stringBuilder = new StringBuilder();
         for (Vertex vertex : adjVertices.keySet()) {
@@ -37,5 +52,9 @@ public class Graph {
             stringBuilder.append(adjVertices.get(vertex));
         }
         return stringBuilder.toString();
+    }
+
+    int size(){
+        return adjVertices.size();
     }
 }

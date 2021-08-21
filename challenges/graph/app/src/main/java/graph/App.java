@@ -15,14 +15,21 @@ public class App {
         graph.addVertex("Bob");
         graph.addVertex("Alice");
         graph.addVertex("Mary");
+        graph.addVertex("Noor");
+
 
         graph.addEdge("Bob", "Mary");
         graph.addEdge("Bob", "Alice");
         graph.addEdge("Alice", "Bob");
+        graph.addEdge("Alice", "Noor");
+        System.out.println( graph.size());
 
         System.out.println( graph.printGraph());
         graph.removeVertex("Bob");
+        graph.removeEdge("Alice","Noor");
         System.out.println( graph.printGraph());
+        System.out.println( graph.size());
+
 
 
 
