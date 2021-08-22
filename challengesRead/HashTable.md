@@ -55,6 +55,23 @@ Is to Write a function called **repeated word** that finds the first word to occ
 
 
 
+# 32. Find common values in 2 binary trees.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+
+
+
 ## Resources
 
 - Class-30.
