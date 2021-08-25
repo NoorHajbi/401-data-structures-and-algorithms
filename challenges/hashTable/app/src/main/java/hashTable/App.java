@@ -3,6 +3,8 @@
  */
 package hashTable;
 
+import hashTable.hashmapChallenges.RepeatedWord;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,23 +31,29 @@ public class App {
         HashTable<String, String> stringTest = new HashTable<>();
         HashTable<Integer, Integer> integerTest = new HashTable<>();
 
-        studentsMoney.add("Noor", 200);
-        studentsMoney.add("Sara", 300);
-        studentsMoney.add("Alaa", 500);
-        stringTest.add("hello", "World");
+//        studentsMoney.add("Noor", 200);
+//        studentsMoney.add("Sara", 300);
+//        studentsMoney.add("Alaa", 500);
+//        stringTest.add("hello", "World");
         integerTest.add(1, 2);
-        System.out.println("The hashCode is => " + studentsMoney.hashCode("Sara"));
-        System.out.println("The BucketIndex is => " + studentsMoney.getBucketIndex("Sara"));
-        System.out.println("The size is => " + studentsMoney.getSize());
-        System.out.println("The isEmpty => " + studentsMoney.isEmpty());
-        System.out.println("The get noor => " + studentsMoney.get("Sara"));
-        System.out.println("The remove noor => " + studentsMoney.remove("Sara"));
-        System.out.println("The size is => " + studentsMoney.getSize());
-
-        System.out.println("The get noor => " + stringTest.get("hello"));
-        System.out.println("The get noor => " + integerTest.get(1));
-
-
+//        System.out.println("The hashCode is => " + studentsMoney.hashCode("Sara"));
+//        System.out.println("The BucketIndex is => " + studentsMoney.getBucketIndex("Sara"));
+//        System.out.println("The size is => " + studentsMoney.getSize());
+//        System.out.println("The isEmpty => " + studentsMoney.isEmpty());
+//        System.out.println("The get noor => " + studentsMoney.get("Sara"));
+//        System.out.println("The remove noor => " + studentsMoney.remove("Sara"));
+//        System.out.println("The size is => " + studentsMoney.getSize());
+//
+//        System.out.println("The get noor => " + stringTest.get("hello"));
+//        System.out.println("The get noor => " + integerTest.get(1));
 //        System.out.println(checkUniqueCharacters("NoOr JAmal  l"));
+//        System.out.println("The get noor => " + integerTest.includes(1));
+
+
+        RepeatedWord repeated = new RepeatedWord();
+//        System.out.println( repeated.repeatedWord("Noor,;,- is the best as noor as"));
+        System.out.println( repeated.repeatedWord("Hello .,-)(*@#$%^!! My Name is Noor, hello"));
+
+
     }
 }
