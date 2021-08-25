@@ -34,8 +34,10 @@ returns boolean.
 returns deleted value.
 6. **get(K key)** -> return the value from the table based on inserted key.
 
+
+    
+----
 # 31. Find the first repeated word in a book
- 
 
 ## Challenge Summary
 <!-- Description of the challenge -->
@@ -44,16 +46,40 @@ Is to Write a function called **repeated word** that finds the first word to occ
 **Arguments:** string
 **Return:** string
 
+  
+## [Link to the code](../challenges/hashTable/app/src/main/java/hashTable/hashmapChallenges/RepeatedWord.java)
+  
+
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-
+![Hashmap repeated word](../challenges/hashTable/app/src/main/resources/hashmapRepeatedWord.png)
+  
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### - Approach:
+1. Declare a function called repearedWord that takes a string and returns string.
+2. initialize a hashtable variable with the key is string and value is integer.
+3. convert the string to an array of string with all spaces is removed.
+4. initialize an integer of hashtable value equals 0.
+5. loop inside the array of string word by word.
+6. remove all punctuations from that word.
+7. check if the hashtable includes the word, then return that word.
+8. add the word with its value to the table and add 1 to the value number.
+9. If the code reaches out of the loop, then return "There are no repeated words"
 
+  
+### - Efficiency:
+- **Space complexity** -> O(n), becuase I initialized Hashtable and array of string to solve this challenge.
+
+- **Time complexity** -> O(n)
+
+  
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+- Initialize A variable from **RepeatedWord Class**.
+- then call the **repeatedWord(sentence)** method.
 
-
+---
 
 # 32. Find common values in 2 binary trees.
 
@@ -74,4 +100,5 @@ Is to Write a function called **repeated word** that finds the first word to occ
 
 ## Resources
 
-- Class-30.
+1.  As for HashTable Class -Class-30.
+2. [Regex used in Repeated Word Challenge](https://stackoverflow.com/questions/18830813/how-can-i-remove-punctuation-from-input-text-in-java)
