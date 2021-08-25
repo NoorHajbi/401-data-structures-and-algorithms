@@ -13,9 +13,7 @@ public class RepeatedWord {
 
             if (hashtable.includes(word))
                 return word;
-            else
-                value++;
-            hashtable.add(word, value);
+            hashtable.add(word, value++);
             System.out.print("key -> " + word);
             System.out.println(", value -> " + value);
         }
