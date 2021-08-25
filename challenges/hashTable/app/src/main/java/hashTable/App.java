@@ -52,7 +52,7 @@ public class App {
 
         RepeatedWord repeated = new RepeatedWord();
 //        System.out.println( repeated.repeatedWord("Noor,;,- is the best as noor as"));
-        System.out.println( repeated.repeatedWord("Hello .,-)(*@#$%^!! My Name is Noor, hello"));
+        System.out.println( repeated.repeatedWord("\"Whatever you do, do it well.\""));
 
 
     }

@@ -34,7 +34,8 @@ returns boolean.
 returns deleted value.
 6. **get(K key)** -> return the value from the table based on inserted key.
 
-  
+
+    
 ----
 # 31. Find the first repeated word in a book
 
@@ -51,8 +52,7 @@ Is to Write a function called **repeated word** that finds the first word to occ
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-
-
+![Hashmap repeated word](../challenges/hashTable/app/src/main/resources/hashmapRepeatedWord.png)
   
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
