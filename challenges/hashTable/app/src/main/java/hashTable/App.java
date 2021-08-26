@@ -64,7 +64,9 @@ public class App {
 
         BinaryTree binaryTree = new BinaryTree();
         BinaryTree binaryTree2 = new BinaryTree();
-//        System.out.println("Empty  " + binaryTree);
+        System.out.println("Empty  " + binaryTree);
+        System.out.println("Empty intersection"+intersection.treeIntersection(binaryTree,binaryTree2));
+
 //        System.out.println("BFS  " + binaryTree.breadthFirst(binaryTree));
 
         // adds nodes to the tree

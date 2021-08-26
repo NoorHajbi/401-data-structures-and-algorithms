@@ -14,9 +14,12 @@ public class TreeIntersection {
     }
 
     public List<Object> treeIntersection(BinaryTree tree1, BinaryTree tree2) {
+        if (tree1.getRoot() == null && tree2.getRoot() == null)
+            return null;
         List<Object> intersection = new ArrayList<>();
         HashMap<Object, Integer> tree2Set = addTreeToHashMap(tree2);
         List<Integer> arrayLoop = new ArrayList<>(tree1.breadthFirst(tree1));
+
         for (Object o : arrayLoop) {
             if (tree2Set.containsKey(o)) {
                 intersection.add(o);
