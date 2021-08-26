@@ -64,35 +64,40 @@ public class App {
 
         BinaryTree binaryTree = new BinaryTree();
         BinaryTree binaryTree2 = new BinaryTree();
-        System.out.println("Empty  " + binaryTree);
-        System.out.println("BFS  " + binaryTree.breadthFirst(binaryTree));
+//        System.out.println("Empty  " + binaryTree);
+//        System.out.println("BFS  " + binaryTree.breadthFirst(binaryTree));
 
         // adds nodes to the tree
-        System.out.println("Max  " + binaryTree.findMaximumValue());
-        binaryTree.setRoot(new TreeNode(11));
-        System.out.println("Root " + binaryTree.getRoot().getValue());
-        System.out.println();
-        binaryTree.getRoot().setLeft(new TreeNode(2));
-        binaryTree.getRoot().setRight(new TreeNode(3));
-        binaryTree.getRoot().getLeft().setLeft(new TreeNode(4)); //leaf
-        binaryTree.getRoot().getLeft().setRight(new TreeNode(5));
-        binaryTree.getRoot().getLeft().getRight().setRight(new TreeNode(6));//leaf
-        binaryTree.getRoot().getLeft().getRight().setLeft(new TreeNode(7));//leaf
-        binaryTree.getRoot().getRight().setRight(new TreeNode(8));
-        binaryTree.getRoot().getRight().getRight().setLeft(new TreeNode(9)); //leaf
-        binaryTree.getRoot().getRight().getRight().setRight(new TreeNode(10));//leaf
+//        System.out.println("Max  " + binaryTree.findMaximumValue());
+        binaryTree.setRoot(new TreeNode(150));
+//        System.out.println("Root " + binaryTree.getRoot().getValue());
+//        System.out.println();
+        binaryTree.getRoot().setLeft(new TreeNode(100));
+        binaryTree.getRoot().setRight(new TreeNode(250));
+        binaryTree.getRoot().getLeft().setLeft(new TreeNode(75)); //leaf
+        binaryTree.getRoot().getLeft().setRight(new TreeNode(160));
+        binaryTree.getRoot().getLeft().getRight().setRight(new TreeNode(175));//leaf
+        binaryTree.getRoot().getLeft().getRight().setLeft(new TreeNode(125));//leaf
+        binaryTree.getRoot().getRight().setRight(new TreeNode(350));
+        binaryTree.getRoot().getRight().setLeft(new TreeNode(200));
+        binaryTree.getRoot().getRight().getRight().setLeft(new TreeNode(300)); //leaf
+        binaryTree.getRoot().getRight().getRight().setRight(new TreeNode(500));//leaf
 /****************/
-        binaryTree2.setRoot(new TreeNode(11));
-        binaryTree2.getRoot().setLeft(new TreeNode(2));
-        binaryTree2.getRoot().setRight(new TreeNode(13));
-        binaryTree2.getRoot().getLeft().setLeft(new TreeNode(14));
-        binaryTree2.getRoot().getLeft().getLeft().setRight(new TreeNode(15));//leaf
-        binaryTree2.getRoot().getLeft().getLeft().setLeft(new TreeNode(16));//leaf
-        binaryTree2.getRoot().getRight().setRight(new TreeNode(17));
-        binaryTree2.getRoot().getRight().getRight().setLeft(new TreeNode(18)); //leaf
-        binaryTree2.getRoot().getRight().getRight().setRight(new TreeNode(19));
-        binaryTree2.getRoot().getRight().getRight().getRight().setRight(new TreeNode(9));//leaf
-        binaryTree2.getRoot().getRight().getRight().getRight().setLeft(new TreeNode(10));//leaf
+        binaryTree2.setRoot(new TreeNode(42));
+        binaryTree2.getRoot().setLeft(new TreeNode(100));
+        binaryTree2.getRoot().setRight(new TreeNode(600));
+        binaryTree2.getRoot().getLeft().setLeft(new TreeNode(15));//leaf
+        binaryTree2.getRoot().getLeft().setRight(new TreeNode(160));
+        binaryTree2.getRoot().getLeft().getRight().setLeft(new TreeNode(125));//leaf
+        binaryTree2.getRoot().getLeft().getRight().setRight(new TreeNode(175));//leaf
+
+        binaryTree2.getRoot().getRight().setRight(new TreeNode(350));
+        binaryTree2.getRoot().getRight().setLeft(new TreeNode(200)); //leaf
+
+        binaryTree2.getRoot().getRight().getRight().setLeft(new TreeNode(4)); //leaf
+        binaryTree2.getRoot().getRight().getRight().setRight(new TreeNode(500)); //leaf
+//        binaryTree2.getRoot().getRight().getRight().getRight().setRight(new TreeNode(9));//leaf
+//        binaryTree2.getRoot().getRight().getRight().getRight().setLeft(new TreeNode(10));//leaf
 //        System.out.println(binaryTree.getRoot());
         System.out.println(intersection.treeIntersection(binaryTree,binaryTree2));
 

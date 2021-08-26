@@ -3,7 +3,6 @@ package hashTable.hashmapChallenges;
 import hashTable.data.Node;
 
 import java.util.LinkedList;
-import java.util.List;
 
 
 public class HashMap<K, V> {
