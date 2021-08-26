@@ -3,6 +3,11 @@
  */
 package hashTable;
 
+import hashTable.hashmapChallenges.BinaryTree;
+import hashTable.hashmapChallenges.RepeatedWord;
+import hashTable.hashmapChallenges.TreeIntersection;
+import hashTable.hashmapChallenges.data.TreeNode;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,24 +33,80 @@ public class App {
         HashTable<String, Integer> studentsMoney = new HashTable<>();
         HashTable<String, String> stringTest = new HashTable<>();
         HashTable<Integer, Integer> integerTest = new HashTable<>();
+        BinaryTree tree = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
+        TreeIntersection intersection = new TreeIntersection();
 
-        studentsMoney.add("Noor", 200);
-        studentsMoney.add("Sara", 300);
-        studentsMoney.add("Alaa", 500);
-        stringTest.add("hello", "World");
+
+//        studentsMoney.add("Noor", 200);
+//        studentsMoney.add("Sara", 300);
+//        studentsMoney.add("Alaa", 500);
+//        stringTest.add("hello", "World");
         integerTest.add(1, 2);
-        System.out.println("The hashCode is => " + studentsMoney.hashCode("Sara"));
-        System.out.println("The BucketIndex is => " + studentsMoney.getBucketIndex("Sara"));
-        System.out.println("The size is => " + studentsMoney.getSize());
-        System.out.println("The isEmpty => " + studentsMoney.isEmpty());
-        System.out.println("The get noor => " + studentsMoney.get("Sara"));
-        System.out.println("The remove noor => " + studentsMoney.remove("Sara"));
-        System.out.println("The size is => " + studentsMoney.getSize());
-
-        System.out.println("The get noor => " + stringTest.get("hello"));
-        System.out.println("The get noor => " + integerTest.get(1));
-
-
+//        System.out.println("The hashCode is => " + studentsMoney.hashCode("Sara"));
+//        System.out.println("The BucketIndex is => " + studentsMoney.getBucketIndex("Sara"));
+//        System.out.println("The size is => " + studentsMoney.getSize());
+//        System.out.println("The isEmpty => " + studentsMoney.isEmpty());
+//        System.out.println("The get noor => " + studentsMoney.get("Sara"));
+//        System.out.println("The remove noor => " + studentsMoney.remove("Sara"));
+//        System.out.println("The size is => " + studentsMoney.getSize());
+//
+//        System.out.println("The get noor => " + stringTest.get("hello"));
+//        System.out.println("The get noor => " + integerTest.get(1));
 //        System.out.println(checkUniqueCharacters("NoOr JAmal  l"));
+//        System.out.println("The get noor => " + integerTest.includes(1));
+
+
+//        RepeatedWord repeated = new RepeatedWord();
+//        System.out.println( repeated.repeatedWord("Noor,;,- is the best as noor as"));
+//        System.out.println( repeated.repeatedWord("\"Whatever you do, do it well.\""));
+
+
+        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree binaryTree2 = new BinaryTree();
+        System.out.println("Empty  " + binaryTree);
+        System.out.println("Empty intersection"+intersection.treeIntersection(binaryTree,binaryTree2));
+
+//        System.out.println("BFS  " + binaryTree.breadthFirst(binaryTree));
+
+        // adds nodes to the tree
+//        System.out.println("Max  " + binaryTree.findMaximumValue());
+        binaryTree.setRoot(new TreeNode(150));
+//        System.out.println("Root " + binaryTree.getRoot().getValue());
+//        System.out.println();
+        binaryTree.getRoot().setLeft(new TreeNode(100));
+        binaryTree.getRoot().setRight(new TreeNode(250));
+        binaryTree.getRoot().getLeft().setLeft(new TreeNode(75)); //leaf
+        binaryTree.getRoot().getLeft().setRight(new TreeNode(160));
+        binaryTree.getRoot().getLeft().getRight().setRight(new TreeNode(175));//leaf
+        binaryTree.getRoot().getLeft().getRight().setLeft(new TreeNode(125));//leaf
+        binaryTree.getRoot().getRight().setRight(new TreeNode(350));
+        binaryTree.getRoot().getRight().setLeft(new TreeNode(200));
+        binaryTree.getRoot().getRight().getRight().setLeft(new TreeNode(300)); //leaf
+        binaryTree.getRoot().getRight().getRight().setRight(new TreeNode(500));//leaf
+/****************/
+        binaryTree2.setRoot(new TreeNode(42));
+        binaryTree2.getRoot().setLeft(new TreeNode(100));
+        binaryTree2.getRoot().setRight(new TreeNode(600));
+        binaryTree2.getRoot().getLeft().setLeft(new TreeNode(15));//leaf
+        binaryTree2.getRoot().getLeft().setRight(new TreeNode(160));
+        binaryTree2.getRoot().getLeft().getRight().setLeft(new TreeNode(125));//leaf
+        binaryTree2.getRoot().getLeft().getRight().setRight(new TreeNode(175));//leaf
+
+        binaryTree2.getRoot().getRight().setRight(new TreeNode(350));
+        binaryTree2.getRoot().getRight().setLeft(new TreeNode(200)); //leaf
+
+        binaryTree2.getRoot().getRight().getRight().setLeft(new TreeNode(4)); //leaf
+        binaryTree2.getRoot().getRight().getRight().setRight(new TreeNode(500)); //leaf
+//        binaryTree2.getRoot().getRight().getRight().getRight().setRight(new TreeNode(9));//leaf
+//        binaryTree2.getRoot().getRight().getRight().getRight().setLeft(new TreeNode(10));//leaf
+//        System.out.println(binaryTree.getRoot());
+        System.out.println(intersection.treeIntersection(binaryTree,binaryTree2));
+
+
+
+
+
+
     }
 }

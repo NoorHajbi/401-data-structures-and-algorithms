@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="173fceee-1782-45e4-b1ca-9ec57354f28c" name="Default Changelist" comment="" />
+    <list default="true" id="173fceee-1782-45e4-b1ca-9ec57354f28c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/hashTable/app/src/main/java/hashTable/hashmapChallenges/TreeIntersection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashTable/app/src/main/java/hashTable/hashmapChallenges/RepeatedWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/hashTable/app/src/main/java/hashTable/hashmapChallenges/RepeatedWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../challengesRead/HashTable.md" beforeDir="false" afterPath="$PROJECT_DIR$/../challengesRead/HashTable.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sort" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hashTable" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

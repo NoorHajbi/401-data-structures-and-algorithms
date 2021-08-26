@@ -31,6 +31,7 @@ public class Node<K, V> {
         this.value = value;
     }
 
+
     public int getHashCode() {
         return hashCode;
     }
@@ -58,11 +59,11 @@ public class Node<K, V> {
 //    }
 
 
-//    @Override
-//    public String toString() {
-//        return "Node{" +
-//                "key=" + key +
-//                ", value=" + value +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Node{" +
+                "key=" + key +
+                ", value=" + value +
+                '}';
+    }
 }
