@@ -37,6 +37,8 @@ returns deleted value.
 
     
 ----
+# In the next challanges we used hashmap
+
 # 31. Find the first repeated word in a book
 
 ## Challenge Summary
@@ -48,6 +50,8 @@ Is to Write a function called **repeated word** that finds the first word to occ
 
   
 ## [Link to the code](../challenges/hashTable/app/src/main/java/hashTable/hashmapChallenges/RepeatedWord.java)
+
+## [Link to the test](../challenges/hashTable/app/src/test/java/hashTable/RepeatedWordTest.java)
   
 
 ## Whiteboard Process
@@ -79,7 +83,65 @@ Is to Write a function called **repeated word** that finds the first word to occ
 - Initialize A variable from **RepeatedWord Class**.
 - then call the **repeatedWord(sentence)** method.
 
+
+  
 ---
+
+# 32. Find common values in 2 binary trees.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+Write a function called **tree intersection**, that returns in an array common values in 2 binary trees.
+
+**Arguments:** Two binary trees
+**Return:** Array
+
+  
+## [Link to the code](../challenges/hashTable/app/src/main/java/hashTable/hashmapChallenges/TreeIntersection.java)
+
+
+## [Link to the test](../challenges/hashTable/app/src/test/java/hashTable/TreeIntersectionTest.java)
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Hashmap tree intersection](../challenges/hashTable/app/src/main/resources/hashmapTreeIntersection.png)
+  
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### - Approach:
+#### **Fisrt method Algorithm :**
+
+1. Declare a method called addTreeToHashMap that takes binary tree and returns HashMap of key type object and value type of integer.
+2. initialize a hashmap variable.
+3. loop inside the each node in the tree.
+4. add each item to the hashmap
+5. after the loop, return that hashmap.
+
+
+#### **Second method Algorithm :**
+
+1. Declare a function called treeIntersection that takes two binary tree and returns arrayList.
+2. Initialize arraylist of objects for intersection.
+3. Initialize a hashmap variable called tree2Set, that takes the returned value of addTreeToHashMap method when it takes the second tree.
+4. Initialize arraylist called arrayLoop that takes the breadth first of the first tree.
+5. loop inside the arrayLoop item by item.
+- if the tree2Set contains that item
+- add it to the arraylist of intersection.
+6. return that arraylist.
+
+  
+### - Efficiency:
+- **Space complexity** -> O(n)
+
+- **Time complexity** -> O(m+n), where m and n are the number of nodes for each tree.
+
+  
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initialize A variable from **TreeIntersection Class**.
+- then call the **addTreeToHashMap(tree1, tree2)** method.
+
+
 
 ## Resources
 
