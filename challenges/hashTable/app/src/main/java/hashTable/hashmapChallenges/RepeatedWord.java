@@ -1,23 +1,26 @@
 package hashTable.hashmapChallenges;
 
-import hashTable.HashTable;
-
 
 public class RepeatedWord {
+
+    /**
+     * repeatedWord
+     *
+     * @return String
+     */
     public String repeatedWord(String sentence) {
-        HashTable<String, Integer> hashtable = new HashTable<>();
+        HashMap<String, Integer> hashMap = new HashMap<>();
         String[] arr = sentence.split("\\s+");  //remove spaces
         int value = 0;
         for (String word : arr) {
-            word = word.replaceAll("[^a-zA-Z ]", "").toLowerCase();  //remove all punctuation
+            word = word.replaceAll("[^a-zA-Z ]", "").toLowerCase();  //remove all punctuations
 
-            if (hashtable.includes(word))
+            if (hashMap.containsKey(word))
                 return word;
-            hashtable.add(word, value++);
-            System.out.print("key -> " + word);
-            System.out.println(", value -> " + value);
+            hashMap.put(word, value++);
+            System.out.print("key -> " + value);
+            System.out.println(", value -> " + word);
         }
-
         return "There is no repeated words";
     }
 

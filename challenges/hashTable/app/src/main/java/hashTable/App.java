@@ -3,7 +3,10 @@
  */
 package hashTable;
 
+import hashTable.hashmapChallenges.BinaryTree;
 import hashTable.hashmapChallenges.RepeatedWord;
+import hashTable.hashmapChallenges.TreeIntersection;
+import hashTable.hashmapChallenges.data.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,6 +33,10 @@ public class App {
         HashTable<String, Integer> studentsMoney = new HashTable<>();
         HashTable<String, String> stringTest = new HashTable<>();
         HashTable<Integer, Integer> integerTest = new HashTable<>();
+        BinaryTree tree = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
+        TreeIntersection intersection = new TreeIntersection();
+
 
 //        studentsMoney.add("Noor", 200);
 //        studentsMoney.add("Sara", 300);
@@ -50,9 +57,48 @@ public class App {
 //        System.out.println("The get noor => " + integerTest.includes(1));
 
 
-        RepeatedWord repeated = new RepeatedWord();
+//        RepeatedWord repeated = new RepeatedWord();
 //        System.out.println( repeated.repeatedWord("Noor,;,- is the best as noor as"));
-        System.out.println( repeated.repeatedWord("\"Whatever you do, do it well.\""));
+//        System.out.println( repeated.repeatedWord("\"Whatever you do, do it well.\""));
+
+
+        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree binaryTree2 = new BinaryTree();
+        System.out.println("Empty  " + binaryTree);
+        System.out.println("BFS  " + binaryTree.breadthFirst(binaryTree));
+
+        // adds nodes to the tree
+        System.out.println("Max  " + binaryTree.findMaximumValue());
+        binaryTree.setRoot(new TreeNode(11));
+        System.out.println("Root " + binaryTree.getRoot().getValue());
+        System.out.println();
+        binaryTree.getRoot().setLeft(new TreeNode(2));
+        binaryTree.getRoot().setRight(new TreeNode(3));
+        binaryTree.getRoot().getLeft().setLeft(new TreeNode(4)); //leaf
+        binaryTree.getRoot().getLeft().setRight(new TreeNode(5));
+        binaryTree.getRoot().getLeft().getRight().setRight(new TreeNode(6));//leaf
+        binaryTree.getRoot().getLeft().getRight().setLeft(new TreeNode(7));//leaf
+        binaryTree.getRoot().getRight().setRight(new TreeNode(8));
+        binaryTree.getRoot().getRight().getRight().setLeft(new TreeNode(9)); //leaf
+        binaryTree.getRoot().getRight().getRight().setRight(new TreeNode(10));//leaf
+/****************/
+        binaryTree2.setRoot(new TreeNode(11));
+        binaryTree2.getRoot().setLeft(new TreeNode(2));
+        binaryTree2.getRoot().setRight(new TreeNode(13));
+        binaryTree2.getRoot().getLeft().setLeft(new TreeNode(14));
+        binaryTree2.getRoot().getLeft().getLeft().setRight(new TreeNode(15));//leaf
+        binaryTree2.getRoot().getLeft().getLeft().setLeft(new TreeNode(16));//leaf
+        binaryTree2.getRoot().getRight().setRight(new TreeNode(17));
+        binaryTree2.getRoot().getRight().getRight().setLeft(new TreeNode(18)); //leaf
+        binaryTree2.getRoot().getRight().getRight().setRight(new TreeNode(19));
+        binaryTree2.getRoot().getRight().getRight().getRight().setRight(new TreeNode(9));//leaf
+        binaryTree2.getRoot().getRight().getRight().getRight().setLeft(new TreeNode(10));//leaf
+//        System.out.println(binaryTree.getRoot());
+        System.out.println(intersection.treeIntersection(binaryTree,binaryTree2));
+
+
+
+
 
 
     }

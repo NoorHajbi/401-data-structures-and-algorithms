@@ -85,10 +85,12 @@ public class RepeatedWordTest {
         );
     }
 
+
     @Test
     public void testHappyPath3() {
-        sentence = "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know " +
-                "what I was doing in New York...";
+        sentence = "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs," +
+                " and I didn’t know what I was doing in New York...";
+
         repeatedWord = repeatedTest.repeatedWord(sentence);
         assertEquals(
                 "Happy path3 test:",
@@ -96,5 +98,6 @@ public class RepeatedWordTest {
                 repeatedWord
         );
     }
+
 
 }
