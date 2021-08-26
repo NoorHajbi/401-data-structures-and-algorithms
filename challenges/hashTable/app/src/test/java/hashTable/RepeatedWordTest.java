@@ -4,7 +4,7 @@ import hashTable.hashmapChallenges.RepeatedWord;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-
+//Edit the solution using the hashmap
 public class RepeatedWordTest {
     RepeatedWord repeatedTest = new RepeatedWord();
     String sentence;
