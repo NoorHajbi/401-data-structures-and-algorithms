@@ -1,8 +1,12 @@
 package hashTable.hashmapChallenges;
 
 import hashTable.data.Node;
+import hashTable.hashmapChallenges.data.TreeNode;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 
 public class HashMap<K, V> {
@@ -100,6 +104,18 @@ public class HashMap<K, V> {
         return get(key) != null;
     }
 
+    public List<K> keySet() {
+        int bucket = getBucket();
+        List<K> list = new ArrayList<>();
+        Node<K, V> node = bucketArray.get(bucket);
+        while (node != null) {
+            if (node.getKey() != null) {
+                list.add(node.getKey());
+            }
+            node = node.getNext();
+        }
+        return list;
+    }
 
 
 }

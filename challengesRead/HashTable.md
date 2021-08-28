@@ -142,6 +142,50 @@ Write a function called **tree intersection**, that returns in an array common v
 - then call the **addTreeToHashMap(tree1, tree2)** method.
 
 
+# 33. Implement a simplified LEFT JOIN for 2 Hashmaps.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+Write a function called **leftJoin** that left joins two hashmaps into a single data structure.
+
+**Arguments:** Two hash maps
+**Return:** List 
+
+  
+## [Link to the code](../challenges/hashTable/app/src/main/java/hashTable/hashmapChallenges/LeftJoin.java)
+
+
+## [Link to the test](../challenges/hashTable/app/src/test/java/hashTable/LeftJoinTest.java)
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Hashmap left join](../challenges/hashTable/app/src/main/resources/hashmapLeftJoin.png)
+  
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### - Approach:
+#### **Fisrt method Algorithm :**
+
+1. Declare a function called leftJoin that takes two hashmaps and returns arrayList.
+2. Initialize arraylist.
+3. loop inside the list of hashmap1.
+- add to the arraylist the key of that index, the hashmap1, and the hashmap2 value of that key.
+4. return that arraylist.
+
+  
+### - Efficiency:
+- **Space complexity** -> O(n)
+
+- **Time complexity** -> O(n), where n is number of hashmap1 keys.
+
+  
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initialize A variable from **LeftJoin Class**.
+- then call the **leftjoin(hashmap1, hashmap2)** method.
+
+
+---
 
 ## Resources
 
