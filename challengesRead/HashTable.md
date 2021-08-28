@@ -185,6 +185,8 @@ Write a function called **leftJoin** that left joins two hashmaps into a single 
 - then call the **leftjoin(hashmap1, hashmap2)** method.
 
 
+---
+
 ## Resources
 
 1.  As for HashTable Class -Class-30.

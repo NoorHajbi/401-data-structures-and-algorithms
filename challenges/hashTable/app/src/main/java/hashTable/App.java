@@ -40,7 +40,7 @@ public class App {
 //        studentsMoney.add("Sara", 300);
 //        studentsMoney.add("Alaa", 500);
 //        stringTest.add("hello", "World");
-        integerTest.add(1, 2);
+//        integerTest.add(1, 2);
 //        System.out.println("The hashCode is => " + studentsMoney.hashCode("Sara"));
 //        System.out.println("The BucketIndex is => " + studentsMoney.getBucketIndex("Sara"));
 //        System.out.println("The size is => " + studentsMoney.getSize());
@@ -53,7 +53,6 @@ public class App {
 //        System.out.println("The get noor => " + integerTest.get(1));
 //        System.out.println(checkUniqueCharacters("NoOr JAmal  l"));
 //        System.out.println("The get noor => " + integerTest.includes(1));
-
 
 //        RepeatedWord repeated = new RepeatedWord();
 //        System.out.println( repeated.repeatedWord("Noor,;,- is the best as noor as"));
@@ -115,6 +114,8 @@ public class App {
         map2.put("diligent", "idle");
         map2.put("guide", "follow");
         map2.put("flow", "jam");
+
+        System.out.println(map);
 
         System.out.println(leftJoin.leftJoin(map, map2));
 
