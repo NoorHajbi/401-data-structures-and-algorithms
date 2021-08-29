@@ -12,10 +12,10 @@ public class App {
         System.out.println(new App().getGreeting());
 
         Graph graph = new Graph();
-        graph.addVertex("Bob");
-        graph.addVertex("Alice");
-        graph.addVertex("Mary");
-        graph.addVertex("Noor");
+        graph.addNode("Bob");
+        graph.addNode("Alice");
+        graph.addNode("Mary");
+        graph.addNode("Noor");
 
 
         graph.addEdge("Bob", "Mary");
@@ -25,10 +25,13 @@ public class App {
         System.out.println( graph.size());
 
         System.out.println( graph.printGraph());
-        graph.removeVertex("Bob");
-        graph.removeEdge("Alice","Noor");
+//        graph.removeVertex("Bob");
+//        graph.removeEdge("Alice","Noor");
         System.out.println( graph.printGraph());
         System.out.println( graph.size());
+        System.out.println( graph.getNeighbors("Alice"));
+//        System.out.println( graph.getNodes());
+
 
 
 
