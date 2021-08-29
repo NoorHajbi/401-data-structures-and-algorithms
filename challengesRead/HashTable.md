@@ -1,5 +1,5 @@
 # 30. HashTable
-A hash table (hash map) is a data structure that implements a hash table array, which maps keys to values. 
+A hash table is a data structure that implements a hash table array, which maps keys to values. 
 
 ## Challenge
 - **We asked to implement hashtable by Creating 2 classes with their basic methods:**
