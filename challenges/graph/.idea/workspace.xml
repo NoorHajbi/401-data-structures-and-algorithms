@@ -5,27 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d39aae2-273d-4ed3-8bd2-9fda5554716c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../stackQueue/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../stackQueue/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../stackQueue/.idea/stackQueue.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/graph/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/graph/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/graph/Graph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/graph/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/graph/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/graph/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/graph/GraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/graph/GraphTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hashTable/app/src/main/java/hashTable/hashmapChallenges/TreeIntersection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hashTable/app/src/main/java/hashTable/hashmapChallenges/TreeIntersection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stackQueue/app/src/main/java/stackQueue/QueueLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stackQueue/app/src/main/java/stackQueue/QueueLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stackQueue/app/src/main/java/stackQueue/StackLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stackQueue/app/src/main/java/stackQueue/StackLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stackQueue/app/src/main/java/stackQueue/pseudoQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stackQueue/app/src/main/java/stackQueue/pseudoQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +59,12 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/src/main/java/graph/Graph.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/main/java/graph/Vertex.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/main/java/graph/App.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/test/java/graph/GraphTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1x1rBQw8RavZPleVYBnXXx7NJZO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

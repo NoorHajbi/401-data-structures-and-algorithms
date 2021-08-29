@@ -3,20 +3,17 @@ package graph;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class GraphTest {
 
-
-    //    Neighbors are returned with the weight between nodes included
     Graph graph = new Graph();
 
     // Can successfully instantiate an empty graph
     @Test
     public void testEmpty() {
         assertNotNull("Problem with instantiate an empty tree", graph);
-        assertNotNull("Problem with instantiate an empty tree", graph.printGraph());
+        //empty graph returns null
+        assertNull("Problem with instantiate an empty tree", graph.printGraph());
         assertNotNull("Problem with instantiate an empty tree", graph.getNodes());
         // The proper size is returned, representing the number of nodes in the graph
         assertEquals(0, graph.size());
@@ -62,18 +59,15 @@ public class GraphTest {
         assertEquals("Vertex{label='Noor'}[]",
                 graph.printGraph());
         assertEquals("[]", graph.getNeighbors("Noor").toString());
+        graph.addNode("Alice");
 
-
-//        graph.addEdge("Alice", "Noor");
-//        assertEquals(
-//                "Vertex{label='Bob'}[Vertex{label='Mary'}, Vertex{label='Alice'}, Vertex{label='Alice'}]Vertex{label='Noor'}[Vertex{label='Alice'}]Vertex{label='Alice'}[Vertex{label='Bob'}, Vertex{label='Bob'}, Vertex{label='Noor'}]Vertex{label='Mary'}[Vertex{label='Bob'}]",
-//                graph.printGraph());
-//        assertEquals("[Vertex{label='Alice'}]", graph.getNeighbors("Noor").toString());
-//
-//        assertEquals("[Vertex{label='Bob'}, Vertex{label='Noor'}, Vertex{label='Alice'}, Vertex{label='Mary'}]",
-//                graph.getNodes().toString());
-
+        graph.addEdge("Alice", "Noor");
+        assertEquals(
+                "Vertex{label='Noor'}[Vertex{label='Alice'}]Vertex{label='Alice'}[Vertex{label='Noor'}]",
+                graph.printGraph());
+        assertEquals("[Vertex{label='Alice'}]", graph.getNeighbors("Noor").toString());
+        assertEquals("[Vertex{label='Noor'}, Vertex{label='Alice'}]",
+                graph.getNodes().toString());
     }
-
 
 }

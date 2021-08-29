@@ -13,7 +13,7 @@ public class App {
 
         Graph graph = new Graph();
 //        graph.addNode("Bob");
-//        graph.addNode("Alice");
+        graph.addNode("Alice");
 //        graph.addNode("Mary");
         graph.addNode("Noor");
 //
@@ -22,15 +22,15 @@ public class App {
 //        graph.addEdge("Bob", "Alice");
 //        graph.addEdge("Alice", "Bob");
 //        graph.addEdge("Alice", "Noor");
-//        graph.addEdge("Noor", "Alice");
+        graph.addEdge("Noor", "Alice");
 //        System.out.println(graph);
         System.out.println( graph.printGraph());
 //        graph.removeVertex("Bob");
 //        graph.removeEdge("Alice","Noor");
 //        System.out.println( graph.printGraph());
 //        System.out.println( graph.size());
-//        System.out.println( graph.getNeighbors("Noor"));
-//        System.out.println( graph.getNodes());
+        System.out.println( graph.getNeighbors("Noor"));
+        System.out.println( graph.getNodes());
 
 
 

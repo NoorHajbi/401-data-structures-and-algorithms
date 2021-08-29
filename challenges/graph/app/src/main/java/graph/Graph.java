@@ -1,9 +1,6 @@
 package graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Graph {
     private final Map<Vertex, List<Vertex>> adjVertices;
@@ -38,6 +35,7 @@ public class Graph {
         adjVertices.get(vertex1).add(vertex2);
         adjVertices.get(vertex2).add(vertex1);
     }
+
 
     void removeVertex(String data) {
         Vertex vertex = new Vertex(data);
@@ -77,13 +75,18 @@ public class Graph {
         return adjVertices.get(vertex);
     }
 
+
     String printGraph() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (Vertex vertex : adjVertices.keySet()) {
-            stringBuilder.append(vertex);
-            stringBuilder.append(adjVertices.get(vertex));
+        if (adjVertices.isEmpty()) {
+            return null;
+        } else {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (Vertex vertex : adjVertices.keySet()) {
+                stringBuilder.append(vertex);
+                stringBuilder.append(adjVertices.get(vertex));
+            }
+            return stringBuilder.toString();
         }
-        return stringBuilder.toString();
     }
 
     /**
