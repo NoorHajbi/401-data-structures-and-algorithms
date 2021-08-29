@@ -18,7 +18,7 @@ public class TreeIntersection {
             return null;
         List<Object> intersection = new ArrayList<>();
         HashMap<Object, Integer> tree2Set = addTreeToHashMap(tree2);
-        List<Integer> arrayLoop = new ArrayList<>(tree1.breadthFirst(tree1));
+        List<Integer> arrayLoop = new ArrayList<>(tree1.inOrder());
 
         for (Object o : arrayLoop) {
             if (tree2Set.containsKey(o)) {
