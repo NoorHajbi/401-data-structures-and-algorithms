@@ -46,9 +46,9 @@ A graph is data structure consisting of data that is stored among many groups of
 
 ## Challenge Summary
 <!-- Description of the challenge -->
-Write a method for the Graph class called **breadthFirst** that left joins two hashmaps into a single data structure.
+Write a method for the Graph class called **breadthFirst** that implements Breadth-First Traversal of a Graph.
 
-**Arguments:**  Node
+**Arguments:**  String of Node  
 **Return:** A collection of nodes in the order they were visited. 
 
   
@@ -63,17 +63,26 @@ Write a method for the Graph class called **breadthFirst** that left joins two h
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 ### - Approach:
-<!-- 1. Declare a function called leftJoin that takes two hashmaps and returns arrayList.
-2. Initialize arraylist.
-3. loop inside the list of hashmap1.
-- add to the arraylist the key of that index, the hashmap1, and the hashmap2 value of that key.
-4. return that arraylist. -->
-
+1. Declare a method called **breadthFirst** that takes String of node and returns List of strings.
+2. If the **node is empty**, then return "null".
+3. Initialize a **list** of string.
+4. Initialize a **queue**.
+5. Initialize a Set of **visited** nodes.
+6. **enqueue** that node inside the queue.
+7. add that node inside the set of visited.
+8. check while the queue is not empty, then
+    - 1. Initlize a **tempNode** of type String, its value is the **dequeued** value from the queue.
+    - 2. **add the tempNode** to the **List**.
+    - 3.  loop inside the graph nodes, then
+        - check if the node **is not visited** yet, then
+        - add the node data to the queue.
+        - and add the node data to the visited set.
+9. Return the **list**.
   
 ### - Efficiency:
-- **Space complexity** -> O(n)
+- **Space complexity** -> O(n).
 
-- **Time complexity** -> O(n).
+- **Time complexity** -> O(v+e), where v is vertices and e is for edges.
 
   
 ## Solution

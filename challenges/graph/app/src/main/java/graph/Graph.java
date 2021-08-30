@@ -97,7 +97,13 @@ public class Graph {
     }
 
 
-    public List<String> breadthFirst(String node) {
+    /**
+     * breadthFirst
+     *
+     * @param node
+     * @return A collection of nodes in the order they were visited.
+     */
+    List<String> breadthFirst(String node) {
         if (node == null) {
             return null;
         }
@@ -106,7 +112,6 @@ public class Graph {
         Set<String> visited = new HashSet<>();
         queue.add(node);
         visited.add(node);
-
         while (!queue.isEmpty()) {
             String tempNode = queue.remove();
             list.add(tempNode);
