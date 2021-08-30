@@ -53,7 +53,7 @@ public class App {
     /**********************************/
 //    Given an adjacency matrix representation of a graph, return the adjacency list representation.
     static String adjacencyListRepresentation(int[][] matrix) {
-        if(matrix.length==0)
+        if (matrix.length == 0)
             return "The matrix is empty";
         List<List<String>> adjacencyList = new ArrayList<>(matrix[0].length);
         char letter;
@@ -131,13 +131,14 @@ public class App {
         System.out.println(IdentifyAnagrams("fried", "fired"));
 
         /***/
-        int[][] a = {{0, 1, 0},
+        int[][] list = {{0, 1, 0},
                 {1, 0, 1},
                 {0, 1, 0}};
 
 
-//        System.out.println(adjacencyListRepresentation(a));
-
+//        System.out.println(adjacencyListRepresentation(list));
+        System.out.println(graph.breadthFirst("Alice"));
 
     }
 }
+//Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo

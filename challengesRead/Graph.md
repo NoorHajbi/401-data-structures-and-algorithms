@@ -41,3 +41,47 @@ A graph is data structure consisting of data that is stored among many groups of
 4. **getNeighbors()** -> Returns a collection of edges connected to the given node.
 5. **size()** -> Returns the total number of nodes in the graph
 
+---
+# 36. Implement Breadth-First Traversal of a Graph.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+Write a method for the Graph class called **breadthFirst** that left joins two hashmaps into a single data structure.
+
+**Arguments:**  Node
+**Return:** A collection of nodes in the order they were visited. 
+
+  
+## [Link to the code](../challenges/graph/app/src/main/java/graph/Graph.java)
+
+## [Link to the test](../challenges/graph/app/src/test/java/graph/GraphTest.java)
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Graph Breadth First](../challenges/graph/app/src/main/resources/graphBreadthFirst.png)
+  
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### - Approach:
+<!-- 1. Declare a function called leftJoin that takes two hashmaps and returns arrayList.
+2. Initialize arraylist.
+3. loop inside the list of hashmap1.
+- add to the arraylist the key of that index, the hashmap1, and the hashmap2 value of that key.
+4. return that arraylist. -->
+
+  
+### - Efficiency:
+- **Space complexity** -> O(n)
+
+- **Time complexity** -> O(n).
+
+  
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initialize A variable from **Graph Class**.
+- then call the **breadthFirst(node)** method.
+
+---
+## Resources
+
+1. [BreadthFirst](https://www.baeldung.com/java-graphs)

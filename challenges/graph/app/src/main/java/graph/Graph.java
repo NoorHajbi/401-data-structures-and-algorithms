@@ -95,4 +95,28 @@ public class Graph {
     int size() {
         return adjVertices.size();
     }
+
+
+    public List<String> breadthFirst(String node) {
+        if (node == null) {
+            return null;
+        }
+        List<String> list = new ArrayList<>();
+        Queue<String> queue = new LinkedList<>();
+        Set<String> visited = new HashSet<>();
+        queue.add(node);
+        visited.add(node);
+
+        while (!queue.isEmpty()) {
+            String tempNode = queue.remove();
+            list.add(tempNode);
+            for (Vertex v : getNodes()) {
+                if (!visited.contains(v.label)) {
+                    queue.add(v.label);
+                    visited.add(v.label);
+                }
+            }
+        }
+        return list;
+    }
 }
