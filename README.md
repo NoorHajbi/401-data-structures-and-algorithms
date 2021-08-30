@@ -23,7 +23,7 @@
 |mergeSort|[BLOG](challengesRead/Sort/BLOG.md)| [mergeSort](challenges/Sort/app/src/main/resources)|
 |quickSort|[BLOG](challengesRead/Sort/BLOG.md)| [quickSort](challenges/Sort/app/src/main/resources)|
 |hashTable|[Description](challengesRead/HashTable.md)| [HashTable Resources](challenges/hashTable/app/src/main/resources)|
-|graph|[Description](challengesRead/Graph.md)| [Graph Resources](challenges/graph/app/src/main/resources)|
+|Graph|[Description](challengesRead/Graph.md)| [Graph Resources](challenges/graph/app/src/test/resources)|
 
 
 

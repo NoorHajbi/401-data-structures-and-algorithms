@@ -3,13 +3,13 @@ package stackQueue;
 import data.Node;
 
 public class QueueLinkedList<T> {
-    public Node<T> front, rear;
+    Node<T> front, rear;
 
     public QueueLinkedList() {
         this.front = this.rear = null;
     }
 
-    public void enqueue(T value) {
+    void enqueue(T value) {
         Node<T> newNode = new Node<>(value);
 
         //if it's empty, the newNode is rear and front
@@ -22,7 +22,7 @@ public class QueueLinkedList<T> {
         this.rear = newNode;
     }
 
-    public T dequeue() {
+    T dequeue() {
         if (this.front == null) {
             return (T) "The queue is empty";
         } else {
