@@ -107,7 +107,6 @@ public class Graph {
         if (adjVertices.isEmpty()) {
             return null;
         }
-//        || !adjVertices.containsKey(node)
         Set<Object> visited = new LinkedHashSet<>();
         Queue<Object> queue = new LinkedList<>();
         queue.add(node);
