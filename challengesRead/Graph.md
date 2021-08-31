@@ -41,3 +41,55 @@ A graph is data structure consisting of data that is stored among many groups of
 4. **getNeighbors()** -> Returns a collection of edges connected to the given node.
 5. **size()** -> Returns the total number of nodes in the graph
 
+---
+# 36. Implement Breadth-First Traversal of a Graph.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+Write a method for the Graph class called **breadthFirst** that implements Breadth-First Traversal of a Graph.
+
+**Arguments:**  String of Node  
+**Return:** A collection of nodes in the order they were visited. 
+
+  
+## [Link to the code](../challenges/graph/app/src/main/java/graph/Graph.java)
+
+## [Link to the test](../challenges/graph/app/src/test/java/graph/GraphBreadthFirstTest.java)
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Graph Breadth First](../challenges/graph/app/src/main/resources/graphBreadthFirst.png)
+  
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### - Approach:
+1. Declare a method called **breadthFirst** that takes Object of node and returns Set of objects.
+2. If the **graph is empty** or the **node doesn't exist**, then return **"null"**.
+3. Initialize a Set of **visited** nodes.
+4. Initialize a **queue**.
+5. **enqueue** that node inside the queue.
+6. add that node inside the set of visited.
+7. check while the queue is not empty, then
+    - 1. Initlize a **tempNode** of type Object, its value is the **dequeued** value from the queue.
+    - 2.  loop inside the graph nodes, then
+        - check if the node **is not visited** yet, then
+        - add the node data to the queue.
+        - and add the node data to the visited set.
+9. Return the **list**.
+  
+
+### - Efficiency:
+- **Space complexity** -> O(n).
+
+- **Time complexity** -> O(v+e), where v is vertices and e is for edges.
+
+  
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initialize A variable from **Graph Class**.
+- then call the **breadthFirst(node)** method.
+
+---
+## Resources
+
+1. [BreadthFirst](https://www.baeldung.com/java-graphs)
