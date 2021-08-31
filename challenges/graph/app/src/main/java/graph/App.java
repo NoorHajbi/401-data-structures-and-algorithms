@@ -107,28 +107,34 @@ public class App {
         System.out.println(new App().getGreeting());
 
         Graph graph = new Graph();
-//        graph.addNode("Bob");
-        graph.addNode("Alice");
-//        graph.addNode("Mary");
-        graph.addNode("Noor");
-//
-//
-//        graph.addEdge("Bob", "Mary");
-//        graph.addEdge("Bob", "Alice");
-//        graph.addEdge("Alice", "Bob");
-//        graph.addEdge("Alice", "Noor");
-        graph.addEdge("Noor", "Alice");
+        graph.addNode("Pandora");
+        graph.addNode("Arendelle");
+        graph.addNode("Metroville");
+        graph.addNode("Monstroplolis");
+        graph.addNode("Narnia");
+        graph.addNode("Naboo");
+
+
+        graph.addEdge("Pandora", "Arendelle");
+        graph.addEdge("Arendelle", "Metroville");
+        graph.addEdge("Arendelle", "Monstroplolis");
+        graph.addEdge("Metroville", "Monstroplolis");
+        graph.addEdge("Metroville", "Narnia");
+        graph.addEdge("Metroville", "Naboo");
+        graph.addEdge("Monstroplolis", "Naboo");
+
+
 //        System.out.println(graph);
-        System.out.println(graph.printGraph());
+//        System.out.println(graph.printGraph());
 //        graph.removeVertex("Bob");
 //        graph.removeEdge("Alice","Noor");
 //        System.out.println( graph.printGraph());
 //        System.out.println( graph.size());
-        System.out.println(graph.getNeighbors("Noor"));
-        System.out.println(graph.getNodes());
+//        System.out.println(graph.getNeighbors("Noor"));
+//        System.out.println(graph.getNodes());
 
-        System.out.println(IdentifyAnagrams1("Astronomers", "Moon starers"));
-        System.out.println(IdentifyAnagrams("fried", "fired"));
+//        System.out.println(IdentifyAnagrams1("Astronomers", "Moon starers"));
+//        System.out.println(IdentifyAnagrams("fried", "fired"));
 
         /***/
         int[][] list = {{0, 1, 0},
@@ -137,7 +143,7 @@ public class App {
 
 
 //        System.out.println(adjacencyListRepresentation(list));
-        System.out.println(graph.breadthFirst("Alice"));
+        System.out.println(graph.breadthFirst("Pandora"));
 
     }
 }

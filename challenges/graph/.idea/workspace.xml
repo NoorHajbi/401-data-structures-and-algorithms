@@ -5,8 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d39aae2-273d-4ed3-8bd2-9fda5554716c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Sort/app/bin/main/mergeSort.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sort/app/bin/main/quickSort.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sort/app/bin/test/sort/MergeSortTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/39.Adjacencylist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/41.IdentifyAnagrams.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/graphBreadthFirst.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/test/graph/GraphBreadthFirstTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/test/graph/GraphTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/graph/GraphBreadthFirstTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/BinaryTree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/HashMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/data/TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashmapLeftJoin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashmapRepeatedWord.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashmapTreeIntersection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashTable/app/bin/test/hashTable/LeftJoinTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/main/graph/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/main/graph/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/main/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/main/graph/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/graph/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/graph/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/graph/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/graph/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/graph/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/data/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/data/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/LeftJoin.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/LeftJoin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/RepeatedWord.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/RepeatedWord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/TreeIntersection.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hashTable/app/bin/main/hashTable/hashmapChallenges/TreeIntersection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashTable/app/bin/test/hashTable/TreeIntersectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hashTable/app/bin/test/hashTable/TreeIntersectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stackQueue/app/bin/main/stackQueue/QueueLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../stackQueue/app/bin/main/stackQueue/QueueLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stackQueue/app/bin/main/stackQueue/StackLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../stackQueue/app/bin/main/stackQueue/StackLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stackQueue/app/bin/main/stackQueue/pseudoQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../stackQueue/app/bin/main/stackQueue/pseudoQueue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../challengesRead/Graph.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../challengesRead/Graph.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

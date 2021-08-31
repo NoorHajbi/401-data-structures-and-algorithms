@@ -54,7 +54,7 @@ Write a method for the Graph class called **breadthFirst** that implements Bread
   
 ## [Link to the code](../challenges/graph/app/src/main/java/graph/Graph.java)
 
-## [Link to the test](../challenges/graph/app/src/test/java/graph/GraphTest.java)
+## [Link to the test](../challenges/graph/app/src/test/java/graph/GraphBreadthFirstTest.java)
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->

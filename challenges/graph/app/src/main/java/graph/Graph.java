@@ -70,7 +70,7 @@ public class Graph {
      * @return Returns a collection of edges connected to the given node
      * Include the weight of the connection in the returned collection
      */
-    public List<Vertex> getNeighbors(String data) {
+    List<Vertex> getNeighbors(String data) {
         Vertex vertex = new Vertex(data);
         return adjVertices.get(vertex);
     }
@@ -103,25 +103,21 @@ public class Graph {
      * @param node
      * @return A collection of nodes in the order they were visited.
      */
-    List<String> breadthFirst(String node) {
-        if (node == null) {
-            return null;
-        }
-        List<String> list = new ArrayList<>();
-        Queue<String> queue = new LinkedList<>();
-        Set<String> visited = new HashSet<>();
+    Set<Object> breadthFirst(Object node) {
+        Set<Object> visited = new LinkedHashSet<>();
+        Queue<Object> queue = new LinkedList<>();
         queue.add(node);
         visited.add(node);
         while (!queue.isEmpty()) {
-            String tempNode = queue.remove();
-            list.add(tempNode);
-            for (Vertex v : getNodes()) {
+            Object tempNode = queue.remove();
+            for (Vertex v : getNeighbors(tempNode.toString())) {
                 if (!visited.contains(v.label)) {
-                    queue.add(v.label);
                     visited.add(v.label);
+                    queue.add(v.label);
                 }
             }
         }
-        return list;
+        return visited;
     }
+
 }
