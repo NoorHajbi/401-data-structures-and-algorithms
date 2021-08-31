@@ -63,22 +63,21 @@ Write a method for the Graph class called **breadthFirst** that implements Bread
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 ### - Approach:
-1. Declare a method called **breadthFirst** that takes String of node and returns List of strings.
-2. If the **node is empty**, then return "null".
-3. Initialize a **list** of string.
+1. Declare a method called **breadthFirst** that takes Object of node and returns Set of objects.
+2. If the **graph is empty** or the **node doesn't exist**, then return **"null"**.
+3. Initialize a Set of **visited** nodes.
 4. Initialize a **queue**.
-5. Initialize a Set of **visited** nodes.
-6. **enqueue** that node inside the queue.
-7. add that node inside the set of visited.
-8. check while the queue is not empty, then
-    - 1. Initlize a **tempNode** of type String, its value is the **dequeued** value from the queue.
-    - 2. **add the tempNode** to the **List**.
-    - 3.  loop inside the graph nodes, then
+5. **enqueue** that node inside the queue.
+6. add that node inside the set of visited.
+7. check while the queue is not empty, then
+    - 1. Initlize a **tempNode** of type Object, its value is the **dequeued** value from the queue.
+    - 2.  loop inside the graph nodes, then
         - check if the node **is not visited** yet, then
         - add the node data to the queue.
         - and add the node data to the visited set.
 9. Return the **list**.
   
+
 ### - Efficiency:
 - **Space complexity** -> O(n).
 

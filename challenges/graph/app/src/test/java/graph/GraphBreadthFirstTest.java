@@ -5,9 +5,32 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class GraphBreadthFirstTest {
+    Graph graph = new Graph();
+
+    //graph is empty
+    @Test
+    public void testEmpty() {
+        assertNull("Problem with empty graph", graph.breadthFirst("Noor"));
+    }
+
+    @Test
+    public void testOnlyNodes() {
+        graph.addNode("Pandora");
+        graph.addNode("Arendelle");
+        graph.addNode("Metroville");
+        graph.addNode("Monstroplolis");
+        graph.addNode("Narnia");
+        graph.addNode("Naboo");
+
+        assertEquals(
+                "No Edges: ",
+                "[Naboo]",
+                graph.breadthFirst("Naboo").toString()
+        );
+    }
+
     @Test
     public void testHappyPath() {
-        Graph graph = new Graph();
         graph.addNode("Pandora");
         graph.addNode("Arendelle");
         graph.addNode("Metroville");

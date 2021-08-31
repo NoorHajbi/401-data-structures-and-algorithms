@@ -104,10 +104,15 @@ public class Graph {
      * @return A collection of nodes in the order they were visited.
      */
     Set<Object> breadthFirst(Object node) {
+        if (adjVertices.isEmpty()) {
+            return null;
+        }
+//        || !adjVertices.containsKey(node)
         Set<Object> visited = new LinkedHashSet<>();
         Queue<Object> queue = new LinkedList<>();
         queue.add(node);
         visited.add(node);
+
         while (!queue.isEmpty()) {
             Object tempNode = queue.remove();
             for (Vertex v : getNeighbors(tempNode.toString())) {

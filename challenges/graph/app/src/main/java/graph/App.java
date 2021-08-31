@@ -113,15 +113,15 @@ public class App {
         graph.addNode("Monstroplolis");
         graph.addNode("Narnia");
         graph.addNode("Naboo");
+//
 
-
-        graph.addEdge("Pandora", "Arendelle");
-        graph.addEdge("Arendelle", "Metroville");
-        graph.addEdge("Arendelle", "Monstroplolis");
-        graph.addEdge("Metroville", "Monstroplolis");
-        graph.addEdge("Metroville", "Narnia");
-        graph.addEdge("Metroville", "Naboo");
-        graph.addEdge("Monstroplolis", "Naboo");
+//        graph.addEdge("Pandora", "Arendelle");
+//        graph.addEdge("Arendelle", "Metroville");
+//        graph.addEdge("Arendelle", "Monstroplolis");
+//        graph.addEdge("Metroville", "Monstroplolis");
+//        graph.addEdge("Metroville", "Narnia");
+//        graph.addEdge("Metroville", "Naboo");
+//        graph.addEdge("Monstroplolis", "Naboo");
 
 
 //        System.out.println(graph);
@@ -143,7 +143,7 @@ public class App {
 
 
 //        System.out.println(adjacencyListRepresentation(list));
-        System.out.println(graph.breadthFirst("Pandora"));
+        System.out.println(graph.breadthFirst("Naboo"));
 
     }
 }

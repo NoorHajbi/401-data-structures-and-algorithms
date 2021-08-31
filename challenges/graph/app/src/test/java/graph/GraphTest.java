@@ -11,10 +11,10 @@ public class GraphTest {
     // Can successfully instantiate an empty graph
     @Test
     public void testEmpty() {
-        assertNotNull("Problem with instantiate an empty tree", graph);
+        assertNotNull("Problem with instantiate an empty graph", graph);
         //empty graph returns null
-        assertNull("Problem with instantiate an empty tree", graph.printGraph());
-        assertNotNull("Problem with instantiate an empty tree", graph.getNodes());
+        assertNull("Problem with instantiate an empty graph", graph.printGraph());
+        assertNotNull("Problem with instantiate an empty graph", graph.getNodes());
         // The proper size is returned, representing the number of nodes in the graph
         assertEquals(0, graph.size());
     }
