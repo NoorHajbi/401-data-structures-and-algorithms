@@ -141,35 +141,32 @@ public class Graph {
      * @param cityNames List
      * @return cost or null
      */
-    String businessTrip(Graph graph, List<Object> cityNames) {
+    String businessTrip(Graph graph, List<Object> citiesNames) {
         int cost = 0;
-        if (cityNames.size() <= 1)
+        if (citiesNames.size() <= 1)
             return "null";
 
-        List<Integer> findWeight;
-        for (int i = 0; i < cityNames.size() - 1; i++) {
+        int findWeight;
+        for (int i = 0; i < citiesNames.size() - 1; i++) {
             findWeight = findWeight(graph,
-                    (String) cityNames.get(i),
-                    (String) cityNames.get(i + 1));
+                    (String) citiesNames.get(i),
+                    (String) citiesNames.get(i + 1));
 
-            if (findWeight.get(0) == 0)
+            if (findWeight == 0)
                 return "False, $0";
 
-            cost = cost + findWeight.get(0);
+            cost += findWeight;
         }
         return "True, $" + cost;
     }
 
-    private List<Integer> findWeight(Graph graph, String city1, String city2) {
-        List<Integer> visited = new ArrayList<>();
+    private int findWeight(Graph graph, String city1, String city2) {
         for (Vertex vertex : graph.getNeighbors(city1)) {
             if (Objects.equals(city2, vertex.label)) {
-                visited.add(vertex.getWeight());
-                return visited;
+                return vertex.getWeight();
             }
         }
-        visited.add(0);
-        return visited;
+        return 0;
     }
 
 }

@@ -98,7 +98,7 @@ Given a business trip itinerary, and an Alaska Airlines route map, is the trip p
 
 Write a method for the Graph class called **businessTrip** that determines whether the trip is possible with direct flights, and how much it would cost.
 
-**Arguments:**  graph, List of city names
+**Arguments:**  graph, List of city names  
 **Return:** String (cost or null).
 
   
@@ -113,23 +113,28 @@ Write a method for the Graph class called **businessTrip** that determines wheth
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 ### - Approach:
-<!-- 1. Declare a method called **breadthFirst** that takes Object of node and returns Set of objects.
-2. If the **graph is empty** or the **node doesn't exist**, then return **"null"**.
-3. Initialize a Set of **visited** nodes.
-4. Initialize a **queue**.
-5. **enqueue** that node inside the queue.
-6. add that node inside the set of visited.
-7. check while the queue is not empty, then
-    - 1. Initlize a **tempNode** of type Object, its value is the **dequeued** value from the queue.
-    - 2.  loop inside the graph nodes, then
-        - check if the node **is not visited** yet, then
-        - add the node data to the queue.
-        - and add the node data to the visited set.
-9. Return the **list**. -->
+#### **First method Algorithm:**
+1. Declare a private method called **findWeight** that takes graph, string of city1, and string of city2, and returns integer value.
+2.  loop inside the neighbor vertices of the city1, then
+    - check if the vertex value is same as city2, then
+        - return the vertex weight value.
+3. return zero.
+
+#### **Second method Algorithm:**
+1. Declare a method called **businessTrip** that takes graph, and List of cities names, and returns String (cost or null).
+2. Initialize a cost variable with a zero as an initial value.
+3. check if the size of the citiesNames list is less or equal one, then return null.
+4. Declare integer value for the weight.
+5. loop from 0 to the size of the citiesNames list
+    - give the weight the returned value of find weight method when it takes the graph, the city of that index and the city that after it.
+    - check if weight value equals zero then,
+        - return **"False, $0"**
+    - give the cost the sum of weight values
+6. return **"True, $" + cost**
   
 
 ### - Efficiency:
-- **Space complexity** -> O(n).
+- **Space complexity** -> O(1).
 
 - **Time complexity** -> O(n^2).
 
