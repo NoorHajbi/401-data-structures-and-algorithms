@@ -125,19 +125,9 @@ public class Graph {
     }
     ///****************** Code 37 ******************///
 
-//    Given a business trip itinerary,
-//    and an Alaska Airlines route map,
-//    is the trip possible with direct flights?
-//    If so, how much will the total trip cost be?
-
-    //    Write a function called business trip
-//    Arguments: graph, array of city names
-//    Return: cost or null
-//    Determine whether the trip is possible with direct flights, and how much it would cost.
-    public void addEdgeWithWeight(String data1, String data2, int weight) {
+     void addWeightedEdges(String data1, String data2, int weight) {
         Vertex Vertex1 = new Vertex(data1, weight);
         Vertex Vertex2 = new Vertex(data2, weight);
-
 
         adjVertices.get(Vertex1).add(Vertex2);
         adjVertices.get(Vertex2).add(Vertex1);
@@ -151,7 +141,7 @@ public class Graph {
      * @param cityNames List
      * @return cost or null
      */
-    public String businessTrip(Graph graph, List<Object> cityNames) {
+     String businessTrip(Graph graph, List<Object> cityNames) {
         int cost = 0;
         if (cityNames.size() <= 1)
             return "null";
@@ -181,12 +171,5 @@ public class Graph {
         visited.add(0);
         return visited;
     }
-
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
 
 }

@@ -145,19 +145,19 @@ public class App {
         graph2.addNode("Narnia");
         graph2.addNode("Naboo");
 
-        graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
-        graph2.addEdgeWithWeight("Pandora", "Metroville", 82);
+        graph2.addWeightedEdges("Pandora", "Arendelle", 150);
+        graph2.addWeightedEdges("Pandora", "Metroville", 82);
 
 
-        graph2.addEdgeWithWeight("Arendelle", "Metroville", 99);
-        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis", 42);
+        graph2.addWeightedEdges("Arendelle", "Metroville", 99);
+        graph2.addWeightedEdges("Arendelle", "Monstroplolis", 42);
 
-        graph2.addEdgeWithWeight("Metroville", "Monstroplolis", 105);
-        graph2.addEdgeWithWeight("Metroville", "Narnia", 37);
-        graph2.addEdgeWithWeight("Metroville", "Naboo", 26);
+        graph2.addWeightedEdges("Metroville", "Monstroplolis", 105);
+        graph2.addWeightedEdges("Metroville", "Narnia", 37);
+        graph2.addWeightedEdges("Metroville", "Naboo", 26);
 
-        graph2.addEdgeWithWeight("Monstroplolis", "Naboo", 73);
-        graph2.addEdgeWithWeight("Narnia", "Naboo", 250);
+        graph2.addWeightedEdges("Monstroplolis", "Naboo", 73);
+        graph2.addWeightedEdges("Narnia", "Naboo", 250);
 
         List<Object> path1 = new ArrayList<>();
         path1.add("Metroville");
