@@ -125,7 +125,7 @@ public class Graph {
     }
     ///****************** Code 37 ******************///
 
-     void addWeightedEdges(String data1, String data2, int weight) {
+    void addWeightedEdges(String data1, String data2, int weight) {
         Vertex Vertex1 = new Vertex(data1, weight);
         Vertex Vertex2 = new Vertex(data2, weight);
 
@@ -141,7 +141,7 @@ public class Graph {
      * @param cityNames List
      * @return cost or null
      */
-     String businessTrip(Graph graph, List<Object> cityNames) {
+    String businessTrip(Graph graph, List<Object> cityNames) {
         int cost = 0;
         if (cityNames.size() <= 1)
             return "null";
