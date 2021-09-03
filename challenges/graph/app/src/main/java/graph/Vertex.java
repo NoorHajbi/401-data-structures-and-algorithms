@@ -4,9 +4,19 @@ import java.util.Objects;
 
 public class Vertex {
     String label;
+    int weight;
 
     public Vertex(String label) {
         this.label = label;
+    }
+
+    public Vertex(String label, int weight) {
+        this.label = label;
+        this.weight = weight;
+    }
+
+    public int getWeight() {
+        return weight;
     }
 
     public Vertex() {
