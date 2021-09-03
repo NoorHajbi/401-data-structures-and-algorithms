@@ -90,6 +90,61 @@ Write a method for the Graph class called **breadthFirst** that implements Bread
 - then call the **breadthFirst(node)** method.
 
 ---
+# 37. Implement Breadth-First Traversal of a Graph.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
+
+Write a method for the Graph class called **businessTrip** that determines whether the trip is possible with direct flights, and how much it would cost.
+
+**Arguments:**  graph, List of city names  
+**Return:** String (cost or null).
+
+  
+## [Link to the code](../challenges/graph/app/src/main/java/graph/Graph.java)
+
+## [Link to the test](../challenges/graph/app/src/test/java/graph/BusinessTripTest.java)
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Graph Business Trip](../challenges/graph/app/src/main/resources/graphBusinessTrip.png)
+  
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### - Approach:
+#### **First method Algorithm:**
+1. Declare a private method called **findWeight** that takes graph, string of city1, and string of city2, and returns integer value.
+2.  loop inside the neighbor vertices of the city1, then
+    - check if the vertex value is same as city2, then
+        - return the vertex weight value.
+3. return zero.
+
+#### **Second method Algorithm:**
+1. Declare a method called **businessTrip** that takes graph, and List of cities names, and returns String (cost or null).
+2. Initialize a cost variable with a zero as an initial value.
+3. check if the size of the citiesNames list is less or equal one, then return null.
+4. Declare integer value for the weight.
+5. loop from 0 to the size of the citiesNames list
+    - give the weight the returned value of find weight method when it takes the graph, the city of that index and the city that after it.
+    - check if weight value equals zero then,
+        - return **"False, $0"**
+    - give the cost the sum of weight values
+6. return **"True, $" + cost**
+  
+
+### - Efficiency:
+- **Space complexity** -> O(1).
+
+- **Time complexity** -> O(n^2).
+
+  
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initialize A variable from **Graph Class**.
+- then call the **BusinessTrip(graph,list of cities)** method.
+
+---
 ## Resources
 
 1. [BreadthFirst](https://www.baeldung.com/java-graphs)

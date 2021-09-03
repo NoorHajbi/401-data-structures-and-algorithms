@@ -38,7 +38,7 @@ public class BinaryTree {
     }
 
     // 2.
-    public ArrayList<Integer> inOrder(Node node, ArrayList<Integer> list) {
+    private ArrayList<Integer> inOrder(Node node, ArrayList<Integer> list) {
         if (node != null) {
             inOrder(node.getLeft(), list); // traverse left sub tree
             list.add(node.getValue()); // root
@@ -109,27 +109,22 @@ public class BinaryTree {
         List<Integer> inOrder = tree.inOrder();
         for (Integer integer : inOrder) {
             if (integer % 2 != 0) {
-                sum = integer + sum;
+                sum += integer;
             }
         }
         return sum;
     }
 
-    public int filesSum(Node node) {
-        int count=0;
-        int numLeft =0;
-        int numRight =0;
+    private int filesSum(Node node) {
+        int count, numLeft, numRight;
         if (node == null)
             return 0;
         if (node.getLeft() == null && node.getRight() == null)
             return 1;
         else
-             numLeft = filesSum(node.getLeft()) ;
-        System.out.println("numLeft   " + numLeft);
-        numRight=  filesSum(node.getRight());
-        System.out.println("numRight   " + numRight);
-        count = numLeft+numRight;
-        System.out.println("Countttttttt   " + count);
+            numLeft = filesSum(node.getLeft());
+        numRight = filesSum(node.getRight());
+        count = numLeft + numRight;
         return count;
     }
 

@@ -3,12 +3,14 @@
  */
 package graph;
 
-import com.google.common.collect.HashMultiset;
-import com.google.common.collect.Multiset;
 
 import java.util.*;
 
 public class App {
+    private static final Graph graph2 = new Graph();
+    private static final Graph graph = new Graph();
+
+
     public String getGreeting() {
         return "Hello World!";
     }
@@ -25,6 +27,13 @@ public class App {
         }
     }
 
+    /**
+     * My way
+     *
+     * @param str1
+     * @param str2
+     * @return
+     */
     static boolean IdentifyAnagrams(String str1, String str2) {
         char[] str1Array = str1.replaceAll("\\s", "").toLowerCase().toCharArray();
         char[] str2Array = str2.replaceAll("\\s", "").toLowerCase().toCharArray();
@@ -61,7 +70,7 @@ public class App {
         for (int i : matrix[0]) {
             adjacencyList.add(new ArrayList<>(i));
         }
-        System.out.println(adjacencyList);
+//        System.out.println(adjacencyList);
 
 
         for (int i = 0; i < matrix[0].length; i++) {
@@ -74,7 +83,7 @@ public class App {
 
             }
         }
-        System.out.println(adjacencyList);
+//        System.out.println(adjacencyList);
 
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < adjacencyList.size(); i++) {
@@ -89,24 +98,11 @@ public class App {
         return stringBuilder.toString();
     }
 
-    //    static void printArrayList(ArrayList<ArrayList<Integer>>
-//                                       adjListArray)
-//    {
-//        // Print the adjacency list
-//        for (int v = 0; v < adjListArray.size(); v++) {
-//            int rem = v%26;
-//            char letter = (char)((int)'a' + rem);
-//                System.out.print(""+letter);
-//            for (Integer u : adjListArray.get(v)) {
-//                System.out.print(" -> " + u);
-//            }
-//            System.out.println();
-//        }
-//    }
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
-        Graph graph = new Graph();
+
         graph.addNode("Pandora");
         graph.addNode("Arendelle");
         graph.addNode("Metroville");
@@ -142,9 +138,51 @@ public class App {
                 {0, 1, 0}};
 
 
+        graph2.addNode("Pandora");
+        graph2.addNode("Arendelle");
+        graph2.addNode("Metroville");
+        graph2.addNode("Monstroplolis");
+        graph2.addNode("Narnia");
+        graph2.addNode("Naboo");
+
+        graph2.addWeightedEdges("Pandora", "Arendelle", 150);
+        graph2.addWeightedEdges("Pandora", "Metroville", 82);
+
+
+        graph2.addWeightedEdges("Arendelle", "Metroville", 99);
+        graph2.addWeightedEdges("Arendelle", "Monstroplolis", 42);
+
+        graph2.addWeightedEdges("Metroville", "Monstroplolis", 105);
+        graph2.addWeightedEdges("Metroville", "Narnia", 37);
+        graph2.addWeightedEdges("Metroville", "Naboo", 26);
+
+        graph2.addWeightedEdges("Monstroplolis", "Naboo", 73);
+        graph2.addWeightedEdges("Narnia", "Naboo", 250);
+
+        List<Object> path1 = new ArrayList<>();
+        path1.add("Metroville");
+        path1.add("Pandora");
+        List<Object> path2 = new ArrayList<>();
+        path2.add("Arendelle");
+        path2.add("Monstroplolis");
+        path2.add("Naboo");
+
+        List<Object> path3 = new ArrayList<>();
+        path3.add("Naboo");
+        path3.add("Pandora");
+
+        List<Object> path4 = new ArrayList<>();
+        path4.add("Narnia");
+        path4.add("Arendelle");
+        path4.add("Naboo");
+
+
 //        System.out.println(adjacencyListRepresentation(list));
-        System.out.println(graph.breadthFirst("Naboo"));
+//        System.out.println(graph.breadthFirst("Naboo"));
+        System.out.println(graph.businessTrip(graph2, path1));
+        System.out.println(graph.businessTrip(graph2, path2));
+        System.out.println(graph.businessTrip(graph2, path3));
+        System.out.println(graph.businessTrip(graph2, path4));
 
     }
 }
-//Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo
