@@ -5,17 +5,17 @@ public class pseudoQueue<T> {
     StackLinkedList<Integer> stackList2;
 
     public pseudoQueue() {
-        this.stackList1 = new StackLinkedList<Integer>(); //as a rear //top
-        this.stackList2 = new StackLinkedList<Integer>(); //as a front
+        this.stackList1 = new StackLinkedList<>(); //as a rear //top
+        this.stackList2 = new StackLinkedList<>(); //as a front
     }
 
     //    Inserts value into the PseudoQueue, using a first-in, first-out approach.
-    public void enqueue(int value) {
+    void enqueue(int value) {
         this.stackList1.push(value);
     }
 
 
-    public int dequeue() {
+    int dequeue() {
         if (this.stackList2.top == null) {
             while (stackList1.top != null) {
                 stackList2.push(stackList1.pop());

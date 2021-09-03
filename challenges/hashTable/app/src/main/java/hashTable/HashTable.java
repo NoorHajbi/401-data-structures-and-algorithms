@@ -169,5 +169,10 @@ public class HashTable<K, V> {
         // key not found
         return null;
     }
+
+    public boolean includes(K key) {
+        return get(key)!= null;
+    }
+
 }
 
