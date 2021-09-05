@@ -9,7 +9,74 @@ import java.util.*;
 public class App {
     private static final Graph graph2 = new Graph();
     private static final Graph graph = new Graph();
+    private static final Graph graph3 = new Graph();
 
+    public static String RomanNumerals(int num) {
+        if (num <= 0 || num >= 5000)
+            return "invalid number";
+        int[] dec = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] rom = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        StringBuilder returnedVal = new StringBuilder();
+        for (int i = 0; i < dec.length; i++) {
+            while (num >= dec[i]) {
+                num -= dec[i];
+                returnedVal.append(rom[i]);
+            }
+        }
+        return returnedVal.toString();
+    }
+
+    public static String ReverseAString(String exp) {
+        Stack<Character> stack = new Stack<>();
+        if (exp.length() == 0) return null;
+        for (int i = 0; i < exp.length(); i++) {
+            stack.push(exp.charAt(i));
+        }
+        char[] newExp = new char[exp.toCharArray().length];
+        for (int i = 0; i < exp.length(); i++) {
+            newExp[i] = stack.pop();
+        }
+        return String.copyValueOf(newExp);
+    }
+
+
+    //    static int largestProduct (int []arr) {
+//        if (arr.length < 3)
+//            return Integer.MIN_VALUE;
+//        int product = 0;
+//        for (int i = 0; i < arr.length - 2; i++)
+//            for (int j = i + 1; j < arr.length - 1; j++)
+//                for (int l = j + 1; l < arr.length; l++)
+//                    product = Math.max(product,
+//                            arr[i] * arr[j] * arr[l]);
+//        return product;
+//    }
+    public static int largestProduct(int[] arr) {
+        if (arr.length < 3)
+            return Integer.MIN_VALUE;
+        int product1 = 0, product2 = 0, product3 = 0, minProduct1 = 0, minProduct2 = 0;
+        for (int i : arr) {
+            if (i > product1) {
+                product3 = product2;
+                product2 = product1;
+                product1 = i;
+            } else if (i > product2) {
+                product3 = product2;
+                product2 = i;
+            } else if (i > product3) {
+                product3 = i;
+            }
+            if (i < minProduct1) {
+                minProduct2 = minProduct1;
+                minProduct1 = i;
+            } else if (i < minProduct2) {
+                minProduct2 = i;
+            }
+        }
+        return Math.max(product1 * product2 * product3, minProduct1 * minProduct2 * product1);
+//        return product1 * product2 * product3 > minProduct1 * minProduct2 * product1 ?
+//                product1 * product2 * product3 : minProduct1 * minProduct2 * product1;
+    }
 
     public String getGreeting() {
         return "Hello World!";
@@ -175,14 +242,50 @@ public class App {
         path4.add("Narnia");
         path4.add("Arendelle");
         path4.add("Naboo");
-
+//        System.out.println(RomanNumerals(5000));
+//        System.out.println(RomanNumerals(0));
+//        System.out.println(RomanNumerals(2020));
+//        System.out.println(RomanNumerals(2099));
+//        System.out.println(ReverseAString("hello"));
 
 //        System.out.println(adjacencyListRepresentation(list));
 //        System.out.println(graph.breadthFirst("Naboo"));
-        System.out.println(graph.businessTrip(graph2, path1));
-        System.out.println(graph.businessTrip(graph2, path2));
-        System.out.println(graph.businessTrip(graph2, path3));
-        System.out.println(graph.businessTrip(graph2, path4));
+//        System.out.println(graph.businessTrip(graph2, path1));
+//        System.out.println(graph.businessTrip(graph2, path2));
+//        System.out.println(graph.businessTrip(graph2, path3));
+//        System.out.println(graph.businessTrip(graph2, path4));
+
+
+//        int[] arr = {18, 3, 42, 17, 9, 27};
+//        int n = arr.length;
+
+
+//        System.out.println("Maximum product is " + largestProduct(arr));
+//        System.out.println("Maximum product is " + maxTripletProduct(arr));
+
+        graph3.addNode("A");
+        graph3.addNode("B");
+        graph3.addNode("C");
+        graph3.addNode("G");
+        graph3.addNode("D");
+        graph3.addNode("E");
+        graph3.addNode("H");
+        graph3.addNode("F");
+
+
+        graph3.addEdge("A", "B");
+        graph3.addEdge("B", "C");
+        graph3.addEdge("C", "G");
+        graph3.addEdge("B", "D");
+        graph3.addEdge("A", "D");
+        graph3.addEdge("D", "E");
+        graph3.addEdge("D", "H");
+        graph3.addEdge("D", "F");
+        graph3.addEdge("H", "F");
+        System.out.println(graph3.breadthFirst("A"));
+//        System.out.println(graph3.breadthFirst("Aa"));
+
+
 
     }
 }

@@ -90,7 +90,7 @@ Write a method for the Graph class called **breadthFirst** that implements Bread
 - then call the **breadthFirst(node)** method.
 
 ---
-# 37. Implement Breadth-First Traversal of a Graph.
+# 37. Business trip
 
 ## Challenge Summary
 <!-- Description of the challenge -->
@@ -145,6 +145,54 @@ Write a method for the Graph class called **businessTrip** that determines wheth
 - then call the **BusinessTrip(graph,list of cities)** method.
 
 ---
+# 38. Implement Depth-First Preorder Traversal  Of A Graph.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+Write a method for the Graph class called **depthFirst** that implements Depth-First Preorder Traversal  Of A Graph.
+
+**Arguments:**  String of Node  
+**Return:** A set of nodes in their pre-order depth-first traversal order
+
+  
+## [Link to the code](../challenges/graph/app/src/main/java/graph/Graph.java)
+
+## [Link to the test](../challenges/graph/app/src/test/java/graph/GraphDepthFirstTest.java)
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Graph Depth First](../challenges/graph/app/src/main/resources/graphDepthFirst.png)
+  
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### - Approach:
+1. Declare a method called **depthFirst** that takes Object of node and returns Set of objects.
+2. If the graph is empty , then return null.
+3. Initialize a Set of visited nodes.
+4. Initialize a stack.
+5. push that node inside the stack.
+6. add that node inside the set of visited.
+7. check while the stack is not empty, then
+    - 1. Initlize a **tempNode** of type Object, its value is the popped value from the stack.
+    - 2.  loop inside the graph nodes, then
+        - check if the node is not visited  yet, then
+        - push the node data to the stack.
+        - add the node data to the visited set.
+9. Return the visited set.
+  
+
+### - Efficiency:
+- **Space complexity** -> O(n).
+
+- **Time complexity** -> O(v+e), where v is vertices and e is for edges.
+
+  
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initialize A variable from **Graph Class**.
+- then call the **depthFirst(node)** method.
+
+---
 ## Resources
 
-1. [BreadthFirst](https://www.baeldung.com/java-graphs)
+1. [Breadth First And Depth First](https://www.baeldung.com/java-graphs)

@@ -123,6 +123,7 @@ public class Graph {
         }
         return visited;
     }
+
     ///****************** Code 37 ******************///
 
     void addWeightedEdges(String data1, String data2, int weight) {
@@ -138,7 +139,7 @@ public class Graph {
      * and how much it would cost.
      *
      * @param graph
-     * @param cityNames List
+     * @param citiesNames List
      * @return cost or null
      */
     String businessTrip(Graph graph, List<Object> citiesNames) {
@@ -167,6 +168,28 @@ public class Graph {
             }
         }
         return 0;
+    }
+
+    ///****************** Code 38 ******************///
+
+    Set<Object> depthFirst(Object node) {
+        if (adjVertices.isEmpty()) {
+            return null;
+        }
+        Set<Object> visited = new LinkedHashSet<>();
+        Stack<Object> stack = new Stack<>();
+        stack.push(node);
+        visited.add(node);
+        while (!stack.isEmpty()) {
+            Object tempNode = stack.pop();
+                for (Vertex v : getNeighbors(tempNode.toString())) {
+                    if (!visited.contains(tempNode)) {
+                        visited.add(v.label);
+                    stack.push(v.label);
+                }
+            }
+        }
+        return visited;
     }
 
 }
