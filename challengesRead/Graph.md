@@ -157,7 +157,7 @@ Write a method for the Graph class called **depthFirst** that implements Depth-F
   
 ## [Link to the code](../challenges/graph/app/src/main/java/graph/Graph.java)
 
-## [Link to the test](../cchallenges/graph/app/src/test/java/graph/GraphDepthFirstTest.java)
+## [Link to the test](../challenges/graph/app/src/test/java/graph/GraphDepthFirstTest.java)
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
