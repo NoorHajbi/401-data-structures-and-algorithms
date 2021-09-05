@@ -172,15 +172,19 @@ public class Graph {
 
     ///****************** Code 38 ******************///
 
-    Set<String> depthFirst(String node) {
-        Set<String> visited = new LinkedHashSet<>();
-        Stack<String> stack = new Stack<>();
+    Set<Object> depthFirst(Object node) {
+        if (adjVertices.isEmpty()) {
+            return null;
+        }
+        Set<Object> visited = new LinkedHashSet<>();
+        Stack<Object> stack = new Stack<>();
         stack.push(node);
+        visited.add(node);
         while (!stack.isEmpty()) {
-            String tempNode = stack.pop();
-            if (!visited.contains(tempNode)) {
-                visited.add(tempNode);
-                for (Vertex v : getNeighbors(tempNode)) {
+            Object tempNode = stack.pop();
+                for (Vertex v : getNeighbors(tempNode.toString())) {
+                    if (!visited.contains(tempNode)) {
+                        visited.add(v.label);
                     stack.push(v.label);
                 }
             }
